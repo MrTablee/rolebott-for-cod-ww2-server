@@ -4,11 +4,12 @@
   "description": "",
   "main": "rolebot.js",
   "scripts": {
-    "start" : "node rolebot.js
+    "start" : "node rolebot.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ytdl-core": "^0.18.2"
+    "ytdl-core": "^0.18.2",
+    "discord.js":"11.2.1"
   }
 }
