@@ -45,7 +45,7 @@ if(message.content === 'r!reboot') {
         message.channel.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
         description: "This is above your pay grade. (Bot admins only)"})
 }}
-if(message.channel.content === 'r!ping') {
+if(message.content === 'r!ping') {
 message.channel.send("Pinging...").then(m => {
   m.edit(":ping_pong: Time taken: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
 }
