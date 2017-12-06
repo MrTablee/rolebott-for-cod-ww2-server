@@ -1,5 +1,5 @@
 const Eris = require("eris");
-const client = new Eris(TOKEN);
+const client = new Eris(process.env.BOT_TOKEN);
 const fs = require("fs");
 const prefix = "r!"
 
