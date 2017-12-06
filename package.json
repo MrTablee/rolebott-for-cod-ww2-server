@@ -1,0 +1,14 @@
+{
+  "name": "bitch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rolebot.js",
+  "scripts": {
+    "start" : "node rolebot.js
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ytdl-core": "^0.18.2"
+  }
+}
