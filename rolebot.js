@@ -36,10 +36,12 @@ client.on("message", message => {
   const args = message.content.slice('r!'.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-if(message.content === 'r!ping'){
-  message.channel.send("Pinging...").then(m => {
-    m.edit(":ping_pong: Time taken: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
-}
+  try {
+    let commandFile = require(`./commandsssss/${command}.js`);
+    commandFile.run(client, message, args);
+  } catch (err) {
+    client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
