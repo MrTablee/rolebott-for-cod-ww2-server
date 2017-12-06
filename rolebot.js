@@ -1,7 +1,11 @@
 const Eris = require("eris");
 const client = new Eris(process.env.BOT_TOKEN);
 const fs = require("fs");
-const prefix = "r!"
+const prefix = "r!";
+
+process.on('uncaughtException', (err)=>{
+	client.createMessage("384821440844922882", `Unhandled error : ${err}`);
+});
 
 client.on("guildMemberAdd", (guild, member) => {
   let guestRole = guild.roles.find("Guest");
