@@ -45,6 +45,46 @@ if(message.content === 'r!reboot') {
         message.channel.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
         description: "This is above your pay grade. (Bot admins only)"})
 }}
+if(message.channel.content === 'r!ping') {
+message.channel.send("Pinging...").then(m => {
+  m.edit(":ping_pong: Time taken: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
+}
+
+if(message.content === 'takerole'){
+  let guild = message.guild
+  let guestRole = (guild.roles.find("name", "Guest"));    
+  let pcRole = (guild.roles.find("name", "PC"));    
+  let ps4Role = (guild.roles.find("name", "PS4"));    
+  let xboxRole = (guild.roles.find("name", "Xbox"));    
+  
+  message.channel.sendMessage("What role did ya want taken?")
+  .then(() => {
+    message.channel.awaitMessages(response => response.content === 'PC' || response.content === 'Xbox' || response.content === 'PS4', {
+      max: 1,
+      maxMatches: 5,
+      time: 30000,
+      errors: ['time'],
+    })
+    .then((collected) => {
+        if (collected.first().content === 'PC') { 
+          message.channel.send('Took the PC role from ya');
+          message.guild.member(message.author.id).removeRole(pcRole.id)
+      }
+        if (collected.first().content === 'Xbox') { 
+          message.channel.send('Took the Xbox role from ya');
+          message.guild.member(message.author.id).removeRole(xboxRole.id)
+      }
+        if (collected.first().content === 'PS4') { 
+          message.channel.send('Took the PS4 role from ya');
+          message.guild.member(message.author.id).removeRole(ps4Role.id)
+      }
+  })
+      .catch(() => {
+        message.channel.send('No roles were mentioned...');
+      });
+  });
+}
+
 });
 
 client.login(process.env.BOT_TOKEN);
