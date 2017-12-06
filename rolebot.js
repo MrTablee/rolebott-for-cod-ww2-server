@@ -45,12 +45,12 @@ if(message.content === 'r!reboot') {
         message.channel.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
         description: "This is above your pay grade. (Bot admins only)"})
 }}
-if(message.content === 'r!ping') {
+if(message.channel.content === 'r!ping') {
 message.channel.send("Pinging...").then(m => {
   m.edit(":ping_pong: Time taken: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
 }
 
-if(message.content === 'r!takerole'){
+if(message.content === 'takerole'){
   let guild = message.guild
   let guestRole = (guild.roles.find("name", "Guest"));    
   let pcRole = (guild.roles.find("name", "PC"));    
@@ -84,6 +84,22 @@ if(message.content === 'r!takerole'){
       });
   });
 }
+
+if((message.content.startsWith('r!manual')) || message.content.startsWith('r!m')) {
+  let staffRole = (message.guild.roles.find("name", "Staff"));
+  if(!message.member.roles.has(staffRole.id)) {
+message.channel.send('This command is for Staff only')
+return;
+} else if(message.member.roles.has(staffRole.id)) {
+if((args[0] === 'takerole') || (args[0] === 't')) {
+  let mentionedMember = message.guild.member(message.mentions.users.first());        let roleToRemove = (message.guild.roles.find('name', args[2]));
+  message.guild.member(mentionedMember.id).removeRole(roleToRemove.id)
+} else if((args[0] === 'addrole') || (args[0] === 'a')) {
+  let mentionedMember = message.guild.member(message.mentions.users.first());        let roleToRemove = (message.guild.roles.find('name', args[2]));
+  message.guild.member(mentionedMember.id).addRole(roleToRemove.id)
+}}}
+
+
 
 });
 
