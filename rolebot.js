@@ -99,8 +99,55 @@ if((args[0] === 'takerole') || (args[0] === 't')) {
   message.guild.member(mentionedMember.id).addRole(roleToRemove.id)
 }}}
 
+if(message.content === 'r!addrole') {
+  let guild = message.guild
+  let guestRole = (guild.roles.find("name", "Guest"));    
+  let pcRole = (guild.roles.find("name", "PC"));    
+  let ps4Role = (guild.roles.find("name", "PS4"));    
+  let xboxRole = (guild.roles.find("name", "Xbox"));    
+  
+  message.channel.sendMessage("What role did ya want?")
+  .then(() => {
+    message.channel.awaitMessages(response => ['Xbox', 'PC', 'PS4'].includes(response.content), {
+      max: 1,
+      maxMatches: 5,
+      time: 30000,
+      errors: ['time'],
+    })
+    .then((collected) => {
+        if (collected.first().content === 'PC') { 
+          message.channel.send('You now have access to the following PC channels:\n<#377263671895785483>\n<#377263736479678465>\n<#385164138529292298>\nAnd <#385553319457849344>');
+          message.guild.member(message.author.id).addRole(pcRole.id)
+      }
+        if (collected.first().content === 'Xbox') { 
+          message.channel.send('You now have access to the following Xbox channels:\n<#377263472091594752>\n<#377263507173015553>\n<#385164046892007426>\nAnd <#385553280241106955>!');
+          message.guild.member(message.author.id).addRole(xboxRole.id)
+      }
+        if (collected.first().content === 'PS4') { 
+          message.channel.send('You now have access to the following PS4 channels:\n<#377263304915156992>\n<#385164109861355521>\n<#385552955853504524>\nAnd <#377263347189678090>!');
+          message.guild.member(message.author.id).addRole(ps4Role.id)
+      }
+  })
+      .catch(() => {
+        message.channel.send('No roles were mentioned...');
+      });
+  });
+}
 
-
+if(message.content.startsWith('r!eval')){
+  try {
+    if (message.author.id !== '233366720062947330') return;
+  let command = message.content.replace("r!eval ", "");
+  let output = eval(command);
+  message.channel.send("\n```\n" + output + "\n```");
+  } catch (err) {
+    message.channel.send("`Uh oh... " + err + "` came up... Check your code and try again!")
+  }}
 });
+
+setInterval(function() {
+    http.get("http://rolebott-for-cod-ww2-server.herokuapp.com");
+    console.warn('TIMEOUT !');
+}, 600000); // every 10 minutes (10*60000)
 
 client.login(process.env.BOT_TOKEN);
