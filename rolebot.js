@@ -36,12 +36,15 @@ client.on("message", message => {
   const args = message.content.slice('r!'.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  try {
-    let commandFile = require(`./commandsssss/${command}.js`);
-    commandFile.run(client, message, args);
-  } catch (err) {
-    client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
-  }
+const botAdmin = "message.author.id == '233366720062947330' || message.author.id == '209765088196821012' || message.author.id == '277608955855896576' || message.author.id == '246766026052730880'"
+if(message.content === 'r!reboot') {
+             if  (message.author.id == '233366720062947330' || message.author.id == '215509157837537280') {
+        message.channel.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
+        description: "Reboot in progress... Please allow RoleBot about 5-10 seconds before use again."}).then(process.exit);
+              } else if (message.author.id != '233366720062947330') {
+        message.channel.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
+        description: "This is above your pay grade. (Bot admins only)"})
+}}
 });
 
 client.login(process.env.BOT_TOKEN);
