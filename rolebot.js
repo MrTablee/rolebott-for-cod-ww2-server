@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const prefix = "r!"
-//Test
+
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
   let guestRole = member.guild.roles.find("name", "Guest");
