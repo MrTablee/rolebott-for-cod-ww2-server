@@ -50,7 +50,7 @@ message.channel.send("Pinging...").then(m => {
   m.edit(":ping_pong: Time taken: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
 }
 
-if(message.content === 'takerole'){
+if(message.content === 'r!takerole'){
   let guild = message.guild
   let guestRole = (guild.roles.find("name", "Guest"));    
   let pcRole = (guild.roles.find("name", "PC"));    
