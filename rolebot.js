@@ -55,6 +55,19 @@ client.user.setPresence(
       }
     })
 }
+  
+  if(message.content === 'r!refreshping') {
+    message.channel.send("Refreshing ping stats...")
+client.user.setPresence(
+    {
+      game:
+      {
+        name:
+        `r!help | In ${client.guilds.size} servers | Most recent ping: ${client.ping}`,
+        type: 0
+      }
+    })
+}
 
 if(message.content === 'r!takerole'){
   let guild = message.guild
