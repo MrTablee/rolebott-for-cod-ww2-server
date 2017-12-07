@@ -131,7 +131,7 @@ if(message.content === 'r!addrole') {
   });
 }
   if(message.content.startsWith('r!emit')){
-    message.channel.send("Emitting `" + args[0] + "` with parameters `" + args[1] + "`").then(client.emit(args[0], args[1]))
+    message.channel.send("Emitting `guildMemberAdd`").then(client.emit("guildMemberAdd", message.member))
 }
   if(message.content === 'r!help') {
     message.channel.send('**DMing you a list of commands!**')
