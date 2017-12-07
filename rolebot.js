@@ -1,4 +1,3 @@
-const config = require('./config.json')
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
@@ -30,7 +29,7 @@ client.on("ready", (member) => {
 client.on("message", message => {
   if (message.author.bot) return;
   if(message.content.indexOf('r!') !== 0) return;
-
+try {
   const args = message.content.slice('r!'.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
@@ -148,7 +147,8 @@ if(message.content.startsWith('r!eval')){
   message.channel.send("\n```\n" + output + "\n```");
   } catch (err) {
     message.channel.send("`Uh oh... " + err + "` came up... Check your code and try again!")
-  }}
+  }}} catch(err){
+    console.log(err)}
 });
 
 
