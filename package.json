@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ytdl-core": "^0.18.2",
-    "discord.js":"11.2.1"
+    "discord.js":"11.2.1",
+    "eris":"0.8.1"
   }
 }
