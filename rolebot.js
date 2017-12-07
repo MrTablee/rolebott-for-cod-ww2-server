@@ -7,10 +7,7 @@ client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
   let guestRole = member.guild.roles.find("name", "Guest");
   const welcomeChannel = member.guild.channels.find("name", 'reception'); 
-try {  member.guild.channels.find("name", 'reception').send(
-
-  `Welcome ${member.user} to ${guild.name}, use r!addrole to gain access to your platform's channels!`
-).then(() => (member.addRole(guestRole.id)))
+try {  member.guild.channels.find("name", 'reception').send(`Welcome ${member.user} to ${guild.name}, use r!addrole to gain access to your platform's channels!`).then(() => (member.addRole(guestRole.id)))
     } catch (err) {
       client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err}\`\`\``);
     }
@@ -57,7 +54,7 @@ if(message.content === 'takerole'){
   let ps4Role = (guild.roles.find("name", "PS4"));    
   let xboxRole = (guild.roles.find("name", "Xbox"));    
   
-  message.channel.sendMessage("What role did ya want taken?")
+  message.channel.sendMessage("What role did ya want taken?  (This is case sensitive, so let me know \`Xbox, PS4, or PC\` And I'll give you that role)")
   .then(() => {
     message.channel.awaitMessages(response => response.content === 'PC' || response.content === 'Xbox' || response.content === 'PS4', {
       max: 1,
@@ -106,7 +103,7 @@ if(message.content === 'r!addrole') {
   let ps4Role = (guild.roles.find("name", "PS4"));    
   let xboxRole = (guild.roles.find("name", "Xbox"));    
   
-  message.channel.sendMessage("What role did ya want?")
+  message.channel.sendMessage("What role did ya want?  (This is case sensitive, so let me know \`Xbox, PS4, or PC\` And I'll give you that role)")
   .then(() => {
     message.channel.awaitMessages(response => ['Xbox', 'PC', 'PS4'].includes(response.content), {
       max: 1,
