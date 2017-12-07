@@ -44,7 +44,7 @@ if(message.content === 'r!reboot') {
 }}
 if(message.content === 'r!ping') {
     message.channel.send("One second, rushing B...").then(m => {
-    m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (m.createdTimestamp - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + client.ping + "ms \n *Most recent heartbeat pings:* " + client.pings)});
+    m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (m.createdTimestamp - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)});
 client.user.setPresence(
     {
       game:
