@@ -44,7 +44,16 @@ if(message.content === 'r!reboot') {
 }}
 if(message.content === 'r!ping') {
     message.channel.send("One second, rushing B...").then(m => {
-    m.edit(":ping_pong: Objective time: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
+    m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (m.createdTimestamp - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + client.ping + "ms /n *Most recent heartbeat pings:* " + client.pings)});
+client.user.setPresence(
+    {
+      game:
+      {
+        name:
+        `r!help | In ${client.guilds.size} servers | Most recent ping: ${client.ping}`,
+        type: 0
+      }
+    })
 }
 
 if(message.content === 'r!takerole'){
