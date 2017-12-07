@@ -43,8 +43,8 @@ if(message.content === 'r!reboot') {
         description: "This is above your pay grade. (Bot admins only)"})
 }}
 if(message.content === 'r!ping') {
-message.channel.send("Pinging...").then(m => {
-  m.edit(":ping_pong: Time taken: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
+    message.channel.send("One second, rushing B...").then(m => {
+    m.edit(":ping_pong: Objective time: " + (m.createdTimestamp - message.createdTimestamp) + 'ms')});
 }
 
 if(message.content === 'r!takerole'){
@@ -129,6 +129,14 @@ if(message.content === 'r!addrole') {
         message.channel.send('No roles were mentioned...');
       });
   });
+}
+  if(message.content === 'r!emitnewmember'){
+    message.channel.send("Emitting `guildMemberAdd`").then(client.emit("guildMemberAdd", message.member))
+}
+  if(message.content === 'r!help') {
+    message.channel.send('**DMing you a list of commands!**')
+message.author.sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
+description: "Commands:\n**r!ping:** Sends the current ping time of the bot.\n**r!help:** Sends this message to your DMs.\n**r!addrole:** Adds a role to you.\n**r!takerole:** Takes a role from you.\n**r!manual**(*Staff only*) Manually adds a role to a user." });
 }
 
 if(message.content.startsWith('r!eval')){
