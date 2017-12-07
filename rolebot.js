@@ -142,9 +142,5 @@ if(message.content.startsWith('r!eval')){
   }}
 });
 
-setInterval(function() {
-    http.get("http://rolebott-for-cod-ww2-server.herokuapp.com");
-    console.warn('TIMEOUT !');
-}, 600000);
 
 client.login(process.env.BOT_TOKEN);
