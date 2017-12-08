@@ -160,6 +160,19 @@ if(message.content === 'r!addrole') {
 message.author.sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
 description: "Commands:\n**r!ping:** Sends the current ping time of the bot.\n**r!help:** Sends this message to your DMs.\n**r!addrole:** Adds a role to you.\n**r!takerole:** Takes a role from you.\n**r!manual**(*Staff only*) Manually adds a role to a user." });
 }
+
+if(message.content.startsWith('r!eval')){
+  try {
+    if (message.author.id !== '233366720062947330') return;
+  let command = message.content.replace("r!eval ", "");
+  let output = eval(command);
+  message.channel.send("\n```\n" + output + "\n```");
+  } catch (err) {
+    message.channel.send("`Uh oh... " + err + "` came up... Check your code and try again!")
+  }}} catch(err){
+    console.log(err)}
+});
+client.on("message", message => {
 const Cleverbot = require('cleverbot-node');
 const clbot = new Cleverbot;
     clbot.configure({botapi: "CC5t7pEnGxIq-mjrBf89H2pDcWQ"});
@@ -173,18 +186,6 @@ const clbot = new Cleverbot;
         }, Math.random() * (1 - 3) + 1 * 1000);
       });
     });
-  }
-if(message.content.startsWith('r!eval')){
-  try {
-    if (message.author.id !== '233366720062947330') return;
-  let command = message.content.replace("r!eval ", "");
-  let output = eval(command);
-  message.channel.send("\n```\n" + output + "\n```");
-  } catch (err) {
-    message.channel.send("`Uh oh... " + err + "` came up... Check your code and try again!")
-  }}} catch(err){
-    console.log(err)}
-});
-
+  }});
 
 client.login(process.env.BOT_TOKEN);
