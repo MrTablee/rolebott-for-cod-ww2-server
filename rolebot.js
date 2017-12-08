@@ -162,7 +162,7 @@ description: "Commands:\n**r!ping:** Sends the current ping time of the bot.\n**
 }
 const Cleverbot = require('cleverbot-node');
 const clbot = new Cleverbot;
-    clbot.configure({botapi: "CCCzvZw_IjvA0ocpaEYg8922Usw"});
+    clbot.configure({botapi: "CC5t7pEnGxIq-mjrBf89H2pDcWQ"});
     if (message.channel.type == "dm"){
     Cleverbot.prepare(() => {
       clbot.write(message.content, (response) => {
