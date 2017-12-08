@@ -173,6 +173,7 @@ if(message.content.startsWith('r!eval')){
     console.log(err)}
 });
 client.on("message", message => {
+    if (message.author.bot) return;
 const Cleverbot = require('cleverbot-node');
 const clbot = new Cleverbot;
     clbot.configure({botapi: "CC5t7pEnGxIq-mjrBf89H2pDcWQ"});
