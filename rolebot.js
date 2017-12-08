@@ -177,7 +177,7 @@ client.on("message", message => {
 const Cleverbot = require('cleverbot-node');
 const clbot = new Cleverbot;
     clbot.configure({botapi: "CC5t7pEnGxIq-mjrBf89H2pDcWQ"});
-    if (message.channel.type == "dm"){
+    if (message.channel.type == "dm" || !message.content.startsWith('r!')){
     Cleverbot.prepare(() => {
       clbot.write(message.content, (response) => {
         message.channel.startTyping();
