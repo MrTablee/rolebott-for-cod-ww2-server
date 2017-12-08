@@ -38,7 +38,7 @@ client.on("message", message => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`/commandsss/${command}.js`);
+    let commandFile = require(`commandssss\${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
     client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
