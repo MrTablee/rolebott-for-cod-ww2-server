@@ -160,7 +160,20 @@ if(message.content === 'r!addrole') {
 message.author.sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
 description: "Commands:\n**r!ping:** Sends the current ping time of the bot.\n**r!help:** Sends this message to your DMs.\n**r!addrole:** Adds a role to you.\n**r!takerole:** Takes a role from you.\n**r!manual**(*Staff only*) Manually adds a role to a user." });
 }
-
+const Cleverbot = require('cleverbot-node');
+const clbot = new Cleverbot;
+    clbot.configure({botapi: "CCCzvZw_IjvA0ocpaEYg8922Usw"});
+    if (message.channel.type == "dm" && !message.content.includes('r!')){
+    Cleverbot.prepare(() => {
+      clbot.write(message.content, (response) => {
+        message.channel.startTyping();
+        setTimeout(() => {
+          message.channel.sendMessage(response.message).catch(console.error);
+          message.channel.stopTyping();
+        }, Math.random() * (1 - 3) + 1 * 1000);
+      });
+    });
+  }
 if(message.content.startsWith('r!eval')){
   try {
     if (message.author.id !== '233366720062947330') return;
