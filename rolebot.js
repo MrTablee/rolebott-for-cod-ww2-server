@@ -1,7 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
-const prefix = "r!"
+const prefix = "r!";
+const Cleverbot = require('cleverbot-node');
+const clbot = new Cleverbot;
 
 client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
@@ -23,11 +25,23 @@ client.on("ready", (member) => {
         type: 0
       }
     })
+    clbot.configure({botapi: "CC5t7pEnGxIq-mjrBf89H2pDcWQ"});
   console.log(`RoleBot is connected to the Discord WebSocket`)
 });
 
 client.on("message", message => {
   if (message.author.bot) return;
+  if (message.channel.type == "dm"){
+    Cleverbot.prepare(() => {
+      clbot.write(message.content, (response) => {
+        message.channel.startTyping();
+        setTimeout(() => {
+          message.channel.sendMessage(response.message).catch(console.error);
+          message.channel.stopTyping();
+        }, Math.random() * (1 - 3) + 1 * 1000);
+      });
+    });
+  }
   if(message.content.indexOf('r!') !== 0) return;
 try {
   const args = message.content.slice('r!'.length).trim().split(/ +/g);
@@ -172,21 +186,5 @@ if(message.content.startsWith('r!eval')){
   }}} catch(err){
     console.log(err)}
 });
-client.on("message", message => {
-    if (message.author.bot) return;
-const Cleverbot = require('cleverbot-node');
-const clbot = new Cleverbot;
-    clbot.configure({botapi: "CC5t7pEnGxIq-mjrBf89H2pDcWQ"});
-    if (message.channel.type == "dm"){
-    Cleverbot.prepare(() => {
-      clbot.write(message.content, (response) => {
-        message.channel.startTyping();
-        setTimeout(() => {
-          message.channel.sendMessage(response.message).catch(console.error);
-          message.channel.stopTyping();
-        }, Math.random() * (1 - 3) + 1 * 1000);
-      });
-    });
-  }});
 
 client.login(process.env.BOT_TOKEN);
