@@ -57,8 +57,9 @@ if(message.content === 'r!reboot') {
         description: "This is above your pay grade. (Bot admins only)"})
 }}
 if(message.content === 'r!ping') {
-    message.channel.send("One second, rushing B...").then(m => {
-    m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (m.createdTimestamp - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)});
+   /* message.channel.send("One second, rushing B...").then(m => {
+    m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (m.createdTimestamp - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)});*/
+    require('./commandssss/ping').run(client, message, null);
 client.user.setPresence(
     {
       game:
