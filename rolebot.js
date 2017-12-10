@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const prefix = "r!"
-const config = require("./config.json")
+/*const config = require("./config.json")*/
 const Cleverbot = require('cleverbot-node');
 const clbot = new Cleverbot;
 
