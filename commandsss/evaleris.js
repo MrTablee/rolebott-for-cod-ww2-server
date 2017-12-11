@@ -5,4 +5,4 @@ exports.run = (client, message, args) => {
     return eval(evalCmd)},{
       requirements:{ 
         userIDs: ['233366720062947330'] 
-      }} catch(err) return (err)}
+      }}} catch(err) return (err)}
