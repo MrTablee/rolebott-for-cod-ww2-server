@@ -5,6 +5,8 @@ const Eris = require("eris");
 const sql = require("sqlite");
 const music = require('discord.js-music-v11');
 sql.open("./score.sqlite");
+const Cleverbot = require('cleverbot-node');
+const clbot = new Cleverbot;
 
 
 discord.hookId = '385323385254707200';
