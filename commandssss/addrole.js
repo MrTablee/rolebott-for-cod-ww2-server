@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   let ps4Role = (guild.roles.find("name", "PS4"));    
   let xboxRole = (guild.roles.find("name", "Xbox"));    
   
-  message.channel.sendMessage("What role did ya want?")
+  message.channel.sendMessage("What role did ya want?  (This is case sensitive, so let me know `Xbox, PS4, or PC` And I'll give you that role)")
   .then(() => {
     message.channel.awaitMessages(response => ['Xbox', 'PC', 'PS4'].includes(response.content), {
       max: 1,
