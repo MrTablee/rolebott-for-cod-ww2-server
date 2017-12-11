@@ -323,14 +323,14 @@ alleyclient.on("message", message => {
     });
   });
 
-  if (!message.content.startsWith(prefix)) return;
+  if (!message.content.startsWith(alleyprefix)) return;
 
-  if (message.content.startsWith(prefix + "level")) {
+  if (message.content.startsWith(alleyprefix + "level")) {
     sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
       if (!row) return message.channel.send("Welp... your current level is 0");
       message.channel.send(`Your current level is ${row.level}`);
     });
-  } else if (message.content.startsWith(prefix + "givepoints")) {
+  } else if (message.content.startsWith(alleyprefix + "givepoints")) {
     sql.open("./score.sqlite"); 
     sql.get(`SELECT * FROM scores WHERE userId ="${message.mentions.users.first().id}"`).then(row => {
         if (!row) {
@@ -340,7 +340,7 @@ alleyclient.on("message", message => {
     message.channel.send(`Gave ${message.mentions.users.first().username} 50 points`)
  }})}
 
-  if (message.content.startsWith(prefix + "points")) {
+  if (message.content.startsWith(alleyprefix + "points")) {
     sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
       if (!row) return message.channel.send("Sadly you do not have any points yet... Talk more");
       message.channel.send(`${message.author.username} you currently have ${row.points} points, good going!`);
