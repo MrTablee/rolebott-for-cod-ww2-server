@@ -1,5 +1,5 @@
 const search = require('youtube-search');
-let prefix = ".." ;
+let prefix = "r!" ;
 var opts = {
     maxResults: 1,
     key: 'AIzaSyAJto0Vilt5bCmyVZKaSqtTj4PJkAt7VbU'}
