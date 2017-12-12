@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-    let canDeleteMessages = message.guild.member(message.author.id).hasPermission('DELETE_MESSAGES');
+    let canDeleteMessages = message.guild.member(message.author.id).hasPermission('MANAGE_MESSAGES');
     if((canDeleteMessages) || message.author.id == '233366720062947330' ) {
     const params = message.content.split(" ").slice(1);
         let messagecount = parseInt(params[0]);
