@@ -1,7 +1,7 @@
 exports.run = (client, message, args) => {
-    let modRole = message.guild.roles.find("name", "Mod");
-    if((!message.member.roles.has(modRole.id)) && message.author.id !== '233366720062947330' ) {
-    return message.channel.send('You need the role `Mod` to use this command.');
+    let canKick = message.guild.hasPermission('KICK_MEMBERS');
+    if((!message.member.canKick) && message.author.id !== '233366720062947330' ) {
+    return message.channel.send('You need the permission `Mod` to use this command.');
     }
     if(message.mentions.users.size === 0) {
         return message.channel.send("Well you don't expect me to kick **nobody**, do you?");
