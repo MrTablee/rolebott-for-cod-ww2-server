@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
-    let canKick = message.guild.member.hasPermission('KICK_MEMBERS');
-    if((!message.member.canKick) && message.author.id !== '233366720062947330' ) {
+    let canKick = message.guild.member(message.author.id).hasPermission('KICK_MEMBERS');
+    if((!canKick) && message.author.id !== '233366720062947330' ) {
     return message.channel.send('You need the permission `KICK_MEMBERS` to use this command.');
     }
     if(message.mentions.users.size === 0) {
