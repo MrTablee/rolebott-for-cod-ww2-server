@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
         .then(messages => {
           let msg_array = messages.array();
           msg_array.length = messagecount + 1;
-          msg_array.map(m => m.delete().catch(console.error));
+          msg_array.map(m => m.delete().then(client.channels.get(message.guild.channels.find('name', 'logs').id).send('Test')).catch(console.error));
         });
                    }
   else {
