@@ -1,8 +1,8 @@
 exports.run = (client, message, args) => {
-
+    let canDeleteMessages = message.guild.member(message.author.id).hasPermission('DELETE_MESSAGES');
+    if((canDeleteMessages) || message.author.id == '233366720062947330' ) {
     const params = message.content.split(" ").slice(1);
         let messagecount = parseInt(params[0]);
-                   if  ((message.member.roles.exists("name", "Mod")) || (message.author.id === '233366720062947330')) {
       message.channel.fetchMessages({
           limit: 100
         })
@@ -13,6 +13,6 @@ exports.run = (client, message, args) => {
         });
                    }
   else {
-    message.channel.send('This is above your pay grade. You need to be a `Mod` to use this.')
+    message.channel.send('This is above your pay grade. You need to be able to `DELETE_MESSAGES` to use this.')
     }
   }
