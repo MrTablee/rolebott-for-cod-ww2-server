@@ -11,6 +11,6 @@ exports.run = (client, message, args) => {
         return message.channel.send("That user doesn't seem to be around...");
     }
     kickMember.kick().then(member => {
-        message.channel.send(`${member.user.username} was kicked from the server... Bye bye`)
+        message.channel.send(`${member.user.username} was kicked from the server... Bye bye`).then(client.channels.get(message.guild.channels.find('name', 'logs').id).send('Test'))
     })
 }
