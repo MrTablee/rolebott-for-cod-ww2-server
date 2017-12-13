@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
           let msg_array = messages.array();
           msg_array.length = messagecount + 1;
           msg_array.map(m => m.delete().catch(console.error));
-        }).then(client.channels.get(message.guild.channels.find('name', 'logs').id).send(messagecount));
+        }).then(client.channels.get(message.guild.channels.find('name', 'logs').id).send(`**Moderator:** ${message.author.tag}\n**Action used:** Prune\n**Messages deleted:** ${messagecount}`));
                    }
   else {
     message.channel.send('This is above your pay grade. You need to be able to `DELETE_MESSAGES` to use this.')
