@@ -1,3 +1,3 @@
 exports.run = (client, message, args) => {
-    message.channel.send("Emitting: `" + args[0] + "` with parameters: `" + args[1] } "`").then(client.emit(args[0], args[1]))
+    message.channel.send(`Emitting: \`args[0]\` with parameters: \`args[1]\``).then(client.emit(args[0], args[1]))
 }
