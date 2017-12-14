@@ -391,5 +391,4 @@ alleyclient.on("message", message => {
   
   
 });
-
 alleyclient.login(process.env.ALLEYTOKEN);
