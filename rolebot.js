@@ -255,6 +255,9 @@ rolebotclient.on("message", message => {
       });
     });
   }
+  if((message.guild.id === '') && (message.content.includes('youtube.com/'))){
+  message.channel.send('Successful test mah dude')
+  }
   if(message.content.indexOf('r!') !== 0) return;
 
   const args = message.content.slice('r!'.length).trim().split(/ +/g);
