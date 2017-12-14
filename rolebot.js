@@ -255,8 +255,7 @@ rolebotclient.on("message", message => {
       });
     });
   }
-  if((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))){
-    try{
+  if((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))){    
   let guestRole = (guild.roles.find("name", "Guest"));    
   let pcRole = (guild.roles.find("name", "PC"));    
   let ps4Role = (guild.roles.find("name", "PS4"));    
@@ -265,8 +264,7 @@ rolebotclient.on("message", message => {
     message.delete()
   message.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${message.author.tag}`)
   message.guild.member(message.author.id).addRole(muteRole.id)
-  message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)} catch(err)
-  {message.channel.send(err)}}
+  message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)}
   if(message.content.indexOf('r!') !== 0) return;
 
   const args = message.content.slice('r!'.length).trim().split(/ +/g);
