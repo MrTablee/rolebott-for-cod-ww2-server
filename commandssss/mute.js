@@ -1,9 +1,9 @@
 exports.run = (client, message, args) => {
-    let modRole = message.guild.roles.find("name", "Mod");
+let canMute = message.guild.member(message.author.id).hasPermission('KICK_MEMBERS');
   let guild = message.member.guild;
   let muteRole = (guild.roles.find("name", "Muted"));
-    if(!message.member.roles.has(modRole.id)) {
-    return message.channel.send('You need the role `Mod` to use this command.');
+    if(!canMute) {
+    return message.channel.send('You need proper permissions to use this command.');
     }
     if(message.mentions.users.size === 0) {
         return message.channel.send("Well you don't expect me to mute **nobody**, do you?");
