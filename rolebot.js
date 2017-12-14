@@ -255,10 +255,16 @@ rolebotclient.on("message", message => {
       });
     });
   }
-  if((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/'))){
+  if((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators')) ){
+  let guestRole = (guild.roles.find("name", "Guest"));    
+  let pcRole = (guild.roles.find("name", "PC"));    
+  let ps4Role = (guild.roles.find("name", "PS4"));    
+  let xboxRole = (guild.roles.find("name", "Xbox"));  
+  let muteRole = (guild.roles.find("name", "Muted"));  
     message.delete()
-  message.channel.send('Successful test mah dude')
-  }
+  message.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${message.author.tag}`)
+  message.guild.member(message.author.id).addRole(muteRole.id)
+  message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)}
   if(message.content.indexOf('r!') !== 0) return;
 
   const args = message.content.slice('r!'.length).trim().split(/ +/g);
