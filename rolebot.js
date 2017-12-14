@@ -255,7 +255,7 @@ rolebotclient.on("message", message => {
       });
     });
   }
-  if(message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators')){    
+  if((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))){    
   let guestRole = (guild.roles.find("name", "Guest"));    
   let pcRole = (guild.roles.find("name", "PC"));    
   let ps4Role = (guild.roles.find("name", "PS4"));    
