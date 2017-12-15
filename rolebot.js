@@ -274,6 +274,27 @@ rolebotclient.on("message", message => {
   }
 });
 
+rolebotclient.on("messageUpdate", newMessage => {
+  if (newMessage.author.bot) return;
+  if((newMessage.guild.id === '377259194211893248') && (newMessage.content.includes('youtube.com/')) && (!newMessage.guild.member(newMessage.author.id).roles.exists('name', 'Content Creators'))){
+  let muteRole = (newMessage.guild.roles.find("name", "Muted"));  
+  newMessage.delete()
+  newMessage.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${newMessage.author.tag}`)
+  newMessage.guild.member(newMessage.author.id).addRole(muteRole.id)
+  newMessage.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${newMessage.guild.name}`)}
+  if(newMessage.content.indexOf('r!') !== 0) return;
+
+  const args = newMessage.content.slice('r!'.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  try {
+    let commandFile = require(`./commandssss/${command}`);
+    commandFile.run(rolebotclient, newMessage, args);
+  } catch (err) {
+    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMessage.content}\nMessage author: ${newMessage.author.tag} ID: ${newMessage.author.id}\n \`\`\`${err}\`\`\``);
+  }
+});
+
 rolebotclient.login(process.env.ROLEBOTTOKEN);
 
 
