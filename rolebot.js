@@ -242,6 +242,19 @@ rolebotclient.on("ready", (member) => {
   clbot.configure({botapi: "CC5t7pEnGxIq-mjrBf89H2pDcWQ"});
 });
 
+rolebotclient.on("disconnect", () => {
+  rolebotclient.user.setPresence(
+    {
+      game:
+      {
+        name:
+        'Uh oh I\'m dying...',
+        type: 0
+      }
+    })
+  console.log(`RoleBot is disconnected from the Discord WebSocket`)
+});
+
 rolebotclient.on("message", message => {
   if (message.author.bot) return;
   if (message.channel.type == "dm"){
