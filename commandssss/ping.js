@@ -1,5 +1,8 @@
-exports.run = (client, message, args) => {
+exports.run = (client, newMsg,  message, args) => {
+    if(!newMsg){
     message.channel.send("One second, rushing B...").then(m => {
     m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)});
+}
+else {message.channel.send(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - newMsg.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)}
 }
 
