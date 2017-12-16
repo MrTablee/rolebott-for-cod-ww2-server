@@ -34,7 +34,7 @@ alphaclient.on("message", message => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`./commands/${command}`);
+    let commandFile = require(`./alphacommands/${command}`);
     commandFile.run(alphaclient, message, args);
   } catch (err) {
     alphaclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
@@ -280,7 +280,7 @@ rolebotclient.on("message", message => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`./commandssss/${command}`);
+    let commandFile = require(`./rolebotcommands/${command}`);
     commandFile.run(rolebotclient, message, args);
   } catch (err) {
     rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
@@ -301,7 +301,7 @@ rolebotclient.on("messageUpdate", (oldMsg, newMsg) => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`./commandssss/${command}`);
+    let commandFile = require(`./rolebotcommands/${command}`);
     commandFile.run(rolebotclient, newMsg, args);
   } catch (err) {
     rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err}\`\`\``);
@@ -347,7 +347,7 @@ rolebotv2client.on("message", message => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`./commandsssss/${command}`);
+    let commandFile = require(`./rolebotv2commands/${command}`);
     commandFile.run(rolebotv2client, message, args);
   } catch (err) {
     rolebotv2client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
@@ -410,7 +410,7 @@ alleyclient.on("message", message => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`./commandsss/${command}`);
+    let commandFile = require(`./alleycommands/${command}`);
     commandFile.run(alleyclient, message, args);
   } catch (err) {
     alleyclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
