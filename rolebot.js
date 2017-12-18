@@ -69,19 +69,22 @@ bot.on("guildCreate", () => {
 var playCommand = ",,Join me";
 bot.on("messageCreate", (msg) => {
       if (msg.content.startsWith(playCommand)) {
+
         if (!msg.channel.guild) {
           bot.createMessage(msg.channel.id, "This command can only be run in a server.");
           return;
         }
+
         if (!msg.member.voiceState.channelID) {
           bot.createMessage(msg.channel.id, "You are not in a voice channel.");
           return;
         }
-        bot.joinVoiceChannel(msg.member.voiceState.channelID).catch((err => {
+
+        bot.joinVoiceChannel(msg.member.voiceState.channelID).then((connection) => {
+
+        }).catch(err => {
             bot.createMessage(msg.channel.id, "ERROR joining voice channel: " + err.stack);
             console.log(err.stack);
-          }).then((connection) => {
-
           })
         }
       });
