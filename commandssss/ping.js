@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-exports.run = (client, newMsg,  message, args) => {
-    if(!newMsg){
-    message.channel.send("One second, rushing B...").then(m => {
-    m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)});
+exports.run = (client, newMsg, message, args) => {
+    if (!newMsg) {
+        message.channel.send("One second, rushing B...").then(m => {
+            m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)
+        });
+    } else {
+        newMsg.channel.send(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - newMsg.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)
+    }
 }
-else {newMsg.channel.send(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - newMsg.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)}
-}
-
-=======
-exports.run = (client, newMsg,  message, args) => {
-    if(!newMsg){
-    message.channel.send("One second, rushing B...").then(m => {
-    m.edit(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - message.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)});
-}
-else {newMsg.channel.send(":ping_pong: **Bot ping stats:** \n *Response time:* " + (Date.now() - newMsg.createdTimestamp) + 'ms \n*Heartbeat ping:* ' + Math.round(client.ping) + "ms \n*Most recent heartbeat pings:* " + client.pings)}
-}
-
->>>>>>> f44287ff42279570b8a50e31d58b2557b2fa74c2
