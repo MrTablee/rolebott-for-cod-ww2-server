@@ -9,7 +9,7 @@ exports.run = (client, message, args) => { try{
               } else {
               message.channel.send('Insuffiecient Args')
               }
-              }
+              
               
 } catch(err){message.channel.send(err)}}
             
