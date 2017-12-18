@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message, args) => { try{
     var wd = new Date(message.guild.createdTimestamp).toUTCString();
     if(!args){
       message.channel.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
@@ -11,5 +11,5 @@ exports.run = (client, message, args) => {
               }
               }
               
-}
+} catch(err){message.channel.send(err)}}
             
