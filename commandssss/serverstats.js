@@ -17,9 +17,10 @@ if(m.user.bot){botCount++}
     if(args[0] == 'Users') {
               message.author.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
       description: `Server Name: **${message.guild.name}**\nUser Number: **${message.guild.members.size}**\nUsers:`});
+        message.author.send('This May take a sec').then(
 client.guilds.get(message.guild.id).members.forEach(m => {
-message.author.send(m.user.tag)
-})
+message.edit(message.content + ", " + m.user.tag)
+}))
     }
               
               
