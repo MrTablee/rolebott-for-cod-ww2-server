@@ -36,8 +36,8 @@ alphaclient.on("message", message => {
   try {
     let commandFile = require(`./commands/${command}`);
     commandFile.run(alphaclient, message, args);
-  } catch (err) {
-    alphaclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
+  } catch (err.stack) {
+    alphaclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
 
@@ -77,9 +77,9 @@ bot.on("messageCreate", (msg) => {
           bot.createMessage(msg.channel.id, "You are not in a voice channel.");
           return;
       }
-      bot.joinVoiceChannel(msg.member.voiceState.channelID).catch((err) => {
-          bot.createMessage(msg.channel.id, "Error joining voice channel: " + err.message);
-          console.log(err);
+      bot.joinVoiceChannel(msg.member.voiceState.channelID).catch((err.stack) => {
+          bot.createMessage(msg.channel.id, "ERROR joining voice channel: " + err.stack);
+          console.log(err.stack);
       }).then((connection) => {
           });
   }
@@ -202,8 +202,8 @@ rolebotclient.on("messageDelete", (message) => {
   try{
   rolebotclient.channels.get(message.guild.channels.find('name', 'logs').id).sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
             description: `**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}\n**Message Channel:** ${message.channel.name}`});
-    } catch (err) {
-      rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err}\`\`\``);
+    } catch (err.stack) {
+      rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
     }
 });
 
@@ -212,19 +212,19 @@ rolebotclient.on("guildMemberAdd", (member) => {
   let guestRole = member.guild.roles.find("name", "Guest");
   const welcomeChannel = member.guild.channels.find("name", 'reception'); 
 try {  member.guild.channels.find("name", 'reception').send(`Welcome ${member.user} to ${guild.name}, use r!addrole to gain access to your platform's channels!`).then(() => (member.addRole(guestRole.id)))
-    } catch (err) {
-      rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err}\`\`\``);
+    } catch (err.stack) {
+      rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
     }
 });
 
-rolebotclient.on("guildMemberRemove", (member) => {
+rolebotclient.on("guildMemberr.stackemove", (member) => {
   let guild = member.guild;
   const welcomeChannel = member.guild.channels.find("name", 'reception'); 
 try {  member.guild.channels.find("name", 'reception').send(`There goes ${member.user}... Sorry to see ya go`)
      rolebotclient.channels.get(message.guild.channels.find('name', 'logs').id).sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
             description: `**${member.username} left the server!**`});
-    } catch (err) {
-      rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err}\`\`\``);
+    } catch (err.stack) {
+      rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
     }
 });
 
@@ -282,8 +282,8 @@ rolebotclient.on("message", message => {
   try {
     let commandFile = require(`./commandssss/${command}`);
     commandFile.run(rolebotclient, message, args);
-  } catch (err) {
-    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
+  } catch (err.stack) {
+    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
 
@@ -303,8 +303,8 @@ rolebotclient.on("messageUpdate", (oldMsg, newMsg) => {
   try {
     let commandFile = require(`./commandssss/${command}`);
     commandFile.run(rolebotclient, newMsg, args);
-  } catch (err) {
-    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err}\`\`\``);
+  } catch (err.stack) {
+    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
 
@@ -317,7 +317,7 @@ rolebotclient.login(process.env.ROLEBOTTOKEN);
 
 rolebotv2client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
-  let memberRole = member.guild.roles.find("name", "Members");
+  let memberr.stackole = member.guild.roles.find("name", "Members");
   let botRole = member.guild.roles.find("name", "Bot");  
   let guestRole = member.guild.roles.find("name", "Guest");  
   const defaultChannel = member.guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
@@ -349,8 +349,8 @@ rolebotv2client.on("message", message => {
   try {
     let commandFile = require(`./commandsssss/${command}`);
     commandFile.run(rolebotv2client, message, args);
-  } catch (err) {
-    rolebotv2client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
+  } catch (err.stack) {
+    rolebotv2client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
 
@@ -412,8 +412,8 @@ alleyclient.on("message", message => {
   try {
     let commandFile = require(`./commandsss/${command}`);
     commandFile.run(alleyclient, message, args);
-  } catch (err) {
-    alleyclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err}\`\`\``);
+  } catch (err.stack) {
+    alleyclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
   
   
