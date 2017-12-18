@@ -36,7 +36,7 @@ alphaclient.on("message", message => {
   try {
     let commandFile = require(`./commands/${command}`);
     commandFile.run(alphaclient, message, args);
-  } catch (err.stack) {
+ } catch (err) {
     alphaclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
@@ -202,7 +202,7 @@ rolebotclient.on("messageDelete", (message) => {
   try{
   rolebotclient.channels.get(message.guild.channels.find('name', 'logs').id).sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
             description: `**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}\n**Message Channel:** ${message.channel.name}`});
-    } catch (err.stack) {
+   } catch (err) {
       rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
     }
 });
@@ -212,7 +212,7 @@ rolebotclient.on("guildMemberAdd", (member) => {
   let guestRole = member.guild.roles.find("name", "Guest");
   const welcomeChannel = member.guild.channels.find("name", 'reception'); 
 try {  member.guild.channels.find("name", 'reception').send(`Welcome ${member.user} to ${guild.name}, use r!addrole to gain access to your platform's channels!`).then(() => (member.addRole(guestRole.id)))
-    } catch (err.stack) {
+   } catch (err) {
       rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
     }
 });
@@ -223,7 +223,7 @@ rolebotclient.on("guildMemberr.stackemove", (member) => {
 try {  member.guild.channels.find("name", 'reception').send(`There goes ${member.user}... Sorry to see ya go`)
      rolebotclient.channels.get(message.guild.channels.find('name', 'logs').id).sendEmbed({ color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
             description: `**${member.username} left the server!**`});
-    } catch (err.stack) {
+   } catch (err) {
       rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
     }
 });
@@ -282,7 +282,7 @@ rolebotclient.on("message", message => {
   try {
     let commandFile = require(`./commandssss/${command}`);
     commandFile.run(rolebotclient, message, args);
-  } catch (err.stack) {
+ } catch (err) {
     rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
@@ -303,7 +303,7 @@ rolebotclient.on("messageUpdate", (oldMsg, newMsg) => {
   try {
     let commandFile = require(`./commandssss/${command}`);
     commandFile.run(rolebotclient, newMsg, args);
-  } catch (err.stack) {
+  } catch (err) {
     rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
@@ -349,7 +349,7 @@ rolebotv2client.on("message", message => {
   try {
     let commandFile = require(`./commandsssss/${command}`);
     commandFile.run(rolebotv2client, message, args);
-  } catch (err.stack) {
+ } catch (err) {
     rolebotv2client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
@@ -412,7 +412,7 @@ alleyclient.on("message", message => {
   try {
     let commandFile = require(`./commandsss/${command}`);
     commandFile.run(alleyclient, message, args);
-  } catch (err.stack) {
+ } catch (err) {
     alleyclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
   
