@@ -12,8 +12,6 @@ if(m.user.bot){botCount++}
     if(args[0] == 'Usercount') {
               message.channel.sendEmbed({ color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
       description: `Server Name: ${message.guild.name}\nUser Number: ${message.guild.members.size}` });
-              } else {
-              message.channel.send('Insufficient Args')
               }
               
               
