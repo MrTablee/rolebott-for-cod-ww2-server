@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-    if (!args) {
+    if (!args[0]) {
         message.channel.send('**DMing you a list of commands!**')
         message.author.sendEmbed({
             color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
