@@ -317,7 +317,7 @@ rolebotclient.login(process.env.ROLEBOTTOKEN);
 
 rolebotv2client.on("guildMemberAdd", (member) => {
   let guild = member.guild;
-  let memberr.stackole = member.guild.roles.find("name", "Members");
+  let memberRole = member.guild.roles.find("name", "Members");
   let botRole = member.guild.roles.find("name", "Bot");  
   let guestRole = member.guild.roles.find("name", "Guest");  
   const defaultChannel = member.guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
