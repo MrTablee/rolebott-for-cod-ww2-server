@@ -36,7 +36,7 @@ exports.run = (client, message, args) => {
 
             message.channel.sendEmbed({
                 color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
-                description: `Server name: **${message.guild.name}**\nTotal amount of users in the server:**${message.guild.members.size}**\nOnline Users: **${onlineUserCount}**\nActual Users: **${(message.guild.members.size)-botCount}**\nBot Users: **${botCount}**\nServer Created on: **${wd}**\nRoles: **${message.guild.roles.size}**\nChannels: **${message.guild.channels.size}**\nOwner: **${message.guild.owner}**\nOwner ID: **${message.guild.ownerID}**\nServer ID: **${message.guild.id}**`
+                description: `Server name: **${message.guild.name}**\nTotal amount of users in the server:**${message.guild.members.size}**\nOnline Users: **${onlineUserCount}**\nIdle Users: **${idleUserCount}**\nDo Not Disturb Users: **${dndUserCount}**\nOffline Users: **${offlineUserCount}**\nActual Users: **${(message.guild.members.size)-botCount}**\nBot Users: **${botCount}**\nServer Created on: **${wd}**\nRoles: **${message.guild.roles.size}**\nChannels: **${message.guild.channels.size}**\nOwner: **${message.guild.owner}**\nOwner ID: **${message.guild.ownerID}**\nServer ID: **${message.guild.id}**`
             });
         }
         if (args[0] == 'Usercount') {
