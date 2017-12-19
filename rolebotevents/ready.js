@@ -1,7 +1,7 @@
-exports.run = (rolebotclient) => {
-  rolebotclient.user.setPresence({
+exports.run = (client) => {
+  client.user.setPresence({
     game: {
-      name: `r!help | In ${rolebotclient.guilds.size} servers!`,
+      name: `r!help | In ${client.guilds.size} servers!`,
       type: 0
     }
   })
