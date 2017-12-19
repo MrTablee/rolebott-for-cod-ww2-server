@@ -199,40 +199,6 @@ echoCommand.registerSubcommandAlias('backwards', 'reverse');
 
 bot.connect();
 
-rolebotclient.on('messageDelete', (message) => {
-  try {
-    rolebotclient.channels.get(message.guild.channels.find('name', 'logs').id).sendEmbed({
-      color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
-      description: `**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}\n**Message Channel:** ${message.channel.name}`
-    });
-  } catch (err) {
-    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
-  }
-});
-
-rolebotclient.on('guildMemberr.stackemove', (member) => {
-  let guild = member.guild;
-  const welcomeChannel = member.guild.channels.find('name', 'reception');
-  try {
-    member.guild.channels.find('name', 'reception').send(`There goes ${member.user}... Sorry to see ya go`)
-    rolebotclient.channels.get(message.guild.channels.find('name', 'logs').id).sendEmbed({
-      color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
-      description: `**${member.username} left the server!**`
-    });
-  } catch (err) {
-    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`\`\`${err.stack}\`\`\``);
-  }
-});
-
-rolebotclient.on('disconnect', () => {
-  rolebotclient.user.setPresence({
-    game: {
-      name: 'Uh oh I\'m dying...',
-      type: 0
-    }
-  })
-  console.log(`RoleBot is disconnected from the Discord WebSocket`)
-});
 
 fs.readdir("./rolebotevents/", (err, files) => {
   if (err) return console.error(err);
