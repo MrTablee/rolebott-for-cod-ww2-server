@@ -245,6 +245,15 @@ rolebotclient.on('disconnect', () => {
   console.log(`RoleBot is disconnected from the Discord WebSocket`)
 });
 
+fs.readdir("./rolebotevents/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+    let eventFunction = require(`./events/${file}`);
+    let eventName = file.split(".")[0];
+    rolebotclient.on(eventName, (...args) => eventFunction.run(client, ...args));
+  });
+});
+
 rolebotclient.on('message', message => {
   if (message.author.bot) return;
   if (message.channel.type == 'dm') {
