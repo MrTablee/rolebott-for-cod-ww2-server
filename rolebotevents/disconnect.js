@@ -1,5 +1,5 @@
-exports.run = (rolebotclient) => {
-rolebotclient.user.setPresence({
+exports.run = (client) => {
+client.user.setPresence({
     game: {
       name: 'Uh oh I\'m dying...',
       type: 0
