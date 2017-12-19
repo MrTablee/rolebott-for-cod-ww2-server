@@ -235,19 +235,6 @@ rolebotclient.on('guildMemberr.stackemove', (member) => {
   }
 });
 
-rolebotclient.on('ready', (member) => {
-  rolebotclient.user.setPresence({
-    game: {
-      name: `r!help | In ${rolebotclient.guilds.size} servers`,
-      type: 0
-    }
-  })
-  console.log(`RoleBot is connected to the Discord WebSocket`)
-  clbot.configure({
-    botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
-  });
-});
-
 rolebotclient.on('disconnect', () => {
   rolebotclient.user.setPresence({
     game: {
@@ -261,6 +248,9 @@ rolebotclient.on('disconnect', () => {
 rolebotclient.on('message', message => {
   if (message.author.bot) return;
   if (message.channel.type == 'dm') {
+      clbot.configure({
+    botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
+  });
     Cleverbot.prepare(() => {
       clbot.write(message.content, (response) => {
         message.channel.startTyping();
