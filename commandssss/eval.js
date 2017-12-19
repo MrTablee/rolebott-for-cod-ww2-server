@@ -1,10 +1,10 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
   try {
     if (message.author.id !== '233366720062947330') return;
-    let command = message.content.replace("r!eval ", "");
-    let output = eval(command);
-    message.channel.send("\n```\n" + output + "\n```");
+    const command = message.content.replace('r!eval ', '');
+    const output = eval(command);
+    message.channel.send('\n```\n' + output + '\n```');
   } catch (err) {
-    message.channel.send("`Uh oh... " + err + "` came up... Check your code and try again!")
+    message.channel.send('`Uh oh... ' + err + '` came up... Check your code and try again!');
   }
-}
+};

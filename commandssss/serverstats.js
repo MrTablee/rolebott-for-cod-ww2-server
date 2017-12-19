@@ -1,38 +1,37 @@
 exports.run = (client, message, args) => {
     try {
-
-        var wd = new Date(message.guild.createdTimestamp).toUTCString();
+        const wd = new Date(message.guild.createdTimestamp).toUTCString();
         if (!args[0]) {
-            let botCount = 0
+            let botCount = 0;
             client.guilds.get(message.guild.id).members.forEach(m => {
                 if (m.user.bot) {
-                    botCount++
+                    botCount++;
                 }
-            })
-            let offlineUserCount = 0
+            });
+            let offlineUserCount = 0;
             client.guilds.get(message.guild.id).members.forEach(m => {
                 if (m.user.presence.status === 'offline') {
-                    offlineUserCount++
+                    offlineUserCount++;
                 }
-            })
-            let dndUserCount = 0
+            });
+            let dndUserCount = 0;
             client.guilds.get(message.guild.id).members.forEach(m => {
                 if (m.user.presence.status === 'dnd') {
-                    dndUserCount++
+                    dndUserCount++;
                 }
-            })
-            let idleUserCount = 0
+            });
+            let idleUserCount = 0;
             client.guilds.get(message.guild.id).members.forEach(m => {
                 if (m.user.presence.status === 'idle') {
-                    idleUserCount++
+                    idleUserCount++;
                 }
-            })
-            let onlineUserCount = 0
+            });
+            let onlineUserCount = 0;
             client.guilds.get(message.guild.id).members.forEach(m => {
                 if (m.user.presence.status === 'online') {
-                    onlineUserCount++
+                    onlineUserCount++;
                 }
-            })
+            });
 
             message.channel.sendEmbed({
                 color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
@@ -52,12 +51,12 @@ exports.run = (client, message, args) => {
             });
             message.author.send('This May take a sec').then(
                 client.guilds.get(message.guild.id).members.forEach(m => {
-                    message.edit(message.content + ", " + m.user.tag)
-                }))
+                    message.edit(message.content + ', ' + m.user.tag);
+                }));
         }
 
 
     } catch (err) {
-        message.channel.send(err)
+        message.channel.send(err);
     }
-}
+};

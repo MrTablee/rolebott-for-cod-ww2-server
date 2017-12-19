@@ -1,30 +1,30 @@
-const ud = require('urban-dictionary')
-exports.run = (client, message, args) => {
+const ud = require('urban-dictionary');
+exports.run = (client, message) => {
 
-  if (message.content === "r!urban") {
-    ud.random(function (error, entry) {
+  if (message.content === 'r!urban') {
+    ud.random(function(error, entry) {
       if (error) {
-        message.channel.send(error.message)
+        message.channel.send(error.message);
       } else {
         message.channel.sendEmbed({
           color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
-          description: ("**Word:**\n" + entry.word + "\n**Definition:**\n" + entry.definition + "\n**Example:**\n" + entry.example)
-        })
+          description: ('**Word:**\n' + entry.word + '\n**Definition:**\n' + entry.definition + '\n**Example:**\n' + entry.example)
+        });
       }
-    })
-  } else if (message.content.startsWith("r!urban ")) {
-    var definition = message.content.replace("r!urban ", "")
+    });
+  } else if (message.content.startsWith('r!urban ')) {
+    const definition = message.content.replace('r!urban ', '');
 
-    ud.term(definition, function (error, entries, tags, sounds) {
+    ud.term(definition, function(error, entries) {
       if (error) {
-        message.channel.send(error.message)
+        message.channel.send(error.message);
       } else {
         message.channel.sendEmbed({
           color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
-          description: ("**Word:**\n" + entries[0].word + "\n**Definition:**\n" + entries[0].definition + "\n**Example:**\n" + entries[0].example)
-        })
+          description: ('**Word:**\n' + entries[0].word + '\n**Definition:**\n' + entries[0].definition + '\n**Example:**\n' + entries[0].example)
+        });
       }
-    })
+    });
   }
 
 };
