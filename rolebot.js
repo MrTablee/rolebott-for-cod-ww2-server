@@ -250,7 +250,7 @@ fs.readdir("./rolebotevents/", (err, files) => {
   files.forEach(file => {
     let eventFunction = require(`./rolebotevents/${file}`);
     let eventName = file.split(".")[0];
-    rolebotclient.on(eventName, (...args) => eventFunction.run(client, ...args));
+    rolebotclient.on(eventName, (...args) => eventFunction.run(rolebotclient, ...args));
   });
 });
 
