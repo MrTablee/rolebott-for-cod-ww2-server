@@ -1,4 +1,4 @@
-exports.run = (member) => {
+exports.run = (client, member) => {
 let guild = member.guild;
   let guestRole = guild.roles.find('name', 'Guest');
   const welcomeChannel = member.guild.channels.find('name', 'reception');
