@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
 
     for (var i = 0; i < res.links.length; ++i) {
       var link = res.links[i];
-      message.channel.send("Results for: " + ggle + " " + link.href)
+      message.channel.send("Results for: \n**" + ggle + "**\n\n" + link.href)
     }
 
     if (nextCounter < 0) {
