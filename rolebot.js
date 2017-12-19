@@ -222,6 +222,26 @@ rolebotclient.on('message', message => {
       });
     });
   }
+  let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
+  if (!points[message.author.id]) points[message.author.id] = {
+    points: 0,
+    level: 0
+  };
+  let userData = points[message.author.id];
+  userData.points++;
+
+  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
+  if (curLevel > userData.level) {
+    userData.level = curLevel;
+    message.reply(`You"ve leveled up to level **${curLevel}**! Ain't that dandy?`);
+  }
+
+  if (message.content.startsWith(prefix + "level")) {
+    message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
+  }
+  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
+    if (err) console.error(err)
+  });
   if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
     let muteRole = (message.guild.roles.find('name', 'Muted'));
     message.delete()
