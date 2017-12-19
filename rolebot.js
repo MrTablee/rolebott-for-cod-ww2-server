@@ -13,15 +13,12 @@ discord.hookId = '385323385254707200';
 discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBnSF1tiDnhZ';
 const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
-const rolebotv2client = new Discord.Client();
 const rolebotclient = new Discord.Client();
 var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
   owner: 'Mr.Table#1352​',
   prefix: ',,'
 });
-
-const rolebotv2prefix = 'RoleBot ';
 const alphaprefix = 'A!';
 const alleyprefix = '..';
 
