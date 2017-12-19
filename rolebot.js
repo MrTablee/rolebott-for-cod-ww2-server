@@ -21,7 +21,7 @@ var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
 });
 const alphaprefix = 'A!';
 const alleyprefix = '..';
-
+const prefix = 'r!';
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
@@ -222,7 +222,7 @@ rolebotclient.on('message', message => {
       });
     });
   }
-  let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
+  let points = JSON.parse(fs.readFileSync("./commandssss/points.json", "utf8"));
   if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
     level: 0
@@ -239,7 +239,7 @@ rolebotclient.on('message', message => {
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
   }
-  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
+  fs.writeFile("./commandssss/points.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   });
   if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
