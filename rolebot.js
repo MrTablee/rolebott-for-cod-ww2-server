@@ -269,49 +269,6 @@ rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
 
 rolebotclient.login(process.env.ROLEBOTTOKEN);
 
-
-
-
-
-
-rolebotv2client.on('guildMemberAdd', (member) => {
-  let guild = member.guild;
-  let memberRole = member.guild.roles.find('name', 'Members');
-  let botRole = member.guild.roles.find('name', 'Bot');
-  let guestRole = member.guild.roles.find('name', 'Guest');
-  const defaultChannel = member.guild.channels.find(c => c.permissionsFor(guild.me).has('SEND_MESSAGES'));
-  if ((!member.bot)) {
-    defaultChannel.send(`Welcome ${member.user} to ${guild.name}`).then(member.addRole(guestRole.id)).catch(console.error);
-  }
-});
-
-rolebotv2client.on('ready', (member) => {
-  rolebotv2client.user.setPresence({
-    game: {
-      name: `RoleBot help | In ${rolebotv2client.guilds.size} servers`,
-      type: 0
-    }
-  })
-  console.log(`RoleBot is connected to the Discord WebSocket`)
-});
-
-rolebotv2client.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content.indexOf('RoleBot ') !== 0) return;
-
-  const args = message.content.slice('RoleBot '.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-
-  try {
-    let commandFile = require(`./commandsssss/${command}`);
-    commandFile.run(rolebotv2client, message, args);
-  } catch (err) {
-    rolebotv2client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
-  }
-});
-
-rolebotv2client.login(process.env.ROLEBOTV2TOKEN);
-
 alleyclient.on('message', message => {
   if (message.author.bot) return;
   if (message.content.indexOf('..') !== 0) return;
