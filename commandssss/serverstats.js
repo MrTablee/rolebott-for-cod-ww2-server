@@ -9,10 +9,34 @@ exports.run = (client, message, args) => {
                     botCount++
                 }
             })
+            let offlineUserCount = 0
+            client.guilds.get(message.guild.id).members.forEach(m => {
+                if (m.user.presence.status === 'offline') {
+                    offlineUserCount++
+                }
+            })
+            let dndUserCount = 0
+            client.guilds.get(message.guild.id).members.forEach(m => {
+                if (m.user.presence.status === 'dnd') {
+                    dndUserCount++
+                }
+            })
+            let idleUserCount = 0
+            client.guilds.get(message.guild.id).members.forEach(m => {
+                if (m.user.presence.status === 'idle') {
+                    idleUserCount++
+                }
+            })
+            let onlineUserCount = 0
+            client.guilds.get(message.guild.id).members.forEach(m => {
+                if (m.user.presence.status === 'online') {
+                    onlineUserCount++
+                }
+            })
 
             message.channel.sendEmbed({
                 color: (Math.floor(Math.random() * (10000000 - 1 + 1))) + 1,
-                description: `Server name: **${message.guild.name}**\nTotal amount of users in the server:**${message.guild.members.size}**\nActual Users: **${(message.guild.members.size)-botCount}**\nBot Users: **${botCount}**\nServer Created on: **${wd}**\nRoles: **${message.guild.roles.size}**\nChannels: **${message.guild.channels.size}**\nOwner: **${message.guild.owner}**\nOwner ID: **${message.guild.ownerID}**\nServer ID: **${message.guild.id}**`
+                description: `Server name: **${message.guild.name}**\nTotal amount of users in the server:**${message.guild.members.size}**\nOnline Users: **${onlineUserCount}**\nActual Users: **${(message.guild.members.size)-botCount}**\nBot Users: **${botCount}**\nServer Created on: **${wd}**\nRoles: **${message.guild.roles.size}**\nChannels: **${message.guild.channels.size}**\nOwner: **${message.guild.owner}**\nOwner ID: **${message.guild.ownerID}**\nServer ID: **${message.guild.id}**`
             });
         }
         if (args[0] == 'Usercount') {
