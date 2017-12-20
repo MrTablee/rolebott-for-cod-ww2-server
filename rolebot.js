@@ -233,10 +233,10 @@ rolebotclient.on('message', message => {
   let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
   if (curLevel > userData.level) {
     userData.level = curLevel;
-    message.reply(`You"ve leveled up to level **${curLevel}**! Ain't that dandy?`);
+    message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
   }
   if (message.content.startsWith(prefix + "test")) {
-userData.points + 1000
+let userData.points = 1000
   }
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
