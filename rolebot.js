@@ -235,7 +235,9 @@ rolebotclient.on('message', message => {
     userData.level = curLevel;
     message.reply(`You"ve leveled up to level **${curLevel}**! Ain't that dandy?`);
   }
-
+  if (message.content.startsWith(prefix + "test")) {
+userData.points + 1000
+  }
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
   }
