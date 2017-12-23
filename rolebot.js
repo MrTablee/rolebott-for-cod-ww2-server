@@ -27,6 +27,7 @@ const database = new pg.Client({
 	connectionString: process.env.DATABASE_URL,
 	ssl: true
 });
+database.connect();
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
