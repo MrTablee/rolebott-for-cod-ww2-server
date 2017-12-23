@@ -237,11 +237,13 @@ rolebotclient.on('message', message => {
     database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0];
+		console.log('Before checking: '+points);
         if (!points) points = {
             points: 0,
             level: 0
         };
         else points = JSON.parse(res.rows[0].points);
+		console.log('After checking: '+points);
         points.points++;
 
         let curLevel = Math.floor(0.1 * Math.sqrt(points.points));
