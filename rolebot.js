@@ -213,7 +213,7 @@ fs.readdir("./rolebotevents/", (err, files) => {
 });
 
 rolebotclient.on('ready', () => {
-	database.query('CREATE TABLE IF NOT EXISTS user(id VARCHAR(18) UNIQUE, points TEXT)', (err, res) => {
+	database.query('CREATE TABLE IF NOT EXISTS user(userId VARCHAR(18) UNIQUE, points TEXT)', (err, res) => {
 		if (err) throw err;
 	});
 });
@@ -234,7 +234,7 @@ rolebotclient.on('message', message => {
             });
         });
     }
-    database.query('SELECT points FROM user WHERE id = $1', [message.author.id], (err, res) => {
+    database.query('SELECT points FROM user WHERE userId = $1', [message.author.id], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0].points;
         if (!points) points = {
@@ -259,7 +259,7 @@ rolebotclient.on('message', message => {
         if (message.content.startsWith(prefix + "level")) {
             message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
         }
-        database.query('UPDATE user SET points = $1 WHERE id = $2', [JSON.stringify(userData), message.author.id], (err, res) => {
+        database.query('UPDATE user SET points = $1 WHERE userId = $2', [JSON.stringify(userData), message.author.id], (err, res) => {
             if (err) {console.log(err); return}
         });
         if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
