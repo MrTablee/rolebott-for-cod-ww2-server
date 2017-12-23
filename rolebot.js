@@ -214,26 +214,7 @@ fs.readdir("./rolebotevents/", (err, files) => {
 });
 
 rolebotclient.on('message', message => {
-	try{
     if (message.author.bot) return;
-	        if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
-            let muteRole = (message.guild.roles.find('name', 'Muted'));
-            message.delete()
-            message.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${message.author.tag}`)
-            message.guild.member(message.author.id).addRole(muteRole.id)
-            message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)
-        }
-        if (message.content.indexOf('r!') !== 0) return;
-
-        const args = message.content.slice('r!'.length).trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
-
-        try {
-            let commandFile = require(`./commandssss/${command}`);
-            commandFile.run(rolebotclient, message, args);
-        } catch (err) {
-            rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
-        }} catch(err) {console.log(err)}
     if (message.channel.type == 'dm') {
         clbot.configure({
             botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
@@ -249,7 +230,7 @@ rolebotclient.on('message', message => {
         });
     }
     database.query('SELECT points FROM user WHERE id = $1', [message.author.id], (err, res) => {
-        if (err) throw err;
+        if (err) {console.log(err); return}
         let points = res.rows[0].points;
         if (!points) points = {
             points: 0,
@@ -274,8 +255,26 @@ rolebotclient.on('message', message => {
             message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
         }
         database.query('UPDATE user SET points = $1 WHERE id = $2', [JSON.stringify(userData), message.author.id], (err, res) => {
-            if (err) throw err;
+            if (err) {console.log(err); return}
         });
+        if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
+            let muteRole = (message.guild.roles.find('name', 'Muted'));
+            message.delete()
+            message.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${message.author.tag}`)
+            message.guild.member(message.author.id).addRole(muteRole.id)
+            message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)
+        }
+        if (message.content.indexOf('r!') !== 0) return;
+
+        const args = message.content.slice('r!'.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+
+        try {
+            let commandFile = require(`./commandssss/${command}`);
+            commandFile.run(rolebotclient, message, args);
+        } catch (err) {
+            rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+        }
     });
 });
 
@@ -310,7 +309,7 @@ alleyclient.on('message', message => {
 
 
   database.query('SELECT * FROM scores WHERE userId = $1', [message.author.id], (err, res) => {
-	  if (err) throw err;
+	  if (err) {console.log(err); return}
 	  if (!res.rows[0]) {
       database.query('INSERT INTO scores (userId, points, level) VALUES ($1, $2, $3)', [message.author.id, 1, 0]);
     } else {
@@ -319,7 +318,7 @@ alleyclient.on('message', message => {
       if (curLevel > row.level) {
         row.level = curLevel;
         database.query('UPDATE scores SET points = $1, level = $2 WHERE userId = $3', [row.points, row.level, row.userid], (err) => {
-			if (err) throw err;
+			if (err) console.log(err);
 			message.channel.send(`Ayeeee, you've leveled up to level **${curLevel}**! Ain't that dandy ${message.author.username}?`);
 		});
       }
@@ -334,12 +333,12 @@ alleyclient.on('message', message => {
       message.channel.send(`Your current level is ${res.rows[0].level}`);
     });
   } else if (message.content.startsWith(alleyprefix + 'givepoints')) {
-    database.query('SELECT * FROM scores WHERE userId = $1', [message.mentions.users.first().id], (err, res) => {
+    database.query('SELECT * FROM scores WHERE userId = $1', [message.mentions.users.first().id], (err. res) => {
       if (!res.rows[0]) {
         database.query('INSERT INTO scores (userId, points, level) VALUES ($1, $2, $3)', [message.author.id, 1, 0]);
       } else {
         database.query('UPDATE scores SET points = $1 WHERE userId = $2', [res.rows[0].points+50, message.mentions.users.first().id], (err) => {
-			if (err) throw err;
+			if (err) {console.log(err); return}
 			message.channel.send(`Gave ${message.mentions.users.first().username} 50 points`)
 		});
       }
