@@ -27,8 +27,6 @@ const database = new pg.Client({
 	connectionString: process.env.DATABASE_URL,
 	ssl: true
 });
-database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)');
-database.query('CREATE TABLE IF NOT EXISTS user(id VARCHAR(18) UNIQUE, points TEXT)');
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
@@ -213,6 +211,10 @@ fs.readdir("./rolebotevents/", (err, files) => {
   });
 });
 
+rolebotclient.on('ready', () => {
+	database.query('CREATE TABLE IF NOT EXISTS user(id VARCHAR(18) UNIQUE, points TEXT)');
+});
+
 rolebotclient.on('message', message => {
     if (message.author.bot) return;
     if (message.channel.type == 'dm') {
@@ -301,6 +303,10 @@ rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
 });
 
 rolebotclient.login(process.env.ROLEBOTTOKEN);
+
+alleyclient.on('ready', () => {
+	database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)');
+});
 
 alleyclient.on('message', message => {
   if (message.author.bot) return;
