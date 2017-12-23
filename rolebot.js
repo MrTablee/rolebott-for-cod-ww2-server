@@ -212,7 +212,9 @@ fs.readdir("./rolebotevents/", (err, files) => {
 });
 
 rolebotclient.on('ready', () => {
-	database.query('CREATE TABLE IF NOT EXISTS user(id VARCHAR(18) UNIQUE, points TEXT)');
+	database.query('CREATE TABLE IF NOT EXISTS user(id VARCHAR(18) UNIQUE, points TEXT)', (err, res) => {
+		if (err) throw err;
+	});
 });
 
 rolebotclient.on('message', message => {
@@ -305,7 +307,9 @@ rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
 rolebotclient.login(process.env.ROLEBOTTOKEN);
 
 alleyclient.on('ready', () => {
-	database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)');
+	database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)', (err, res) => {
+		if (err) throw err;
+	});
 });
 
 alleyclient.on('message', message => {
