@@ -236,7 +236,7 @@ rolebotclient.on('message', message => {
     }
     database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
         if (err) {console.log(err); return}
-        let points = res.rows[0].points;
+        let points = res.rows[0];
         if (!points) points = {
             points: 0,
             level: 0
