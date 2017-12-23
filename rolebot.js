@@ -7,6 +7,7 @@ const music = require('discord.js-music-v11');
 sql.open('./score.sqlite');
 const Cleverbot = require('cleverbot-node');
 const clbot = new Cleverbot;
+const pg = require('pg');
 
 
 discord.hookId = '385323385254707200';
@@ -22,6 +23,12 @@ var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
 const alphaprefix = 'A!';
 const alleyprefix = '..';
 const prefix = 'r!';
+const database = new pg.Client({
+	connectionString: process.env.DATABASE_URL,
+	ssl: true
+});
+database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, BIGINT points DEFAULT 0, BIGINT level DEFAULT 1)');
+database.query('CREATE TABLE IF NOT EXISTS user(id VARCHAR(18) UNIQUE, points TEXT)');
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
@@ -207,64 +214,68 @@ fs.readdir("./rolebotevents/", (err, files) => {
 });
 
 rolebotclient.on('message', message => {
-  if (message.author.bot) return;
-  if (message.channel.type == 'dm') {
-      clbot.configure({
-    botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
-  });
-    Cleverbot.prepare(() => {
-      clbot.write(message.content, (response) => {
-        message.channel.startTyping();
-        setTimeout(() => {
-          message.channel.sendMessage(response.message).catch(console.error);
-          message.channel.stopTyping();
-        }, Math.random() * (1 - 3) + 1 * 1000);
-      });
+    if (message.author.bot) return;
+    if (message.channel.type == 'dm') {
+        clbot.configure({
+            botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
+        });
+        Cleverbot.prepare(() => {
+            clbot.write(message.content, (response) => {
+                message.channel.startTyping();
+                setTimeout(() => {
+                    message.channel.sendMessage(response.message).catch(console.error);
+                    message.channel.stopTyping();
+                }, Math.random() * (1 - 3) + 1 * 1000);
+            });
+        });
+    }
+    database.query('SELECT points FROM user WHERE id = $1', [message.author.id], (err, res) => {
+        if (err) throw err;
+        let points = res.rows[0].points;
+        if (!points) points = {
+            points: 0,
+            level: 0
+        };
+        else points = JSON.parse(res.rows[0].points);
+        let userData = points;
+        userData.points++;
+
+        let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
+        if (curLevel > userData.level) {
+            userData.level = curLevel;
+            message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
+        }
+        if (message.content.startsWith(prefix + "test")) {
+            for (i = 0; i < 666; i++) {
+                userData.points++;
+                userData.level++;
+            }
+        }
+        if (message.content.startsWith(prefix + "level")) {
+            message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
+        }
+        database.query('UPDATE user SET points = $1 WHERE id = $2', [JSON.stringify(userData), message.author.id], (err, res) => {
+            if (err) throw err;
+        });
+        if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
+            let muteRole = (message.guild.roles.find('name', 'Muted'));
+            message.delete()
+            message.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${message.author.tag}`)
+            message.guild.member(message.author.id).addRole(muteRole.id)
+            message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)
+        }
+        if (message.content.indexOf('r!') !== 0) return;
+
+        const args = message.content.slice('r!'.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+
+        try {
+            let commandFile = require(`./commandssss/${command}`);
+            commandFile.run(rolebotclient, message, args);
+        } catch (err) {
+            rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+        }
     });
-  }
-  let points = JSON.parse(fs.readFileSync("./commandssss/points.json", "utf8"));
-  if (!points[message.author.id]) points[message.author.id] = {
-    points: 0,
-    level: 0
-  };
-  let userData = points[message.author.id];
-  userData.points++;
-
-  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-  if (curLevel > userData.level) {
-    userData.level = curLevel;
-    message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
-  }
-  if (message.content.startsWith(prefix + "test")) {
-for(i=0;i<666;i++){
-  userData.points++;
-  userData.level++;
-}
-  }
-  if (message.content.startsWith(prefix + "level")) {
-    message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
-  }
-  fs.writeFile("./commandssss/points.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
-  });
-  if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
-    let muteRole = (message.guild.roles.find('name', 'Muted'));
-    message.delete()
-    message.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${message.author.tag}`)
-    message.guild.member(message.author.id).addRole(muteRole.id)
-    message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)
-  }
-  if (message.content.indexOf('r!') !== 0) return;
-
-  const args = message.content.slice('r!'.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-
-  try {
-    let commandFile = require(`./commandssss/${command}`);
-    commandFile.run(rolebotclient, message, args);
-  } catch (err) {
-    rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
-  }
 });
 
 rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
@@ -297,48 +308,47 @@ alleyclient.on('message', message => {
 
 
 
-  sql.get(`SELECT * FROM scores WHERE userId ='${message.author.id}'`).then(row => {
-    if (!row) {
-      sql.run('INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)', [message.author.id, 1, 0]);
+  database.query('SELECT * FROM scores WHERE userId = $1', [message.author.id], (err, res) => {
+	  if (err) throw err;
+	  if (!res.rows[0]) {
+      database.query('INSERT INTO scores (userId, points, level) VALUES ($1, $2, $3)', [message.author.id, 1, 0]);
     } else {
+		let row = res.rows[0];
       let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
       if (curLevel > row.level) {
         row.level = curLevel;
-        sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
-        message.channel.send(`Ayeeee, you've leveled up to level **${curLevel}**! Ain't that dandy ${message.author.username}?`);
+        database.query('UPDATE scores SET points = $1, level = $2 WHERE userId = $3', [row.points, row.level, row.userid], (err) => {
+			if (err) throw err;
+			message.channel.send(`Ayeeee, you've leveled up to level **${curLevel}**! Ain't that dandy ${message.author.username}?`);
+		});
       }
-      sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
+      database.query('UPDATE scores SET points = $1 WHERE userId = $2', [row.points, row.userid]);
     }
-  }).catch(() => {
-    console.error;
-    sql.run('CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)').then(() => {
-      sql.run('INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)', [message.author.id, 1, 0]);
-    });
-  });
-
-  if (!message.content.startsWith(alleyprefix)) return;
+	
+	if (!message.content.startsWith(alleyprefix)) return;
 
   if (message.content.startsWith(alleyprefix + 'level')) {
-    sql.get(`SELECT * FROM scores WHERE userId ='${message.author.id}'`).then(row => {
-      if (!row) return message.channel.send('Welp... your current level is 0');
-      message.channel.send(`Your current level is ${row.level}`);
+    database.query('SELECT * FROM scores WHERE userId = $1', [message.author.id], (err, res) => {
+      if (!res.rows[0]) return message.channel.send('Welp... your current level is 0');
+      message.channel.send(`Your current level is ${res.rows[0].level}`);
     });
   } else if (message.content.startsWith(alleyprefix + 'givepoints')) {
-    sql.open('./score.sqlite');
-    sql.get(`SELECT * FROM scores WHERE userId ='${message.mentions.users.first().id}'`).then(row => {
-      if (!row) {
-        sql.run('INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)', [message.author.id, 1, 0]);
+    database.query('SELECT * FROM scores WHERE userId = $1', [message.mentions.users.first().id], (err. res) => {
+      if (!res.rows[0]) {
+        database.query('INSERT INTO scores (userId, points, level) VALUES ($1, $2, $3)', [message.author.id, 1, 0]);
       } else {
-        sql.run(`UPDATE scores SET points = ${row.points + 50} WHERE userId = ${message.mentions.users.first().id}`);
-        message.channel.send(`Gave ${message.mentions.users.first().username} 50 points`)
+        database.query('UPDATE scores SET points = $1 WHERE userId = $2', [res.rows[0].points+50, message.mentions.users.first().id], (err) => {
+			if (err) throw err;
+			message.channel.send(`Gave ${message.mentions.users.first().username} 50 points`)
+		});
       }
     })
   }
 
   if (message.content.startsWith(alleyprefix + 'points')) {
-    sql.get(`SELECT * FROM scores WHERE userId ='${message.author.id}'`).then(row => {
-      if (!row) return message.channel.send('Sadly you do not have any points yet... Talk more');
-      message.channel.send(`${message.author.username} you currently have ${row.points} points, good going!`);
+    database.query('SELECT * FROM scores WHERE userId = $1', [message.author.id], (err, res) => {
+      if (!res.rows[0]) return message.channel.send('Sadly you do not have any points yet... Talk more');
+      message.channel.send(`${message.author.username} you currently have ${res.rows[0].points} points, good going!`);
 
     });
   }
@@ -352,8 +362,6 @@ alleyclient.on('message', message => {
   } catch (err) {
     alleyclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
-
-
-
+  });
 });
 alleyclient.login(process.env.ALLEYTOKEN);
