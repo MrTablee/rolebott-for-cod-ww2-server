@@ -9,12 +9,12 @@ exports.run = (client, message) => {
       .then(messages => {
         const msg_array = messages.array();
         msg_array.length = messagecount + 1;
-        msg_array.map(m => m.deconste().catch(console.error));
+        msg_array.map(m => m.delete().catch(console.error));
       }).then(client.channels.get(message.guild.channels.find('name', 'logs').id).sendEmbed({
         color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
-        description: `**Moderator:** ${message.author.tag}\n**Action used:** Prune\n**Messages deconsted:** ${messagecount}`
+        description: `**Moderator:** ${message.author.tag}\n**Action used:** Prune\n**Messages deleted:** ${messagecount}`
       }));
   } else {
-    message.channel.send('This is above your pay grade. You need to be able to `DEconstE_MESSAGES` to use this.');
+    message.channel.send('This is above your pay grade. You need to be able to `DELETE_MESSAGES` to use this.');
   }
 };
