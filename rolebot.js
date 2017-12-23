@@ -27,8 +27,7 @@ const database = new pg.Client({
 	connectionString: process.env.DATABASE_URL,
 	ssl: true
 });
-database.connect();
-database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, BIGINT points DEFAULT 0, BIGINT level DEFAULT 1)');
+database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)');
 database.query('CREATE TABLE IF NOT EXISTS user(id VARCHAR(18) UNIQUE, points TEXT)');
 
 alphaclient.on('message', message => {
