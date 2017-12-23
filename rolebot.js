@@ -333,7 +333,7 @@ alleyclient.on('message', message => {
       message.channel.send(`Your current level is ${res.rows[0].level}`);
     });
   } else if (message.content.startsWith(alleyprefix + 'givepoints')) {
-    database.query('SELECT * FROM scores WHERE userId = $1', [message.mentions.users.first().id], (err. res) => {
+    database.query('SELECT * FROM scores WHERE userId = $1', [message.mentions.users.first().id], (err, res) => {
       if (!res.rows[0]) {
         database.query('INSERT INTO scores (userId, points, level) VALUES ($1, $2, $3)', [message.author.id, 1, 0]);
       } else {
