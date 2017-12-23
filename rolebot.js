@@ -242,24 +242,23 @@ rolebotclient.on('message', message => {
             level: 0
         };
         else points = JSON.parse(res.rows[0].points);
-        let userData = points;
-        userData.points++;
+        points.points++;
 
-        let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-        if (curLevel > userData.level) {
-            userData.level = curLevel;
+        let curLevel = Math.floor(0.1 * Math.sqrt(points.points));
+        if (curLevel > points.level) {
+            points.level = curLevel;
             message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
         }
         if (message.content.startsWith(prefix + "test")) {
             for (i = 0; i < 666; i++) {
-                userData.points++;
-                userData.level++;
+                points.points++;
+                points.level++;
             }
         }
         if (message.content.startsWith(prefix + "level")) {
-            message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
+            message.reply(`You are currently level ${points.level}, with ${points.points} points.`);
         }
-        database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(userData), message.author.id], (err, res) => {
+        database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
             if (err) {console.log(err); return}
         });
         if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
