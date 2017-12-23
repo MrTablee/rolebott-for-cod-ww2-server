@@ -6,7 +6,7 @@ exports.run = (client, message) => {
   const xboxRole = (guild.roles.find('name', 'Xbox'));
   const saidRole = (guild.roles.find('name', (message.content.replace("r!addrole ", ""))));
 if(message.guild.id === '377259194211893248') {
-  message.channel.sendMessage('What role did ya want?  (This is case sensitive, so const me know `Xbox, PS4, or PC` And I\'ll give you that role)')
+  message.channel.sendMessage('What role did ya want?  (This is case sensitive, so let me know `Xbox, PS4, or PC` And I\'ll give you that role)')
     .then(() => {
       message.channel.awaitMessages(response => ['Xbox', 'PC', 'PS4'].includes(response.content), {
           max: 1,
