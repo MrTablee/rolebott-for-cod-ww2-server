@@ -271,7 +271,7 @@ rolebotclient.on('message', message => {
         if (message.content.indexOf('r!') !== 0) return;
 
         const args = message.content.slice('r!'.length).trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
+        const command = (!message.content.startsWith('r!level'))?args.shift().toLowerCase():[database];
 
         try {
             let commandFile = require(`./commandssss/${command}`);
