@@ -253,16 +253,9 @@ rolebotclient.on('message', message => {
             points.level = curLevel;
             message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
         }
-        if(message.conent.startsWith('r!test')) {
-          database.query('SELECT * FROM points WHERE userId = $1', [message.author.id], (err, res) => {
-            if(err) {message.channel.send(err)}
-            if (!res.rows[0]) return message.channel.send('Welp... your current level is 0');
-            message.channel.send(`Your current level is ${res.rows[0].level}`);
-          });
-};
 	   
 		
-        if (message.content.startsWith(prefix + "level")) {
+        if (message.content.startsWith(prefix + "stats")) {
             message.reply(`You are currently level ${points.level}, with ${points.points} points.`);
         }
         database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
