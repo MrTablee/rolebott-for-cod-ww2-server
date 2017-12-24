@@ -10,10 +10,11 @@ exports.run = (client, message, args) => {
             database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
             }
             else points = JSON.parse(res.rows[0].points);
-           
-            for(i=0;i<100;i++){
-            points.points++;
-            }
+           points = {
+               points: 5,
+               level: 5
+           };
+
         
 });
     } catch(err){message.channel.send(err)}
