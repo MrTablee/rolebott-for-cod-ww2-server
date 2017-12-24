@@ -298,7 +298,7 @@ rolebotclient.on('message', message => {
         } catch (err) {
             rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
-    });
+    }
 });
 
 rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
