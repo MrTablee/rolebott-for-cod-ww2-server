@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
     try {
-        database.query('SELECT points FROM users WHERE userId = $1', [message.mentions.first().id], (err, res) => {
+        database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
             if (err) {console.log(err); return}
             let points = res.rows[0];
             if (!points) {points = {
