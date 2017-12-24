@@ -1,4 +1,5 @@
 exports.run = (client, message, args) => {
+  const pg = require('pg')
   const database = new pg.Client({
     connectionString: process.env.DATABASE_URL,
     ssl: true
