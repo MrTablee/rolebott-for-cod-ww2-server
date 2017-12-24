@@ -272,7 +272,7 @@ rolebotclient.on('message', message => {
         points.points++;
         }
     
-    }
+    });
 		
         if (message.content.startsWith(prefix + "level")) {
             message.reply(`You are currently level ${points.level}, with ${points.points} points.`);
