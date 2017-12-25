@@ -258,12 +258,6 @@ rolebotclient.on('message', message => {
         if (message.content.startsWith(prefix + "stats")) {
             message.reply(`You are currently level ${points.level}, with ${points.points} points.`);
         }
-        if (message.content.startsWith(prefix + "test")) {
-          {points = {
-            points: 0,
-            level: 777
-        }}
-      }
       database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
           if (err) {console.log(err); return}
       });
