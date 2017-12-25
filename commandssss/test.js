@@ -1,5 +1,5 @@
 exports.run = (client, message, args) => {
-    if(message.author.id !== '' ) return
+    if(message.author.id !== '233366720062947330' ) return
     const mentionedID = args[0]
     const mentionedAmount = args[1]
     if(!args) {message.channel.send('You can\'t run this without any args')}
