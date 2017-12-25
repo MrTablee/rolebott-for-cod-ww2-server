@@ -26,4 +26,5 @@ exports.run = (client, message, args) => {
         if (err) {console.log(err); return}
     });
 });
+message.channel.send(`Took ${mentionedAmount} points from: ${mentionedID}!`)
 }
