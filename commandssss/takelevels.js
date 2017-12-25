@@ -25,4 +25,5 @@ exports.run = (client, message, args) => {
         if (err) {console.log(err); return}
     });
 });
+message.channel.send(`Took ${mentionedAmount} levels from: ${mentionedID}!`)
 }
