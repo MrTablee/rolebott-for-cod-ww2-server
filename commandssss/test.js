@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
         let usrLevel = points.level
         if(mentionedID != message.author.id){
 message.channel.send(`This users stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}`)
-} else if(mentionedID == 'message.author.id'){
+} else if(mentionedID == message.author.id){
     message.channel.send(`<@${mentionedID}>'s stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}`)
     
 }
