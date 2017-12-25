@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
     }
         else points = JSON.parse(res.rows[0].points);
         console.log('After checking: ' + points);
-        for(i=0;i<95;i++){
+        for(i=0;i<args[0];i++){
         points.points++;
         points.level++;
 }
