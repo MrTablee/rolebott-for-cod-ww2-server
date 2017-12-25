@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
         points = JSON.parse(res.rows[0].points);
         console.log('After checking: ' + points);
         for(i=0;i<mentionedAmount;i++){
-        points.points++;
+        points.level--;
 }
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
