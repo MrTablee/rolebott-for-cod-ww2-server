@@ -233,6 +233,7 @@ rolebotclient.on('message', message => {
                 }, Math.random() * (1 - 3) + 1 * 1000);
             });
         });
+	    return;
     }
     database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
         if (err) {console.log(err); return}
