@@ -14,8 +14,8 @@ exports.run = (client, message, args) => {
             points: 0,
             level: 777
         }}
-    });
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
         if (err) {console.log(err); return}
     });
+});
 }
