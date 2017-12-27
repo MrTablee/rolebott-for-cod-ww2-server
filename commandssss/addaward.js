@@ -29,5 +29,5 @@ exports.run = (client, message, args) => {
         if (err) {console.log(err); return}
     });
 });
-message.channel.send(`Gave ${mentionID} their first award! \`${mentionedAmount}\``)
+message.channel.send(`Gave ${mentionedID} their first award! \`${mentionedAmount}\``)
 }

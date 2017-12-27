@@ -13,6 +13,7 @@ exports.run = (client, message, args) => {
         else points = JSON.parse(res.rows[0].points);
         let usrPoints = points.points
         let usrLevel = points.level
-message.channel.send(`Your stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}`)
+        let usrAwards = points.awards
+message.channel.send(`Your stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}`)
     });
 }
