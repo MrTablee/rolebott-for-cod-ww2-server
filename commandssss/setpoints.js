@@ -18,13 +18,15 @@ exports.run = (client, message, args) => {
         console.log('After checking: ' + points);
         let usrPoints = points.points
         let usrLevel = points.level
+        let usrAwards = points.awards
         points = {
-            points: usrPoints + mentionedAmount,
-            level: usrLevel
+            points: mentionedAmount,
+            level: usrLevel,
+            awards: usrAwards
         }
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
 });
-message.channel.send(`Gave ${mentionedAmount} points to: ${mentionedID}!`)
+message.channel.send(`Set points to ${mentionedAmount} points for: ${mentionedID}!`)
 }

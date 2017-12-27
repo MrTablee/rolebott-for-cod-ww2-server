@@ -241,7 +241,8 @@ rolebotclient.on('message', message => {
 		console.log('Before checking: '+points);
         if (!points) {points = {
             points: 0,
-            level: 0
+            level: 0,
+            awards: "None"
         };
 		database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
 		}

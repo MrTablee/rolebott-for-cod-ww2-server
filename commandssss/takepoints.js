@@ -16,15 +16,18 @@ exports.run = (client, message, args) => {
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
         console.log('After checking: ' + points);
-        let usrPoints = points.points
         let usrLevel = points.level
+        let usrPoints = points.points
+        let usrAwards = points.awards
         points = {
             points: usrPoints - mentionedAmount,
-            level: usrLevel
+            level: usrLevel,
+            awards: usrAwards
         }
+
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
 });
-message.channel.send(`Took ${mentionedAmount} points from: ${mentionedID}!`)
+message.channel.send(`Took ${mentionedAmount} levels from: ${mentionedID}!`)
 }
