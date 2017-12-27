@@ -17,6 +17,6 @@ exports.run = (client, message, args) => {
         let usrPoints = points.points
         let usrLevel = points.level
         let usrAwards = points.awards
-message.channel.send(`${message.mentions.first().username}'s stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}`)
+message.channel.send(`${message.mentions.users.first().username}'s stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}`)
     });
 }
