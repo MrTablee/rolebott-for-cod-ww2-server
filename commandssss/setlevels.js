@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message, args, database) => {
     if(message.author.id !== '233366720062947330' ) return
     const mentionedID = args[0]
     const mentionedAmount = args[1]

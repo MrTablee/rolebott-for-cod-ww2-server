@@ -1,14 +1,7 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message, args, database) => {
     if(message.mentions.users.size === 0){
         message.channel.send('You must mention a user...')
     }
-    const pg = require('pg')
-    const database = new pg.Client({
-        connectionString: process.env.DATABASE_URL,
-        ssl: true
-    });
-    database.connect();
-
     database.query('SELECT points FROM users WHERE userId = $1', [message.mentions.users.first().id], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0];

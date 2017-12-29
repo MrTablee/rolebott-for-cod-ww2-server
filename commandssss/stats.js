@@ -1,11 +1,4 @@
-exports.run = (client, message, args) => {
-    const pg = require('pg')
-    const database = new pg.Client({
-        connectionString: process.env.DATABASE_URL,
-        ssl: true
-    });
-    database.connect();
-
+exports.run = (client, message, args, database) => {
     database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0];
