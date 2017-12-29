@@ -1,5 +1,5 @@
-exports.run = (client, message, args, database) => {
-    const mentionedAmount = message.content.replace(`r!setprefix `, '')
+exports.run = (client, message, args, database, usedPrefix) => {
+    const mentionedAmount = message.content.replace(`${usedPrefix}setprefix `, '')
     if(!args) {message.channel.send('You can\'t run this without any args')}
 
     database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {

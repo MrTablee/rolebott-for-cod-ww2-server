@@ -275,7 +275,7 @@ if(message.content.startsWith('r!')) {
 
         try {
             let commandFile = require(`./commandssss/${command}`);
-            commandFile.run(rolebotclient, message, args, database);
+            commandFile.run(rolebotclient, message, args, database, usedPrefix);
         } catch (err) {
             rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
@@ -287,7 +287,7 @@ else if(message.content.startsWith(points.prefix)) {
 
         try {
             let commandFile = require(`./commandssss/${command}`);
-            commandFile.run(rolebotclient, message, args, database);
+            commandFile.run(rolebotclient, message, args, database, usedPrefix);
         } catch (err) {
             rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
