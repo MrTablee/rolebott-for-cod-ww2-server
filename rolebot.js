@@ -268,8 +268,9 @@ rolebotclient.on('message', message => {
             message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)
         }
         if((!message.content.startsWith('r!')) && (!message.content.startsWith(points.prefix))) return;
-
-        const args = message.content.slice('r!'.length).trim().split(/ +/g);
+if(message.content.startsWith('r!')) {let usedPrefix = 'r!'}
+else if(message.content.startsWith(points.prefix)) {let usedPrefix = points.prefix}
+        const args = message.content.slice(usedPrefix.length).trim().split(/ +/g);
         const command = (!message.content.startsWith('r!level'))?args.shift().toLowerCase():[database];
 
         try {
