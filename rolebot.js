@@ -268,8 +268,8 @@ rolebotclient.on('message', message => {
             message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)
         }
         if((!message.content.startsWith('r!')) && (!message.content.startsWith(points.prefix))) return;
-if(message.content.startsWith('r!')) {let usedPrefix = 'r!'}
-else if(message.content.startsWith(points.prefix)) {let usedPrefix = points.prefix}
+if(message.content.startsWith('r!')) {
+	let usedPrefix = 'r!'
         const args = message.content.slice(usedPrefix.length).trim().split(/ +/g);
         const command = (!message.content.startsWith('r!level'))?args.shift().toLowerCase():[database];
 
@@ -279,6 +279,19 @@ else if(message.content.startsWith(points.prefix)) {let usedPrefix = points.pref
         } catch (err) {
             rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
+}
+else if(message.content.startsWith(points.prefix)) {
+	let usedPrefix = points.prefix
+	const args = message.content.slice(usedPrefix.length).trim().split(/ +/g);
+        const command = (!message.content.startsWith('r!level'))?args.shift().toLowerCase():[database];
+
+        try {
+            let commandFile = require(`./commandssss/${command}`);
+            commandFile.run(rolebotclient, message, args, database);
+        } catch (err) {
+            rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+        }
+}
     });
 });
 
