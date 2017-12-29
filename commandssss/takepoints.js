@@ -13,10 +13,12 @@ exports.run = (client, message, args, database) => {
         let usrLevel = points.level
         let usrPoints = points.points
         let usrAwards = points.awards
+        let usrPrefix = points.prefix
         points = {
             points: usrPoints - mentionedAmount,
             level: usrLevel,
-            awards: usrAwards
+            awards: usrAwards,
+            prefix: usrPrefix
         }
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {

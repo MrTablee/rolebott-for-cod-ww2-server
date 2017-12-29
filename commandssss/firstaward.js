@@ -1,7 +1,7 @@
 exports.run = (client, message, args, database) => {
     if(message.author.id !== '233366720062947330' ) return
     const mentionedID = args[0]
-    const mentionedAmount = args[1]
+    const mentionedAmount = message.content.replace(`r!addaward ${args[0]}`, '')
     if(!args) {message.channel.send('You can\'t run this without any args')}
 
     database.query('SELECT points FROM users WHERE userId = $1', [mentionedID], (err, res) => {
@@ -15,15 +15,15 @@ exports.run = (client, message, args, database) => {
         let usrAwards = points.awards
         let usrPrefix = points.prefix
         points = {
-            points: 0,
-            level: 0,
-            awards: "None",
-            prefix: "r!"
+            points: usrPoints,
+            level: usrLevel,
+            awards: mentionedAmount,
+            prefix: usrPrefix
         }
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
 });
-message.channel.send(`Reset: ${mentionedID}!`)
+message.channel.send(`Gave ${mentionedID} their first award! \`${mentionedAmount}\``)
 }

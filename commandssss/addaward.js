@@ -13,15 +13,17 @@ exports.run = (client, message, args, database) => {
         let usrLevel = points.level
         let usrPoints = points.points
         let usrAwards = points.awards
+        let usrPrefix = points.prefix
         points = {
             points: usrPoints,
             level: usrLevel,
-            awards: mentionedAmount
+            awards: usrAwards + ", " + mentionedAmount,
+            prefix: usrPrefix
         }
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
 });
-message.channel.send(`Gave ${mentionedID} their first award! \`${mentionedAmount}\``)
+message.channel.send(`Gave ${mentionedID} the award: \`${mentionedAmount}\`!`)
 }
