@@ -29,12 +29,12 @@ if((args[0].toLowerCase() !== 'heads') && (args[0].toLowerCase() !== 'tails')) {
     return;
 }
 if((args[0].toLowerCase() == 'heads') && (flipResult == 'heads')){
-    message.channel.send(`Coin flip came back heads, you won ${amountBet * 2} XP and ${Math.floor(amountBet * 0.25)} Coins!`)
+    message.channel.send(`Coin flip came back heads, you won ${amountBet * 2} XP and won back ${Math.floor(amountBet * 0.25)} Coins!`)
     points.coins = points.coins + (Math.floor(amountBet * 0.25))
     points.xp = points.xp + (amountBet * 2)
 }
 if((args[0].toLowerCase() == 'tails') && (flipResult == 'tails')){
-    message.channel.send(`Coin flip came back tails, you won ${amountBet * 2} XP and ${Math.floor(amountBet * 0.25)} Coins!`)
+    message.channel.send(`Coin flip came back tails, you won ${amountBet * 2} XP and won back ${Math.floor(amountBet * 0.25)} Coins!`)
     points.coins = points.coins + (Math.floor(amountBet * 0.25))
     points.xp = points.xp + (amountBet * 2)
 }
