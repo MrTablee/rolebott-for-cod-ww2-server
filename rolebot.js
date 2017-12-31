@@ -252,14 +252,7 @@ rolebotclient.on('message', message => {
 		}
         else points = JSON.parse(res.rows[0].points);
 		console.log('After checking: '+points);
-        points.points++;
-
-
-        if (curLevel > points.level) {
-            points.level = curLevel;
-            message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
-        }
-	   
+        points.points++;	   
 		
       database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
           if (err) {console.log(err); return}
