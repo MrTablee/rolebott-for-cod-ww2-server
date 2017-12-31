@@ -18,8 +18,11 @@ exports.run = (client, message, args, database) => {
             points: 0,
             level: 0,
             awards: "None",
-            prefix: "r!"
-        }
+            prefix: "r!",
+            xp: 0,
+            coins: 0,
+            zombiesSlain: 0
+        };
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
