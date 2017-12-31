@@ -248,6 +248,7 @@ rolebotclient.on('message', message => {
       coins: 0,
       zombiesSlain: 0
   };
+  
 		database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
     }
 

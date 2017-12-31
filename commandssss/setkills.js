@@ -11,7 +11,13 @@ exports.run = (client, message, args, database, usedPrefix) => {
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
         console.log('After checking: ' + points);
+        let usrPoints = points.points
+        let usrLevel = points.level
+        let usrAwards = points.awards
         let usrKills = points.zombiesSlain
+        let usrCoins = points.coins
+        let usrXP = points.xp
+        let coinsNeeded = (((usrLevel + 1) * 10)**2)
         points = {
             zombiesSlain: mentionedAmount
         }
