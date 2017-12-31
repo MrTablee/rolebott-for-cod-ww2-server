@@ -1,4 +1,4 @@
-exports.run = (client, message, args, database) => {
+exports.run = (client, message, args, database, usedPrefix) => {
     if(message.mentions.users.size === 0){
         message.channel.send('You must mention a user...')
     }
