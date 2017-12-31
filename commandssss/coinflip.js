@@ -19,6 +19,10 @@ if(!args[1]){
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
         console.log('After checking: ' + points);
+if(amountBet < 1){
+    message.channel.send("Gotta bet something!")
+    return;
+}
 if(amountBet > points.coins){
     message.channel.send("Can't bet more than what you have")
     return;
