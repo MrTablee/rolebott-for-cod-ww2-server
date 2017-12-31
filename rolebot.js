@@ -239,74 +239,22 @@ rolebotclient.on('message', message => {
         if (err) {console.log(err); return}
         let points = res.rows[0];
 		console.log('Before checking: '+points);
-        if (!points) {points = {
-            points: 0,
-            level: 0,
-            awards: "None",
-            prefix: "r!",
-            xp: 0,
-
-        };
+    if (!points) {points = {
+      points: 0,
+      level: 0,
+      awards: "None",
+      prefix: "r!",
+      xp: 0,
+      coins: 0,
+      zombiesSlain: 0
+  };
 		database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
 		}
         else points = JSON.parse(res.rows[0].points);
 		console.log('After checking: '+points);
         points.points++;
 
-        database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
-          if (err) {console.log(err); return}
-          let points = res.rows[0];
-      console.log('Before checking: '+points);
-          if (!points) {points = {
-              points: 0,
-              level: 0,
-              awards: "None",
-              prefix: "r!",
-              xp: 0,
-              
-          };
-      database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
-      }
-          else points = JSON.parse(res.rows[0].points);
-      console.log('After checking: '+points);
-          points.points++;
-          database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
-            if (err) {console.log(err); return}
-            let points = res.rows[0];
-        console.log('Before checking: '+points);
-            if (!points) {points = {
-                points: 0,
-                level: 0,
-                awards: "None",
-                prefix: "r!",
-                xp: 0,
-                coins: 0,
-                zombiesSlain: 0
-            };
-        database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
-        }
-            else points = JSON.parse(res.rows[0].points);
-        console.log('After checking: '+points);
-            points.points++;
-    
-            if (5 > points.points) {
-                points.points = 0;
-                points.coins++
-            }
-         
-        
-          database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
-              if (err) {console.log(err); return}
-          });
-          if (curLevel > points.level) {
-              points.level = curLevel;
-              message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
-          }
-       
-      
-        database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
-            if (err) {console.log(err); return}
-        });
+
         if (curLevel > points.level) {
             points.level = curLevel;
             message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
