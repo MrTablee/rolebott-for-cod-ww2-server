@@ -1,6 +1,6 @@
 exports.run = (client, message, args, database, usedPrefix) => {
     const mentionedID = message.author.id
-    let amountBet = args[0]
+    let amountBet = args[1]
     if(amountBet.includes('.')){
         message.channel.send('No decimals')
         return;
@@ -8,7 +8,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
     let answ = ["tails", "heads"]
     
     let flipResult = answ[Math.floor(Math.random() * answ.length)]
-if(!args[0]){
+if(!args[1]){
     message.channel.send("You can't bet nothing... Try again with a number after coinflip")
     return;
 }
