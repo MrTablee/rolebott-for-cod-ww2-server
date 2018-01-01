@@ -10,7 +10,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
         console.log('After checking: ' + points);
 
         const amountBet = args[1]
-        if(!amountBet){
+        if(!args[1]){
             const amountBet = points.points
             }
         let answ = ["tails", "heads"]
