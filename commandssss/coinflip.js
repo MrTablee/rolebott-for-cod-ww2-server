@@ -22,10 +22,6 @@ if(amountBet < 1){
     message.channel.send("Gotta bet something!")
     return;
 }
-if(amountBet > points.coins){
-    message.channel.send("Can't bet more than what you have")
-    return;
-}
 points.coins = points.coins - amountBet
 if((args[0].toLowerCase() !== 'heads') && (args[0].toLowerCase() !== 'tails')) {
     message.channel.send('You must bet heads or tails!')
