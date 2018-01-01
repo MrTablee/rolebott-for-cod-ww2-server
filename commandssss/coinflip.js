@@ -9,14 +9,14 @@ exports.run = (client, message, args, database, usedPrefix) => {
         else points = JSON.parse(res.rows[0].points);
         console.log('After checking: ' + points);
 
-        const amountBet = args[1]
+        var amountBet = args[1]
         if(!args[1]){
-            const amountBet = points.points
+            var amountBet = points.points
             }
         let answ = ["tails", "heads"]
         
         let flipResult = answ[Math.floor(Math.random() * answ.length)]
-
+message.channel.send(amountBet)
 
 if(amountBet < 1){
     message.channel.send("Gotta bet something!")
