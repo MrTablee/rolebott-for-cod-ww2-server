@@ -11,7 +11,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
 
         var amountBet = args[1]
         if(!args[1]){
-            var amountBet = points.points
+            var amountBet = points.coins
             }
         let answ = ["tails", "heads"]
         
