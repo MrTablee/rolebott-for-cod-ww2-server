@@ -15,18 +15,15 @@ exports.run = (client, message, args, database, usedPrefix) => {
         
         let flipResult = answ[Math.floor(Math.random() * answ.length)]
 
-if(!args[1]){
-        message.channel.send("You can't bet nothing... Try again with a number after coinflip")
+if(!args[0]){
+        message.channel.send("You can't bet something other than heads or tails... Try again with heads or tails after allin")
         return;
     }
 if(amountBet < 1){
-    message.channel.send("Gotta bet something!")
+    message.channel.send("Can't go all in!")
     return;
 }
-if(amountBet > points.coins){
-    message.channel.send("Can't bet more than what you have")
-    return;
-}
+
 points.coins = 0
 if((args[0].toLowerCase() !== 'heads') && (args[0].toLowerCase() !== 'tails')) {
     message.channel.send('You must bet heads or tails!')

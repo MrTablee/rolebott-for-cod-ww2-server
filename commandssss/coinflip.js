@@ -13,10 +13,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
         if(!amountBet){
             const amountBet = points.points
             }
-        if(amountBet.includes('.')){
-            message.channel.send('No decimals')
-            return;
-        }
         let answ = ["tails", "heads"]
         
         let flipResult = answ[Math.floor(Math.random() * answ.length)]
