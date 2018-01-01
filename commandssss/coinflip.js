@@ -16,7 +16,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
         let answ = ["tails", "heads"]
         
         let flipResult = answ[Math.floor(Math.random() * answ.length)]
-message.channel.send(amountBet)
 
 if(amountBet < 1){
     message.channel.send("Gotta bet something!")
