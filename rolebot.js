@@ -248,7 +248,7 @@ rolebotclient.on('message', message => {
       coins: 0,
       zombiesSlain: 0
   };
-  
+
 		database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
     }
 
@@ -259,6 +259,13 @@ rolebotclient.on('message', message => {
         if(points.points > 5){
           points.points = 0
           points.coins++
+        }
+        if(points.xp > ((points.level * 10)**2)){
+          let awardedCoins = (Math.floor(Math.random() * (500 - 1 + 1))) + 1;
+          points.xp = points.xp - ((points.level * 10)**2)
+          points.level++
+          points.coins = points.coins + awardedCoins
+          message.reply(`You just leveled up to level ${points.level}! Have some free coins.`)
         }
       database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
           if (err) {console.log(err); return}
