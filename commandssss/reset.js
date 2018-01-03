@@ -19,7 +19,7 @@ exports.run = (client, message, args, database) => {
         let coinsNeeded = (((usrLevel + 1) * 10)**2)
         points = {
             points: 0,
-            level: 0,
+            level: 1,
             awards: "None",
             prefix: "r!",
             xp: 0,
