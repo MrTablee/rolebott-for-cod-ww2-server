@@ -15,9 +15,11 @@ exports.run = (client, message, args, database, usedPrefix) => {
             }
         if(amountBet < 1){
             message.channel.send(`You must bet at least 1 coin!`)
+            return;
         }
         if(amountBet > points.coins){
             message.channel.send(`You must bet at most, ${points.coins} coins!`)
+            return;
         }
         let answ = ["tails", "heads"]
         
