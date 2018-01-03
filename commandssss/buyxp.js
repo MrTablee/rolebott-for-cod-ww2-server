@@ -10,7 +10,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
         console.log('After checking: ' + points);
         if(wantedAmount < points.coins/5){
         points.coins = points.coins - wantedAmount*5
-        points.xp = points.xp + wantedAmount
+        points.xp = points.xp - (0 - wantedAmount)
         }
         else {message.channel.send('Something went wrong, please try again or contact the owner.')}
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
