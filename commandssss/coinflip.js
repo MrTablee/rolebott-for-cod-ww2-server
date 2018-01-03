@@ -13,6 +13,12 @@ exports.run = (client, message, args, database, usedPrefix) => {
         if(!args[1]){
             var amountBet = points.coins
             }
+        if(amountBet < 1){
+            message.channel.send(`You must bet at least 1 coin!`)
+        }
+        if(amountBet > points.coins){
+            message.channel.send(`You must bet at most, ${points.coins} coins!`)
+        }
         let answ = ["tails", "heads"]
         
         let flipResult = answ[Math.floor(Math.random() * answ.length)]
