@@ -16,5 +16,5 @@ exports.run = (client, message, args, database, usedPrefix) => {
         if (err) {console.log(err); return}
     });
 });
-message.channel.send(`*${message.author.username} killed a zombie and gained ${awardedCoins} Coins and ${awardedXP} XP!*`)
+message.channel.send(`*${message.author.username} killed a zombie and gained ${rewardCoins} Coins and ${rewardXP} XP!*`)
 }
