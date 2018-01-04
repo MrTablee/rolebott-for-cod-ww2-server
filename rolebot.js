@@ -260,9 +260,10 @@ rolebotclient.on('message', message => {
           points.points = 0
           points.coins++
         }
-        if(points.xp > ((points.level * 10)**2)){
+	    let thisVariable = ((points.level * 10)**2)
+        if(points.xp > thisVariable){
           let awardedCoins = (Math.floor(Math.random() * (500 - 1 + 1))) + 1;
-          points.xp = points.xp - ((points.level * 10)**2)
+          points.xp = 0 - (0 - (points.xp - thisVariable))
           points.level++
           points.coins = points.coins + awardedCoins
           message.reply(`You just leveled up to level ${points.level}! Have some free coins.`)
