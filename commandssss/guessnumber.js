@@ -39,9 +39,9 @@ if((args[1] < 1) || (args[1] > maxNumberPicked)) {
     message.channel.send(`You must pick a number between 1 and ${maxNumberPicked}!`)
     return;
 }
-if(pickedNumber !== chosenNumber){
+if(pickedNumber != chosenNumber){
     message.channel.send(`Number was actually ${pickedNumber}, not ${chosenNumber}... you lost ${amountBet} Coins!`)
-} else if(pickedNumber === chosenNumber){
+} else if(pickedNumber = chosenNumber){
     message.channel.send(`The number was indeed ${pickedNumber}, you won ${amountBet * maxNumberPicked} XP and won back ${Math.floor(amountBet * 0.25)} Coins!`)
     points.coins = points.coins - (0 -(Math.floor(amountBet * maxNumberPicked)))
     points.xp = points.xp + (maxNumberPicked) }
