@@ -14,6 +14,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
         let usrCoins = points.coins
         let usrXP = points.xp
         let coinsNeeded = (((usrLevel + 1) * 10)**2)
-message.channel.send(`${message.mentions.users.first().username}'s stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nCost to level up: ${coinsNeeded} Coins`)
+message.channel.send(`${message.mentions.users.first().username}'s stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
+
     });
 }
