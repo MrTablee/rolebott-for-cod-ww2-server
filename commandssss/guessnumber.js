@@ -29,7 +29,7 @@ var chosenNumber = args[2]
         }
         
     let pickedNumber = (Math.floor(Math.random() * (maxNumberPicked - 1 + 1))) + 1;
-    
+    if(!pickedNumber) {message.channel.send('Gotta guess a number!')}
 if(amountBet < 1){
     message.channel.send("Gotta bet something!")
     return;
