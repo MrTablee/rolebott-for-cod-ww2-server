@@ -51,4 +51,5 @@ if(pickedNumber === args[2]){
         if (err) {console.log(err); return}
     });
 });
+    message.channel.send(`${args[0]} ${args[1]} ${args[2]}`)
 }
