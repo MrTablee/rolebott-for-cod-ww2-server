@@ -46,10 +46,10 @@ if(pickedNumber === args[2]){
 } else if(pickedNumber !== args[2]){
     message.channel.send(`Number was actually ${pickedNumber}, not ${chosenNumber}... you lost ${amountBet} Coins!`)
 }
+            message.channel.send(`${args[0]} ${args[1]} ${args[2]} ${maxNumberPicked} ${pickedNumber} ${chosenNumber}`)
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
 });
-    message.channel.send(`${args[0]} ${args[1]} ${args[2]}`)
 }
