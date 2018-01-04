@@ -7,7 +7,7 @@ exports.run = (client, message, args, usedPrefix) => {
 let person = args[0]
 let actionUsed = args[1]
 let reason = message.content.replace(`r!modlog ${args[0]} ${args[1]} `,'')
-if((person.length !== 18) || (!args[0]) || (!args[1]) || (!reason)) {
+if((!args[0]) || (person.length !== 18) || (!args[1]) || (!reason)) {
         message.channel.send("Proper usage:\n```r!modlog <Target's ID> <Action Used> <Reason>```")
 return;
 }
