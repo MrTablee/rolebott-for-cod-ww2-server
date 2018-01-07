@@ -10,11 +10,11 @@ exports.run = (client, message, args, database, usedPrefix) => {
         else points = JSON.parse(res.rows[0].points);
         console.log('After checking: ' + points);
         points.zombiesSlain++
-        points.xp++
-        points.coins++
+        points.xp = points.xp + rewardXP
+        points.coins = points.coins + rewardCoins
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
 });
-message.channel.send(`*${message.author.username} killed a zombie and gained ${rewardCoins} Coins and ${rewardXP} XP!*`)
+message.channel.send(`*${message.author.username} killed a zombie and gathered ${rewardCoins} Coins and ${rewardXP} XP!*`)
 }
