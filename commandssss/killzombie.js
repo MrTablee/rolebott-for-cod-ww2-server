@@ -11,22 +11,21 @@ exports.run = (client, message, args, database, usedPrefix) => {
             else points = JSON.parse(res.rows[0].points);
     
             var countDownDate = points.zombieCooldown
+            var x = setInterval(function() {
+                
+                  var now = new Date().getTime();
+                
+                  var distance = countDownDate - now;
+                
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                }, 1000);
             var noww = new Date().getTime();
             
             if(countDownDate < noww){
-                var x = setInterval(function() {
-                    
-                      var now = new Date().getTime();
-                    
-                      var distance = countDownDate - now;
-                    
-                      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    
-                    }, 1000);
-    
             console.log('After checking: ' + points);
             if(points.zombieCooldown < noww){
             points.zombiesSlain++
