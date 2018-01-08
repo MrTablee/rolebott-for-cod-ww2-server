@@ -14,7 +14,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
             var countDownDate = points.dailyCooldown
             var noww = new Date().getTime();
             
-            if(countDownDate < noww){
                 var x = setInterval(function() {
                     
                       var now = new Date().getTime();
@@ -34,10 +33,9 @@ exports.run = (client, message, args, database, usedPrefix) => {
             points.coins = points.coins + rewardCoins
             points.dailyCooldown = new Date().getTime() + 86400000            
             message.channel.send(`*${message.author.username} collected their daily reward of ${rewardCoins} Coins and ${rewardXP} XP!*`)            
+            } else {
+                message.channel.send(`Gotta wait for another ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds before retrieving another daily!`)
             }
-        } else {
-            message.channel.send(`Gotta wait for another ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds before retrieving another daily!`)
-        }
         database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
             if (err) {console.log(err); return}
         });
