@@ -1,16 +1,16 @@
 exports.run = (client, message, args, database, usedPrefix) => {
     
         const mentionedID = message.author.id
-        let rewardCoins = (Math.floor(Math.random() * (10 - 1 + 1))) + 1;
-        let rewardXP = (Math.floor(Math.random() * (10 - 1 + 1))) + 1;
-        
+
         database.query('SELECT points FROM users WHERE userId = $1', [mentionedID], (err, res) => {
+            let rewardCoins = (Math.floor(Math.random() * (((points.level) * 10) - 1 + 1))) + 1;
+            let rewardXP = (Math.floor(Math.random() * (((points.level) * 10) - 1 + 1))) + 1;    
             if (err) {console.log(err); return}
             let points = res.rows[0];
             if(!points){message.channel.send('This user currently has no database stats')}
             else points = JSON.parse(res.rows[0].points);
     
-            var countDownDate = points.zombieCooldown
+            var countDownDate = points.dailyCooldown
             var noww = new Date().getTime();
             
             if(countDownDate < noww){
@@ -28,15 +28,14 @@ exports.run = (client, message, args, database, usedPrefix) => {
                     }, 1000);
     
             console.log('After checking: ' + points);
-            if(points.zombieCooldown < noww){
-            points.zombiesSlain++
+            if(points.dailyCooldown < noww){
             points.xp = points.xp + rewardXP
             points.coins = points.coins + rewardCoins
-            points.zombieCooldown = new Date().getTime() + 5000
-            message.channel.send(`*${message.author.username} killed a zombie and gathered ${rewardCoins} Coins and ${rewardXP} XP!*`)            
+            points.dailyCooldown = new Date().getTime() + 86400000            
+            message.channel.send(`*${message.author.username} collected their daily reward of ${rewardCoins} Coins and ${rewardXP} XP!*`)            
             }
         } else {
-            message.channel.send(`Gotta wait ${seconds} more seconds`)
+            message.channel.send(`Gotta wait for another ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds before retrieving another daily!`)
         }
         database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
             if (err) {console.log(err); return}
