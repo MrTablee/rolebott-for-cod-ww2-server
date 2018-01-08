@@ -3,12 +3,13 @@ exports.run = (client, message, args, database, usedPrefix) => {
         const mentionedID = message.author.id
 
         database.query('SELECT points FROM users WHERE userId = $1', [mentionedID], (err, res) => {
-            let rewardCoins = (Math.floor(Math.random() * (((points.level) * 10) - 1 + 1))) + 1;
-            let rewardXP = (Math.floor(Math.random() * (((points.level) * 10) - 1 + 1))) + 1;    
+ 
             if (err) {console.log(err); return}
             let points = res.rows[0];
             if(!points){message.channel.send('This user currently has no database stats')}
             else points = JSON.parse(res.rows[0].points);
+            let rewardCoins = (Math.floor(Math.random() * (((points.level) * 10) - 1 + 1))) + 1;
+            let rewardXP = (Math.floor(Math.random() * (((points.level) * 10) - 1 + 1))) + 1;    
     
             var countDownDate = points.dailyCooldown
             var noww = new Date().getTime();
