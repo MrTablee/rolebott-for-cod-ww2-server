@@ -19,9 +19,13 @@ exports.run = (client, message, args, database, usedPrefix) => {
           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
     var noww = new Date().getTime();
-    
+    if(countDownDate > noww)     
+        {
+message.channel.send(`Gotta wait another ${seconds} seconds!`)
+return;
+        }
     if(countDownDate < noww){
-    if(points.coinflipCooldown < noww){
+
         points.coinflipCooldown = new Date().getTime() + 5000
         var amountBet = args[1]
         if(!args[1]){
@@ -65,7 +69,7 @@ if((args[0].toLowerCase() == 'tails') && (flipResult == 'heads')){
     message.channel.send(`Coin flip came back heads, you lost ${amountBet} Coins!`)
 }}else {
     message.channel.send(`Gotta wait ${seconds} more seconds`)
-}}
+}
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
