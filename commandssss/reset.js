@@ -25,10 +25,10 @@ exports.run = (client, message, args, database) => {
             xp: 0,
             coins: 0,
             zombiesSlain: 0,
-            dailyCooldown: 0,
-            zombieCooldown: 0,
-            coinflipCooldown: 0,
-            guessnumberCooldown: 0
+            dailyCooldown: new Date().getTime(),
+            zombieCooldown: new Date().getTime(),
+            coinflipCooldown: new Date().getTime(),
+            guessnumberCooldown: new Date().getTime()
         };
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
