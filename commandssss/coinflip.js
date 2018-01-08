@@ -22,6 +22,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
     
     if(countDownDate < noww){
     if(points.coinflipCooldown < noww){
+        points.coinflipCooldown = new Date().getTime() + 5000
         var amountBet = args[1]
         if(!args[1]){
             var amountBet = points.coins

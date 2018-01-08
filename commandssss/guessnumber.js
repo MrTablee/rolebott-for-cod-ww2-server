@@ -20,10 +20,8 @@ exports.run = (client, message, args, database, usedPrefix) => {
         
     var noww = new Date().getTime();
     
-    if(countDownDate > noww){
-        message.channel.send(`Gotta wait ${seconds} more seconds`)
-        return;
-    }
+    if(countDownDate < noww){
+        points.guessnumberCooldown = new Date().getTime() + 5000
 var maxNumberPicked = args[1]
 if(!maxNumberPicked){
 var maxNumberPicked = 10
@@ -62,7 +60,9 @@ if(pickedNumber != chosenNumber){
     points.coins = points.coins - (0 -(Math.floor(amountBet * maxNumberPicked)))
     points.xp = points.xp + (maxNumberPicked) 
 }}
-        
+        } else {
+            message.channel.send(`Gotta wait ${seconds} more seconds`)
+        }
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
