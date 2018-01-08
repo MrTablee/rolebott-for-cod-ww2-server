@@ -34,6 +34,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
         points.coins = points.coins + rewardCoins
         points.zombieCooldown = new Date().getTime() + 5000
         }}
+        message.channel.send(`${points.zombieCooldown}`)
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
