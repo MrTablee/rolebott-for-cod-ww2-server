@@ -7,8 +7,21 @@ exports.run = (client, message, args, database, usedPrefix) => {
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
-        console.log('After checking: ' + points);
-
+        var countDownDate = points.coinflipCooldown
+        
+          var now = new Date().getTime();
+        
+          var distance = countDownDate - now;
+        
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+    var noww = new Date().getTime();
+    
+    if(countDownDate < noww){
+    if(points.coinflipCooldown < noww){
 var maxNumberPicked = args[1]
 if(!maxNumberPicked){
 var maxNumberPicked = 10
@@ -46,7 +59,9 @@ if(pickedNumber != chosenNumber){
     points.coins = points.coins - (0 -(Math.floor(amountBet * maxNumberPicked)))
     points.xp = points.xp + (maxNumberPicked) }
             message.channel.send(`${args[0]} ${args[1]} ${args[2]} ${maxNumberPicked} ${pickedNumber} ${chosenNumber}`)
-
+        }else {
+            message.channel.send(`Gotta wait ${seconds} more seconds`)
+        }}
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });

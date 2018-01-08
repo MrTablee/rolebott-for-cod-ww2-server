@@ -7,7 +7,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
-        var countDownDate = points.zombieCooldown
+        var countDownDate = points.coinflipCooldown
         
           var now = new Date().getTime();
         
@@ -21,7 +21,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
     var noww = new Date().getTime();
     
     if(countDownDate < noww){
-    if(points.zombieCooldown < noww){
+    if(points.coinflipCooldown < noww){
         var amountBet = args[1]
         if(!args[1]){
             var amountBet = points.coins
@@ -62,9 +62,9 @@ if((args[0].toLowerCase() == 'heads') && (flipResult == 'tails')){
 }
 if((args[0].toLowerCase() == 'tails') && (flipResult == 'heads')){
     message.channel.send(`Coin flip came back heads, you lost ${amountBet} Coins!`)
-}} else {
+}}else {
     message.channel.send(`Gotta wait ${seconds} more seconds`)
-}
+}}
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
