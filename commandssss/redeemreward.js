@@ -15,6 +15,8 @@ exports.run = (client, message, args, database, usedPrefix) => {
             points.xp = points.xp + rewardXP
             points.coins = points.coins + rewardCoins
             message.channel.send(`*${message.author.username} collected their reward, which was worth ${rewardXP} XP, and ${rewardCoins} Coins!*`)            
+            } else {
+            message.channel.send('No rewards available!')
             }
         database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
             if (err) {console.log(err); return}
