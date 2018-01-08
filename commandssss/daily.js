@@ -24,8 +24,9 @@ exports.run = (client, message, args, database, usedPrefix) => {
             if(points.dailyCooldown < now){
             points.xp = points.xp + rewardXP
             points.coins = points.coins + rewardCoins
+            points.rewardsAvailable++
             points.dailyCooldown = new Date().getTime() + 86400000            
-            message.channel.send(`*${message.author.username} collected their daily reward of ${rewardCoins} Coins and ${rewardXP} XP!*`)            
+            message.channel.send(`*${message.author.username} collected their daily reward of ${rewardCoins} Coins and ${rewardXP} XP, as well as 1 reward!*`)            
             } else {
                 message.channel.send(`Gotta wait for another ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds before retrieving another daily!`)
             }
