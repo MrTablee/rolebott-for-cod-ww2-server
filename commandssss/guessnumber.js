@@ -21,7 +21,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
     var noww = new Date().getTime();
     
     if(countDownDate < noww){
-    if(points.coinflipCooldown < noww){
 var maxNumberPicked = args[1]
 if(!maxNumberPicked){
 var maxNumberPicked = 10
@@ -61,7 +60,7 @@ if(pickedNumber != chosenNumber){
             message.channel.send(`${args[0]} ${args[1]} ${args[2]} ${maxNumberPicked} ${pickedNumber} ${chosenNumber}`)
         }else {
             message.channel.send(`Gotta wait ${seconds} more seconds`)
-        }}
+        }
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
     });
