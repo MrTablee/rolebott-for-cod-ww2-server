@@ -11,7 +11,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
             else points = JSON.parse(res.rows[0].points);
     
             var countDownDate = points.zombieCooldown
-            var x = setInterval(function() {
                 
                   var now = new Date().getTime();
                 
@@ -22,7 +21,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
                   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                 
-                }, 1000);
             var noww = new Date().getTime();
             
             if(countDownDate < noww){

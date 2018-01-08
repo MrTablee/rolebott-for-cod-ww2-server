@@ -12,7 +12,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
             let rewardXP = (Math.floor(Math.random() * (((points.level) * 10) - 1 + 1))) + 1;    
     
             var countDownDate = points.dailyCooldown            
-                var x = setInterval(function() {
                     
                       var now = new Date().getTime();
                     
@@ -21,10 +20,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
                       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
                       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    
-                    }, 1000);
-    
+                      var seconds = Math.floor((distance % (1000 * 60)) / 1000);    
             if(points.dailyCooldown < now){
             points.xp = points.xp + rewardXP
             points.coins = points.coins + rewardCoins
