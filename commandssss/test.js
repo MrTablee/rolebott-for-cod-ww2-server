@@ -28,7 +28,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
                 }, 1000);
 
         console.log('After checking: ' + points);
-        if(points.zombieCooldown < 1){
+        if(points.zombieCooldown < noww){
         points.zombiesSlain++
         points.xp = points.xp + rewardXP
         points.coins = points.coins + rewardCoins
