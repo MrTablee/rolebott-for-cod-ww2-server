@@ -251,7 +251,9 @@ rolebotclient.on('message', message => {
       dailyCooldown: new Date().getTime(),
       zombieCooldown: new Date().getTime(),
       coinflipCooldown: new Date().getTime(),
-      guessnumberCooldown: new Date().getTime()
+      guessnumberCooldown: new Date().getTime(),
+      rewardsAvailable: 0,
+      rewardLevel: 1
   };
 
 		database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
