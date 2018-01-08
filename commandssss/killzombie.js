@@ -24,7 +24,6 @@ exports.run = (client, message, args, database, usedPrefix) => {
             var noww = new Date().getTime();
             
             if(countDownDate < noww){
-            console.log('After checking: ' + points);
             if(points.zombieCooldown < noww){
             points.zombiesSlain++
             points.xp = points.xp + rewardXP
