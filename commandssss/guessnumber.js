@@ -31,6 +31,9 @@ var maxNumberPicked = args[1]
 if(!maxNumberPicked){
 var maxNumberPicked = 10
 }
+if(maxNumberPicked < 10){message.channel.send("Max number can't be lower than 10!")
+                        return
+                        }
 var chosenNumber = args[2]
 
         var amountBet = args[0]
