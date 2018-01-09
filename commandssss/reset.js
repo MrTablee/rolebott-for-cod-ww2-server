@@ -30,7 +30,9 @@ exports.run = (client, message, args, database) => {
             coinflipCooldown: new Date().getTime(),
             guessnumberCooldown: new Date().getTime(),
             rewardsAvailable: 0,
-            rewardLevel: 1
+            rewardLevel: 1,
+            xpBoostLevel: 1,
+            coinBoostLevel: 1
         };
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
