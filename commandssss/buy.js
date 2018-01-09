@@ -8,10 +8,17 @@ exports.run = (client, message, args, database, usedPrefix) => {
     var itemWanted = args[0]
     } else {
     message.channel.send('You need to choose an item!')
+        return;
     }
         const mentionedID = message.author.id
-if (itemWanted % 1 !== 0){message.channel.send('I need a number')}
-if (amountWanted % 1 !== 0){message.channel.send('I need a number')}
+if (itemWanted % 1 !== 0){
+    return;
+    message.channel.send('I need a number')
+                         }
+if (amountWanted % 1 !== 0){
+    message.channel.send('I need a number')
+    return;
+}
 
 
 
