@@ -275,7 +275,7 @@ rolebotclient.on('message', message => {
           points.xp = 0 - (0 - (points.xp - thisVariable))
           points.level++
           points.coins = points.coins + awardedCoins
-          message.reply(`You just leveled up to level ${points.level}! Have some free coins.`)
+          message.reply(`<:levelup:380391015409909760>You just leveled up to level ${points.level}! Have some free coins.<:levelup:380391015409909760>`)
         }
       database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
           if (err) {console.log(err); return}
