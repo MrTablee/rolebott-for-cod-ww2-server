@@ -17,7 +17,7 @@ exports.run = (client, message, args, database, usedPrefix) => {
             if(!points){message.channel.send('This user currently has no database stats')}
             else points = JSON.parse(res.rows[0].points);
    if(points.coins > ((500 * points.rewardLevel) * upgradeAmount)){
-            points.rewardLevel++
+            points.rewardLevel = points.rewardLevel + upgradeAmount
             points.coins = points.coins - ((500 * points.rewardLevel) * upgradeAmount)
             message.channel.send(`*${message.author.username} upgraded their reward level to ${points.rewardLevel}!*`)            
 } else {
