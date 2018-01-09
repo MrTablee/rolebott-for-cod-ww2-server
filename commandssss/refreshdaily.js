@@ -9,9 +9,7 @@ exports.run = (client, message, args, database) => {
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
-        points = {
-            dailyCooldown: new Date().getTime()
-        };
+            points.dailyCooldown = new Date().getTime()
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
         if (err) {console.log(err); return}
