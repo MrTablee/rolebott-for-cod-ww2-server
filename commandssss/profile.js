@@ -26,7 +26,6 @@ message.channel.send(`\`\`\`<@${mentionedID}>'s profile:\nVIP Level: ${points.vi
         } else if(points.vipLevel = 3){
 const profileEmbed = new Discord.RichEmbed()
 .setTitle(`<@${mentionedID}>'s profile`)
-.setColor(0002ad)
 .addField(`VIP Level: ${points.vipLevel}`)
 .addField(`Current Level: ${points.level}`)
 .addField(`Current Points: ${points.points}`)
