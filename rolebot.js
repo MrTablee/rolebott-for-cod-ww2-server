@@ -255,7 +255,8 @@ rolebotclient.on('message', message => {
       rewardsAvailable: 0,
       rewardLevel: 1,
       xpBoostLevel: 1,
-      coinBoostLevel: 1
+      coinBoostLevel: 1,
+      vipLevel: 1
   };
 
 		database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
