@@ -17,7 +17,6 @@ exports.run = (client, message, args, database) => {
 .addField(`Current Level: `, `${points.level}`)
 .addField(`Current Points: `, `${points.points}`)
 .addField(`Awards: `, `${points.awards}`)
-.addField(`Zombies slain: `, `${points.zombiesSlain}`)
 .addField(`XP: `, `${points.xp}`)
 .addField(`Coins: `, `${points.coins}`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
