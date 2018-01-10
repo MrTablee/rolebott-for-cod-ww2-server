@@ -67,4 +67,4 @@ client.channels.get("geeksquad").sendFile(canvas.toBuffer())
 })
  
  
-}});
+}}
