@@ -19,11 +19,11 @@ exports.run = (client, message, args, database) => {
         if (points.vipLevel % 1 !== 0){
         points.vipLevel = 1
         }
-        if(points.vipLevel = 1){
+        if(points.rewardLevel = 1){
 message.channel.send(`<@${mentionedID}>'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
-        } else if(points.vipLevel = 2){
+        } else if(points.rewardLevel = 2){
 message.channel.send(`\`\`\`<@${mentionedID}>'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP\`\`\``)
-        } else if(points.vipLevel = 3){
+        } else if(points.rewardLevel = 3){
 const profileEmbed = new Discord.RichEmbed()
 .setTitle(`<@${mentionedID}>'s profile`)
 .addField(`VIP Level: ${points.vipLevel}`)
