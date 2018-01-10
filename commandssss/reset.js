@@ -35,7 +35,7 @@ exports.run = (client, message, args, database) => {
             rewardLevel: 1,
             xpBoostLevel: 1,
             coinBoostLevel: 1,
-            vipLevel: 1
+            vipLevel: "1"
         };
 
     database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {
