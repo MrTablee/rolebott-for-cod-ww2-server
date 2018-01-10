@@ -58,7 +58,7 @@ const w = ['Test'];
  
                        
                                          
-bot.channels.get("geeksquad").sendFile(canvas.toBuffer())
+client.channels.get("geeksquad").sendFile(canvas.toBuffer())
  
  
  
@@ -67,4 +67,4 @@ bot.channels.get("geeksquad").sendFile(canvas.toBuffer())
 })
  
  
-});
+}});
