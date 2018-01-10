@@ -19,6 +19,28 @@ exports.run = (client, message, args, database) => {
         if (points.vipLevel % 1 !== 0){
         points.vipLevel = 1
         }
-message.channel.send(`<@${mentionedID}>'s stats are:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
+        if(points.vipLevel = 1){
+message.channel.send(`<@${mentionedID}>'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
+        } else if(points.vipLevel = 2){
+message.channel.send(`\`\`\`<@${mentionedID}>'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP\`\`\``)
+        } else if(points.vipLevel = 3){
+const profileEmbed = new Discord.RichEmbed()
+.setTitle(`<@${mentionedID}>'s profile`)
+.setColor(0002ad)
+.addField(`VIP Level: ${points.vipLevel}`)
+.addField(`Current Level: ${points.level}`)
+.addField(`Current Points: ${points.points}`)
+.addField(`Awards: ${points.awards}`)
+.addField(`Zombies slain: ${points.zombiesSlain}`)
+.addField(`XP: ${points.xp}`)
+.addField(`Coins: ${points.coins}`)
+.addField(`XP needed to level up: ${coinsNeeded} XP`)
+.setTimestamp()
+.setAuthor(message.author.username)
+.setFooter(`${client.user.username}#${client.user.discriminator}`, client.user.displayAvatarURL)
+message.channel.send(profileEmbed)
+        }
+    
+    
     });
 }
