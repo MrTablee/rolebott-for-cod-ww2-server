@@ -11,6 +11,6 @@ exports.run = (client, message, args, database) => {
         let usrCoins = points.coins
         let usrXP = points.xp
         let coinsNeeded = (((usrLevel + 1) * 10)**2)
-message.channel.send(`**Shop Items:**\nID:1 XP boost level up \`Cost: ${points.xpBoostLevel * 10000}\`\nID:2 Coin boost level up \`Cost: ${points.coinBoostLevel * 10000}\`\nID:3 100 XP \`Cost: 500\`\nID:4 1000 XP \`Cost: 5000\`\nID:5 Reward level up \`Cost: 500\`\n\n**To buy an item, use r!buy <ID> <AMOUNT>**`)
+message.channel.send(`**Shop Items:**\nID:1 XP boost level up \`Cost: ${points.xpBoostLevel * 10000}\`\nID:2 Coin boost level up \`Cost: ${points.coinBoostLevel * 10000}\`\nID:3 100 XP \`Cost: 500\`\nID:4 1000 XP \`Cost: 5000\`\nID:5 Reward level up \`Cost: 500\`\nID: 6 VIP Level 2 \`Cost: 50000\`\n\n**To buy an item, use r!buy <ID> <AMOUNT>**`)
     });
 }
