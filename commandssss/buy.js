@@ -52,7 +52,7 @@ if (amountWanted % 1 !== 0){
             message.channel.send(`*${message.author.username}, you don't have enough coins*`)
             return;
             }
-            if ((args[0] === '6') && (points.coins > (50000) && (!points.vipLevel > 1)){
+            if ((args[0] === '6') && (points.coins > (50000)) && (!points.vipLevel > 1)){
             points.coins = points.coins - (50000)
             points.vipLevel++
             message.channel.send(`*${message.author.username} upgraded their VIP level to Level ${points.vipLevel}!*`)  
