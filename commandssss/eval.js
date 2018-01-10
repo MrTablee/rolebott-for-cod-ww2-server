@@ -1,4 +1,4 @@
-exports.run = (client, message) => {
+exports.run = (client, message, database) => {
   try {
     if (message.author.id !== '233366720062947330') return;
     const command = message.content.replace('r!eval ', '');
