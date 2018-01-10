@@ -1,5 +1,9 @@
 exports.run = (client, message, args, database, usedPrefix) => {
-    if(message.author.id !== '233366720062947330' ) return
+    if(message.author.id !== '233366720062947330' ) {
+        message.channel.send(`You don't have proper permissions to run this command!`)
+        return
+    }
+    
     const mentionedID = args[0]
     const mentionedAmount = message.content.replace(`${usedPrefix}addaward ${args[0]}`, '')
     if(!args) {message.channel.send('You can\'t run this without any args')}

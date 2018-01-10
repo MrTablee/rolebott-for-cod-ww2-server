@@ -1,5 +1,10 @@
 exports.run = (client, message, args, database) => {
-    database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
+    if(message.mention.users.size > 0){
+        var mentionedID = message.mentions.users.first().id
+    } else {
+        var mentionedID = message.author.id        
+    }
+    database.query('SELECT points FROM users WHERE userId = $1', [mentionedID], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}
