@@ -1,4 +1,4 @@
-exports.run = (client, message, args, database) => {
+exports.run = (client, message, args, database, Discord) => {
     if(message.mentions.users.size > 0){
         var mentionedID = message.mentions.users.first().id
     } else {
