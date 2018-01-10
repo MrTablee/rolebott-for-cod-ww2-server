@@ -16,6 +16,9 @@ exports.run = (client, message, args, database) => {
         let usrCoins = points.coins
         let usrXP = points.xp
         let coinsNeeded = (((usrLevel + 1) * 10)**2)
-message.channel.send(`Your stats are:\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
+        if (points.vipLevel % 1 !== 0){
+        points.vipLevel = 1
+        }
+message.channel.send(`<@${mentionedID}>'s stats are:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
     });
 }
