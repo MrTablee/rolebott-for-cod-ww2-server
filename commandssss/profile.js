@@ -1,4 +1,5 @@
-exports.run = (client, message, args, database, Discord) => {
+exports.run = (client, message, args, database) => {
+    const Discord = require('discord.js');
     if(message.mentions.users.size > 0){
         var mentionedID = message.mentions.users.first().id
     } else {
