@@ -247,7 +247,6 @@ rolebotclient.on('message', message => {
       prefix: "r!",
       xp: 0,
       coins: 0,
-      zombiesSlain: 0,
       dailyCooldown: new Date().getTime(),
       zombieCooldown: new Date().getTime(),
       coinflipCooldown: new Date().getTime(),
