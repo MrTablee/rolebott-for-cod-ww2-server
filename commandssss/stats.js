@@ -1,5 +1,5 @@
 exports.run = (client, message, args, database) => {
-    if(message.mention.users.size > 0){
+    if(message.mentions.users.size > 0){
         var mentionedID = message.mentions.users.first().id
     } else {
         var mentionedID = message.author.id        
