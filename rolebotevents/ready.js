@@ -1,9 +1,9 @@
-exports.run = (client) => {
-  client.user.setPresence({
+exports.run = (atlasclient) => {
+  atlasclient.user.setPresence({
     game: {
-      name: `r!help | In ${client.guilds.size} servers!`,
+      name: `a!help | In ${atlasclient.guilds.size} servers!`,
       type: 0
     }
   })
-  console.log(`RoleBot is connected to the Discord WebSocket`)
+  console.log(`Atlas is connected to the Discord WebSocket`)
 }
