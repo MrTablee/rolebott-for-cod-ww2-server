@@ -26,8 +26,8 @@ exports.run = (client, message, args, database, usedPrefix) => {
             if(countDownDate < noww){
             if(points.zombieCooldown < noww){
             points.zombiesSlain++
-            points.xp = points.xp + rewardXP
-            points.coins = points.coins + rewardCoins
+            points.xp = points.xp - (0 - rewardXP)
+            points.coins = points.coins - (0 - rewardCoins)
             points.zombieCooldown = new Date().getTime() + 5000
             message.channel.send(`*${message.author.username} killed a zombie and gathered ${rewardCoins} Coins and ${rewardXP} XP!*`)            
             }
