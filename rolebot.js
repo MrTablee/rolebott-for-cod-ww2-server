@@ -341,7 +341,7 @@ rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
 rolebotclient.login(process.env.ROLEBOTTOKEN);
 
 atlasclient.on('ready', () => {
-	database.query('CREATE TABLE IF NOT EXISTS profiles(userId VARCHAR(18) UNIQUE, points TEXT)', (err, res) => {
+	database.query('CREATE TABLE IF NOT EXISTS users(userId VARCHAR(18) UNIQUE, points TEXT)', (err, res) => {
 		if (err) throw err;
 	});
 });
@@ -363,7 +363,7 @@ atlasclient.on('message', message => {
         });
 	    return;
     }
-    database.query('SELECT points FROM profiles WHERE userId = $1', [message.author.id], (err, res) => {
+    database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0];
 		console.log('Before checking: '+points);
@@ -386,7 +386,7 @@ atlasclient.on('message', message => {
       vipLevel: 1
   };
 
-		database.query('INSERT INTO profiles (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
+		database.query('INSERT INTO users (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
     }
 
         else points = JSON.parse(res.rows[0].points);
@@ -405,7 +405,7 @@ atlasclient.on('message', message => {
           points.coins = points.coins + awardedCoins
           message.reply(`<:levelup:380391015409909760>You just leveled up to level ${points.level}! Have some free coins.<:levelup:380391015409909760>`)
         }
-      database.query('UPDATE profiles SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
+      database.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
           if (err) {console.log(err); return}
       });
         if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
