@@ -2,8 +2,10 @@ exports.run = (client, message, args, database) => {
     const Discord = require('discord.js');
     if(message.mentions.users.size > 0){
         var mentionedID = message.mentions.users.first().id
+        var mentionedUsername = message.mentions.users.first().username
     } else {
-        var mentionedID = message.author.id        
+        var mentionedID = message.author.id
+        var mentionedUsername = message.author.username
     }
     database.query('SELECT points FROM users WHERE userId = $1', [mentionedID], (err, res) => {
         if (err) {console.log(err); return}
@@ -12,8 +14,8 @@ exports.run = (client, message, args, database) => {
         else points = JSON.parse(res.rows[0].points);
                 let coinsNeeded = (((points.level + 1) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()
-.setTitle(`<@${mentionedID}>'s profile`)
-.addField(`VIP Level: `, `3`)
+.setTitle(`${mentionedUsername}'s profile`)
+.addField(`VIP Level: `, `points.vipLevel`)
 .addField(`Current Level: `, `${points.level}`)
 .addField(`Current Points: `, `${points.points}`)
 .addField(`Awards: `, `${points.awards}`)
@@ -30,11 +32,11 @@ exports.run = (client, message, args, database) => {
         let usrCoins = points.coins
         let usrXP = points.xp
          if(points.level > 10){
-message.channel.send(`\`\`\`<@${mentionedID}>'s profile:\nVIP Level: 2\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP\`\`\``)
+message.channel.send(`\`\`\`${mentionedUsername}'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP\`\`\``)
         } else if(message.author.id){
 message.channel.send(profileEmbed)
         } else {
-message.channel.send(`<@${mentionedID}>'s profile:\nVIP Level: 1\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
+message.channel.send(`${mentionedUsername}'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
         }
     
     
