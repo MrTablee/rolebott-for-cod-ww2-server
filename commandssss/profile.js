@@ -13,7 +13,7 @@ exports.run = (client, message, args, database) => {
                 let coinsNeeded = (((points.level + 1) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()
 .setTitle(`<@${mentionedID}>'s profile`)
-.addField(`VIP Level: `, `${points.vipLevel}`)
+.addField(`VIP Level: `, `3`)
 .addField(`Current Level: `, `${points.level}`)
 .addField(`Current Points: `, `${points.points}`)
 .addField(`Awards: `, `${points.awards}`)
@@ -29,12 +29,12 @@ exports.run = (client, message, args, database) => {
         let usrKills = points.zombiesSlain
         let usrCoins = points.coins
         let usrXP = points.xp
-        if((points.vipLevel !== "2") && (points.vipLevel !== "3")){
-message.channel.send(`<@${mentionedID}>'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
-        } else if(points.vipLevel === "2"){
-message.channel.send(`\`\`\`<@${mentionedID}>'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP\`\`\``)
-        } else if(points.vipLevel === "3"){
+         if(points.level > 10){
+message.channel.send(`\`\`\`<@${mentionedID}>'s profile:\nVIP Level: 2\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP\`\`\``)
+        } else if(message.author.id){
 message.channel.send(profileEmbed)
+        } else {
+message.channel.send(`<@${mentionedID}>'s profile:\nVIP Level: 1\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
         }
     
     
