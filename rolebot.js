@@ -14,6 +14,7 @@ discord.hookId = '385323385254707200';
 discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBnSF1tiDnhZ';
 const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
+const atlasclient = new Discord.Client();
 const rolebotclient = new Discord.Client();
 var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
@@ -338,6 +339,133 @@ rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
 });
 
 rolebotclient.login(process.env.ROLEBOTTOKEN);
+
+atlasclient.on('ready', () => {
+	database.query('CREATE TABLE IF NOT EXISTS profiles(userId VARCHAR(18) UNIQUE, points TEXT)', (err, res) => {
+		if (err) throw err;
+	});
+});
+
+atlasclient.on('message', message => {
+    if (message.author.bot) return;
+    if (message.channel.type == 'dm') {
+        clbot.configure({
+            botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
+        });
+        Cleverbot.prepare(() => {
+            clbot.write(message.content, (response) => {
+                message.channel.startTyping();
+                setTimeout(() => {
+                    message.channel.sendMessage(response.message).catch(console.error);
+                    message.channel.stopTyping();
+                }, Math.random() * (1 - 3) + 1 * 1000);
+            });
+        });
+	    return;
+    }
+    database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
+        if (err) {console.log(err); return}
+        let points = res.rows[0];
+		console.log('Before checking: '+points);
+    if (!points) {        
+      points = {
+      points: 0,
+      level: 1,
+      awards: "None",
+      prefix: "a!",
+      xp: 0,
+      coins: 0,
+      dailyCooldown: new Date().getTime(),
+      zombieCooldown: new Date().getTime(),
+      coinflipCooldown: new Date().getTime(),
+      guessnumberCooldown: new Date().getTime(),
+      rewardsAvailable: 0,
+      rewardLevel: 1,
+      xpBoostLevel: 1,
+      coinBoostLevel: 1,
+      vipLevel: 1
+  };
+
+		database.query('INSERT INTO profiles (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);
+    }
+
+        else points = JSON.parse(res.rows[0].points);
+		console.log('After checking: '+points);
+        points.points++;	   
+    
+        if(points.points > 5){
+          points.points = 0
+          points.coins++
+        }
+	    let thisVariable = (((points.level + 1) * 10)**2)
+        if(points.xp > thisVariable){
+          let awardedCoins = (Math.floor(Math.random() * (500 - 1 + 1))) + 1;
+          points.xp = 0 - (0 - (points.xp - thisVariable))
+          points.level++
+          points.coins = points.coins + awardedCoins
+          message.reply(`<:levelup:380391015409909760>You just leveled up to level ${points.level}! Have some free coins.<:levelup:380391015409909760>`)
+        }
+      database.query('UPDATE profiles SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
+          if (err) {console.log(err); return}
+      });
+        if ((message.guild.id === '377259194211893248') && (message.content.includes('youtube.com/')) && (!message.guild.member(message.author.id).roles.exists('name', 'Content Creators'))) {
+            let muteRole = (message.guild.roles.find('name', 'Muted'));
+            message.delete()
+            message.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${message.author.tag}`)
+            message.guild.member(message.author.id).addRole(muteRole.id)
+            message.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${message.guild.name}`)
+        }
+        if((!message.content.startsWith('a!')) && (!message.content.startsWith(points.prefix))) return;
+if(message.content.startsWith('a!')) {
+	let usedPrefix = 'a!'
+        const args = message.content.slice(usedPrefix.length).trim().split(/ +/g);
+        const command = (!message.content.startsWith('a!level'))?args.shift().toLowerCase():[database];
+
+        try {
+            let commandFile = require(`./commandsssss/${command}`);
+            commandFile.run(atlasclient, message, args, database, usedPrefix);
+        } catch (err) {
+            atlasclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+        }
+}
+else if(message.content.startsWith(points.prefix)) {
+	let usedPrefix = points.prefix
+	const args = message.content.slice(usedPrefix.length).trim().split(/ +/g);
+        const command = (!message.content.startsWith('a!level'))?args.shift().toLowerCase():[database];
+
+        try {
+            let commandFile = require(`./commandssss/${command}`);
+            commandFile.run(atlasclient, message, args, database, usedPrefix);
+        } catch (err) {
+            atlasclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+        }
+}
+    });
+});
+
+atlasclient.on('messageUpdate', (oldMsg, newMsg) => {
+  if (newMsg.author.bot) return;
+  if ((newMsg.guild.id === '377259194211893248') && (newMsg.content.includes('youtube.com/')) && (!newMsg.guild.member(newMsg.author.id).roles.exists('name', 'Content Creators'))) {
+    let muteRole = (newMsg.guild.roles.find('name', 'Muted'));
+    newMsg.delete()
+    newMsg.channel.send(`So uhm... You can't do that... Unless you're a content creator... So I'm gonna go ahead and mute you... ${newMsg.author.tag}`)
+    newMsg.guild.member(newMsg.author.id).addRole(muteRole.id)
+    newMsg.author.send(`Hey there, sorry if I muted you wrongfully, but you need the role \`Content Creators\` to send youtube links in ${newMsg.guild.name}`)
+  }
+  if (newMsg.content.indexOf('r!') !== 0) return;
+
+  const args = newMsg.content.slice('r!'.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  try {
+    let commandFile = require(`./commandsssss/${command}`);
+    commandFile.run(atlasclient, newMsg, args);
+  } catch (err) {
+    atlasclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
+  }
+});
+
+atlasclient.login(process.env.ATLASTOKEN);
 
 alleyclient.on('ready', () => {
 	database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)', (err, res) => {
