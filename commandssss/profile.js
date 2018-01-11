@@ -23,7 +23,6 @@ exports.run = (client, message, args, database) => {
 .addField(`Coins: `, `${points.coins}`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
 .setTimestamp()
-.setAuthor(message.author.username)
 .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)
         let usrPoints = points.points
         let usrLevel = points.level
