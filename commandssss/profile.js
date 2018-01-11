@@ -15,7 +15,7 @@ exports.run = (client, message, args, database) => {
                 let coinsNeeded = (((points.level + 1) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()
 .setTitle(`${mentionedUsername}'s profile`)
-.addField(`VIP Level: `, `points.vipLevel`)
+.addField(`VIP Level: `, `${points.vipLevel}`)
 .addField(`Current Level: `, `${points.level}`)
 .addField(`Current Points: `, `${points.points}`)
 .addField(`Awards: `, `${points.awards}`)
