@@ -295,7 +295,7 @@ if(message.content.startsWith('r!')) {
         const command = (!message.content.startsWith('r!level'))?args.shift().toLowerCase():[database];
 
         try {
-            let commandFile = require(`./commandssss/${command}`);
+            let commandFile = require(`./commandsssss/${command}`);
             commandFile.run(rolebotclient, message, args, database, usedPrefix);
         } catch (err) {
             rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
@@ -307,7 +307,7 @@ else if(message.content.startsWith(points.prefix)) {
         const command = (!message.content.startsWith('r!level'))?args.shift().toLowerCase():[database];
 
         try {
-            let commandFile = require(`./commandssss/${command}`);
+            let commandFile = require(`./commandsssss/${command}`);
             commandFile.run(rolebotclient, message, args, database, usedPrefix);
         } catch (err) {
             rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
@@ -331,7 +331,7 @@ rolebotclient.on('messageUpdate', (oldMsg, newMsg) => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`./commandssss/${command}`);
+    let commandFile = require(`./commandsssss/${command}`);
     commandFile.run(rolebotclient, newMsg, args);
   } catch (err) {
     rolebotclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
@@ -422,7 +422,7 @@ if(message.content.startsWith('a!')) {
         const command = (!message.content.startsWith('a!level'))?args.shift().toLowerCase():[database];
 
         try {
-            let commandFile = require(`./commandsssss/${command}`);
+            let commandFile = require(`./commandssss/${command}`);
             commandFile.run(atlasclient, message, args, database, usedPrefix);
         } catch (err) {
             atlasclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
@@ -458,7 +458,7 @@ atlasclient.on('messageUpdate', (oldMsg, newMsg) => {
   const command = args.shift().toLowerCase();
 
   try {
-    let commandFile = require(`./commandsssss/${command}`);
+    let commandFile = require(`./commandssss/${command}`);
     commandFile.run(atlasclient, newMsg, args);
   } catch (err) {
     atlasclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
