@@ -346,6 +346,15 @@ atlasclient.on('ready', () => {
 	});
 });
 
+fs.readdir("./rolebotevents/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+    let eventFunction = require(`./rolebotevents/${file}`);
+    let eventName = file.split(".")[0];
+    atlasclient.on(eventName, (...args) => eventFunction.run(atlasclient, ...args));
+  });
+});
+
 atlasclient.on('message', message => {
     if (message.author.bot) return;
     if (message.channel.type == 'dm') {
