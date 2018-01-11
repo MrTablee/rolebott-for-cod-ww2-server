@@ -363,7 +363,7 @@ atlasclient.on('message', message => {
         });
 	    return;
     }
-    database.query('SELECT points FROM users WHERE userId = $1', [message.author.id], (err, res) => {
+    database.query('SELECT points FROM profiles WHERE userId = $1', [message.author.id], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0];
 		console.log('Before checking: '+points);
