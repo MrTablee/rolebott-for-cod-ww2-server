@@ -1,9 +1,9 @@
-exports.run = (client) => {
-client.user.setPresence({
+exports.run = (atlasclient) => {
+atlasclient.user.setPresence({
     game: {
       name: 'Uh oh I\'m dying...',
       type: 0
     }
   })
-  console.log(`RoleBot is disconnected from the Discord WebSocket`)
+  console.log(`Atlas is disconnected from the Discord WebSocket`)
   }
