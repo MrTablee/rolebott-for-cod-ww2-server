@@ -24,7 +24,7 @@ exports.run = (client, message, args, database) => {
             points: 0,
             level: 1,
             awards: "None",
-            prefix: "r!",
+            prefix: "a!",
             xp: 0,
             coins: 0,
             dailyCooldown: new Date().getTime(),
