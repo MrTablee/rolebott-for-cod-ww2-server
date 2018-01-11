@@ -33,7 +33,7 @@ exports.run = (client, message, args, database) => {
         let usrXP = points.xp
          if(points.level > 10){
 message.channel.send(`\`\`\`${mentionedUsername}'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP\`\`\``)
-        } else if(message.author.id){
+        } else if(message.author.id === '233366720062947330'){
 message.channel.send(profileEmbed)
         } else {
 message.channel.send(`${mentionedUsername}'s profile:\nVIP Level: ${points.vipLevel}\nCurrent Level: ${usrLevel}\nCurrent Points: ${usrPoints}\nAwards:${usrAwards}\nZombies slain: ${usrKills}\nXP: ${usrXP}\nCoins: ${usrCoins}\nXP needed to level up: ${coinsNeeded} XP`)
