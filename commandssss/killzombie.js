@@ -8,8 +8,8 @@ exports.run = (client, message, args, database, usedPrefix) => {
             let points = res.rows[0];
             if(!points){message.channel.send('This user currently has no database stats')}
             else points = JSON.parse(res.rows[0].points);
-        let rewardCoins = (points.coinBoostLevel * ((Math.floor(Math.random() * (10 + (Math.floor(Math.random() * (10))))))));
-        let rewardXP = (points.xpBoostLevel * ((Math.floor(Math.random() * (10 + (Math.floor(Math.random() * (10))))))));
+        let rewardCoins = ((points.coinBoostLevel * ((Math.floor(Math.random() * (10 + (Math.floor(Math.random() * (10)))))))) + (Math.floor(Math.random() * (10))));
+        let rewardXP = ((points.xpBoostLevel * ((Math.floor(Math.random() * (10 + (Math.floor(Math.random() * (10)))))))) + (Math.floor(Math.random() * (10))));
             var countDownDate = points.zombieCooldown
                 
                   var now = new Date().getTime();
