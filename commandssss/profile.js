@@ -12,7 +12,7 @@ exports.run = (client, message, args, database) => {
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
-                let coinsNeeded = (((points.level + 1) * 10)**2)
+                let coinsNeeded = (((points.level - (0 - 1)) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()
 .setTitle(`${mentionedUsername}'s profile`)
 .addField(`VIP Level: `, `${points.vipLevel}`)
@@ -22,6 +22,7 @@ exports.run = (client, message, args, database) => {
 .addField(`XP: `, `${points.xp}`)
 .addField(`Coins: `, `${points.coins}`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
+.addField(`XP left until level up: `, `${points.xp - coinsNeeded} XP`)
 .setTimestamp()
 .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)
         let usrPoints = points.points
