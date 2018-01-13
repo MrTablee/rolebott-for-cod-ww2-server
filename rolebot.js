@@ -406,7 +406,7 @@ atlasclient.on('message', message => {
           points.points = 0
           points.coins++
         }
-	    let thisVariable = (((points.level + 1) * 10)**2)
+	    let thisVariable = (((points.level - (0 - 1)) * 10)**2)
         if(points.xp > thisVariable){
           let awardedCoins = (Math.floor(Math.random() * (500 - 1 + 1))) + 1;
           points.xp = 0 - (0 - (points.xp - thisVariable))
