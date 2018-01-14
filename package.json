@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ytdl-core": "^0.18.2",
-    "discord.js":"11.2.1",
+    "discord.js":"latest",
     "pg":"latest",
     "eris":"0.8.1",
     "cleverbot-node":"0.3.11",
