@@ -22,7 +22,7 @@ exports.run = (client, message, args, database) => {
 .addField(`XP: `, `${points.xp}`)
 .addField(`Coins: `, `${points.coins}`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
-.addField(`XP left until level up: `, `${points.xp - coinsNeeded} XP`)
+.addField(`XP left until level up: `, `${coinsNeeded - points.xp} XP`)
 .setTimestamp()
 .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)
         let usrPoints = points.points
