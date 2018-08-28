@@ -73,7 +73,7 @@ alphaclient.on('message', message => {
                     message.channel.stopTyping();
                 }, Math.random() * (1 - 3) + 1 * 1000);
             });
-        });
+	
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
