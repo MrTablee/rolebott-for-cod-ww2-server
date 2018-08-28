@@ -48,21 +48,7 @@ alphaclient.on('ready', () => {
   })
 });
 
-alphaclient.on('message', message => {
-    if (message.author.bot) return;
-    if (message.channel.type == 'dm') {
-        clbot.configure({
-            botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
-        });
-        Cleverbot.prepare(() => {
-            clbot.write(message.content, (response) => {
-                message.channel.startTyping();
-                setTimeout(() => {
-                    message.channel.sendMessage(response.message).catch(console.error);
-                    message.channel.stopTyping();
-                }, Math.random() * (1 - 3) + 1 * 1000);
-            });
-	});
+
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
