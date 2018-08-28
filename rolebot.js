@@ -30,6 +30,35 @@ const database = new pg.Client({
 });
 database.connect();
 
+alleyclient.on('ready', () => {
+  console.log('AlleyCat is now online!');
+  alleyclient.editStatus({
+    name: `..help | In ${alleyclient.guilds.size} servers!`
+  })
+});
+
+alleyclient.on('guildCreate', () => {
+  console.log('New server added!');
+  alleyclient.editStatus({
+    name: `..help | In ${alleyclient.guilds.size} servers!`
+  })
+});
+
+
+alphaclient.on('ready', () => {
+  console.log('AlphaBot is now online!');
+  alphaclient.editStatus({
+    name: `A!help | In ${alphaclient.guilds.size} servers!`
+  })
+});
+
+alphaclient.on('guildCreate', () => {
+  console.log('New server added!');
+  alphaclient.editStatus({
+    name: `A!help | In ${alphaclient.guilds.size} servers!`
+  })
+});
+
 alphaclient.on('message', message => {
   if (message.author.bot) return;
   if (message.content.indexOf('A!') !== 0) return;
