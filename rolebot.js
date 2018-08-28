@@ -33,7 +33,7 @@ database.connect();
 alleyclient.on('ready', () => {
   alleyclient.user.setPresence({
     game: {
-      name: `a!help | In ${alleyclient.guilds.size} servers!`,
+      name: `..help | In ${alleyclient.guilds.size} servers!`,
       type: 0
     }
   })
@@ -42,11 +42,31 @@ alleyclient.on('ready', () => {
 alphaclient.on('ready', () => {
   alphaclient.user.setPresence({
     game: {
-      name: `a!help | In ${alphaclient.guilds.size} servers!`,
+      name: `A!help | In ${alphaclient.guilds.size} servers!`,
       type: 0
     }
   })
 });
+
+
+alphaclient.on('message', message => {
+    if (message.author.bot) return;
+    if (message.channel.type == 'dm') {
+        clbot.configure({
+            botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
+        });
+        Cleverbot.prepare(() => {
+            clbot.write(message.content, (response) => {
+                message.channel.startTyping();
+                setTimeout(() => {
+                    message.channel.sendMessage(response.message).catch(console.error);
+                    message.channel.stopTyping();
+                }, Math.random() * (1 - 3) + 1 * 1000);
+        });
+        });
+        }
+	});
+
 
 
 
