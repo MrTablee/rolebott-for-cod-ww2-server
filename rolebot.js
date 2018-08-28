@@ -32,14 +32,14 @@ database.connect();
 
 alleyclient.on('ready', () => {
   console.log('AlleyCat is now online!');
-  alleyclient.editStatus({
+  alleyclient.user.setStatus({
     name: `..help | In ${alleyclient.guilds.size} servers!`
   })
 });
 
 alleyclient.on('guildCreate', () => {
   console.log('New server added!');
-  alleyclient.editStatus({
+  alleyclient.user.setStatus({
     name: `..help | In ${alleyclient.guilds.size} servers!`
   })
 });
@@ -47,17 +47,33 @@ alleyclient.on('guildCreate', () => {
 
 alphaclient.on('ready', () => {
   console.log('AlphaBot is now online!');
-  alphaclient.editStatus({
+  alphaclient.user.setStatus({
     name: `A!help | In ${alphaclient.guilds.size} servers!`
   })
 });
 
 alphaclient.on('guildCreate', () => {
   console.log('New server added!');
-  alphaclient.editStatus({
+  alphaclient.user.setStatus({
     name: `A!help | In ${alphaclient.guilds.size} servers!`
   })
 });
+
+alphaclient.on('message', message => {
+    if (message.author.bot) return;
+    if (message.channel.type == 'dm') {
+        clbot.configure({
+            botapi: 'CC5t7pEnGxIq-mjrBf89H2pDcWQ'
+        });
+        Cleverbot.prepare(() => {
+            clbot.write(message.content, (response) => {
+                message.channel.startTyping();
+                setTimeout(() => {
+                    message.channel.sendMessage(response.message).catch(console.error);
+                    message.channel.stopTyping();
+                }, Math.random() * (1 - 3) + 1 * 1000);
+            });
+        });
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
