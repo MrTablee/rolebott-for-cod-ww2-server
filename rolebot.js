@@ -31,31 +31,20 @@ const database = new pg.Client({
 database.connect();
 
 alleyclient.on('ready', () => {
-  console.log('AlleyCat is now online!');
-  alleyclient.user.setStatus({
-    name: `..help | In ${alleyclient.guilds.size} servers!`
+  alleyclient.user.setPresence({
+    game: {
+      name: `a!help | In ${alleyclient.guilds.size} servers!`,
+      type: 0
+    }
   })
 });
-
-alleyclient.on('guildCreate', () => {
-  console.log('New server added!');
-  alleyclient.user.setStatus({
-    name: `..help | In ${alleyclient.guilds.size} servers!`
-  })
-});
-
 
 alphaclient.on('ready', () => {
-  console.log('AlphaBot is now online!');
-  alphaclient.user.setStatus({
-    name: `A!help | In ${alphaclient.guilds.size} servers!`
-  })
-});
-
-alphaclient.on('guildCreate', () => {
-  console.log('New server added!');
-  alphaclient.user.setStatus({
-    name: `A!help | In ${alphaclient.guilds.size} servers!`
+  alphaclient.user.setPresence({
+    game: {
+      name: `a!help | In ${alphaclient.guilds.size} servers!`,
+      type: 0
+    }
   })
 });
 
@@ -73,7 +62,7 @@ alphaclient.on('message', message => {
                     message.channel.stopTyping();
                 }, Math.random() * (1 - 3) + 1 * 1000);
             });
-	
+	});
 
 alphaclient.on('message', message => {
   if (message.author.bot) return;
