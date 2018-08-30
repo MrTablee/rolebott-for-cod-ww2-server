@@ -16,6 +16,7 @@ const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
 const atlasclient = new Discord.Client();
 const rolebotclient = new Discord.Client();
+const tableclient = new Discord.Client();
 var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
   owner: 'Mr.Table#1352​',
@@ -47,6 +48,9 @@ alphaclient.on('ready', () => {
     }
   })
 });
+
+
+
 
 
 alphaclient.on('message', message => {
@@ -86,6 +90,27 @@ alphaclient.on('message', message => {
 });
 
 alphaclient.login(process.env.ALPHATOKEN);
+
+
+
+
+
+tableclient.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content.indexOf('!!!') !== 0) return;
+
+  const args = message.content.slice('!!!'.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  try {
+    let commandFile = require(`./commands/${command}`);
+    commandFile.run(tableclient, message, args);
+  } catch (err) {
+    message.channel.send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+  }
+});
+
+tableclient.login(process.env.TABLETOKEN);
 
 
 
