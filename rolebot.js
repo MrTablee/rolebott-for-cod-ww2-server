@@ -64,9 +64,6 @@ torbletclient.on('message', message => {
 	}
 	  if (message.author.id !== '271355666977783808') return;
 		if(message.content.startsWith("!use")){
-		setTimeout(function(){ 
-      message.channel.send("!use 1");
-}, 1000);
                 setTimeout(function(){ 
       message.channel.send("!duel <@271355666977783808>");
 }, 5000)
