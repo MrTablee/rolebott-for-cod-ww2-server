@@ -33,6 +33,11 @@ database.connect();
 tableclient.on('message', message => {
   if (message.author.bot) return;
   if (message.content.indexOf('!!!') !== 0) return;
+	if(message.content.startsWith("!!!say")){
+	  let repeat = message.content.replace("!!!say", "");
+message.channel.send(repeat)
+	}
+	
   if (message.author.id !== '233366720062947330') return;
   let command = message.content.replace("!!!eval", "");
   let output = eval(command);
