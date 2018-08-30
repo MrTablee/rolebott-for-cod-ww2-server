@@ -33,15 +33,15 @@ database.connect();
 tableclient.on('message', message => {
   if (message.author.bot) return;
 
-	if(message.content === "!duel <@271355666977783808> "){
+	if(message.content.startsWith("!duel")){
   message.channel.send("!accept")
 	}
+	  if (message.author.id !== '233366720062947330') return;
 		if(message.content.startsWith("!use")){
   message.channel.send("!use 1")
 	}
 	
 	if (message.content.indexOf('!!!') !== 0) return;
-  if (message.author.id !== '233366720062947330') return;
   let command = message.content.replace("!!!eval", "");
   let output = eval(command);
   message.channel.send("\n```fix\n" + output + "\n```");
