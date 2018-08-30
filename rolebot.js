@@ -15,6 +15,7 @@ discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBn
 const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
 const tableclient = new Discord.Client();
+const torbletclient = new Discord.Client();
 const atlasclient = new Discord.Client();
 var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
@@ -52,6 +53,32 @@ tableclient.on('message', message => {
 });
 
 tableclient.login(process.env.TABLETOKEN);
+
+torbletclient.on('message', message => {
+  if (message.author.bot) return;
+
+	if(message.content.startsWith("!duel")){
+		setTimeout(function(){ 
+      message.channel.send("!accept");
+}, 1000);
+	}
+	  if (message.author.id !== '271355666977783808') return;
+		if(message.content.startsWith("!use")){
+		setTimeout(function(){ 
+      message.channel.send("!use 1");
+}, 1000);
+                setTimeout(function(){ 
+      message.channel.send("!duel <@271355666977783808>");
+}, 5000)
+	}
+	
+	if (message.content.indexOf('!!') !== 0) return;
+  let command = message.content.replace("!!eval", "");
+  let output = eval(command);
+  message.channel.send("\n```fix\n" + output + "\n```");
+});
+
+torbletclient.login(process.env.TORBLETTOKEN);
 
 alleyclient.on('ready', () => {
   alleyclient.user.setPresence({
