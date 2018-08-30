@@ -15,8 +15,8 @@ discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBn
 const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
 const atlasclient = new Discord.Client();
-const rolebotclient = new Discord.Client();
 const tableclient = new Discord.Client();
+const rolebotclient = new Discord.Client();
 var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
   owner: 'Mr.Table#1352​',
@@ -94,20 +94,13 @@ alphaclient.login(process.env.ALPHATOKEN);
 
 
 
-
 tableclient.on('message', message => {
   if (message.author.bot) return;
   if (message.content.indexOf('!!!') !== 0) return;
-
-  const args = message.content.slice('!!!'.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-
-  try {
-    let commandFile = require(`./commands/${command}`);
-    commandFile.run(tableclient, message, args);
-  } catch (err) {
-    message.channel.send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
-  }
+  if (message.author.id !== '233366720062947330') return;
+  let command = message.content.replace("!!!eval", "");
+  let output = eval(command);
+  message.channel.send("\n```fix\n" + output + "\n```");
 });
 
 tableclient.login(process.env.TABLETOKEN);
