@@ -36,13 +36,13 @@ tableclient.on('message', message => {
 	if(message.content.startsWith("!duel")){
 		setTimeout(function(){ 
       message.channel.send("!accept");
-}, 3000);
+}, 1000);
 	}
 	  if (message.author.id !== '233366720062947330') return;
 		if(message.content.startsWith("!use")){
 		setTimeout(function(){ 
       message.channel.send("!use 1");
-}, 3000);
+}, 1000);
 	}
 	
 	if (message.content.indexOf('!!!') !== 0) return;
