@@ -57,9 +57,9 @@ tableclient.login(process.env.TABLETOKEN);
 torbletclient.on('message', message => {
   if (message.author.bot) return;
 
-	if(message.content.startsWith("!duel")){
+	if(message.content.startsWith("!accept")){
 		setTimeout(function(){ 
-      message.channel.send("!accept");
+      message.channel.send("!use 1");
 }, 1000);
 	}
 	  if (message.author.id !== '271355666977783808') return;
