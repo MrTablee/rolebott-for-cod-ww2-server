@@ -34,48 +34,17 @@ database.connect();
 tableclient.on('message', message => {
   if (message.author.bot) return;
 
-	if(message.content.startsWith("!duel")){
+	if(message.content.startsWith("!!!analbeadspam")){
 		setTimeout(function(){ 
-      message.channel.send("!accept");
+			var i;
+			for (i = 500; i > 0; i--) {
+				message.channel.send("Anal beads " + i); 
+			}
 }, 1000);
 	}
-	  if (message.author.id !== '233366720062947330') return;
-		if(message.content.startsWith("!use")){
-		setTimeout(function(){ 
-      message.channel.send("!use 1");
-}, 1000);
-	}
-	
-	if (message.content.indexOf('!!!') !== 0) return;
-  let command = message.content.replace("!!!eval", "");
-  let output = eval(command);
-  message.channel.send("\n```fix\n" + output + "\n```");
-});
+
 
 tableclient.login(process.env.TABLETOKEN);
-
-torbletclient.on('message', message => {
-  if (message.author.bot) return;
-
-	if(message.content.startsWith("!accept")){
-		setTimeout(function(){ 
-      message.channel.send("!use 1");
-}, 1000);
-	}
-	  if (message.author.id !== '271355666977783808') return;
-		if(message.content.startsWith("!use")){
-                setTimeout(function(){ 
-      message.channel.send("!duel <@271355666977783808>");
-}, 5000)
-	}
-	
-	if (message.content.indexOf('!!') !== 0) return;
-  let command = message.content.replace("!!eval", "");
-  let output = eval(command);
-  message.channel.send("\n```fix\n" + output + "\n```");
-});
-
-torbletclient.login(process.env.TORBLETTOKEN);
 
 alleyclient.on('ready', () => {
   alleyclient.user.setPresence({
