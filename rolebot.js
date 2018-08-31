@@ -55,6 +55,23 @@ var i;
 
 tableclient.login(process.env.TABLETOKEN);
 
+torbleclient.on('message', message => {
+  if (message.author.bot) return;
+	if (message.author.id !== '271355666977783808') return;
+	if(message.content.startsWith("!accept")){
+		setTimeout(function(){ 
+      message.channel.send("!use 1");
+}, 1000);
+	}		if(message.content.startsWith("!use 1")){
+		setTimeout(function(){ 
+      message.channel.send("!duel <@271355666977783808>");
+}, 1000);
+	}
+});
+
+
+torbleclient.login(process.env.TORBLETOKEN);
+
 alleyclient.on('ready', () => {
   alleyclient.user.setPresence({
     game: {
