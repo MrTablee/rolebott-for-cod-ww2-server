@@ -55,7 +55,7 @@ var i;
 
 tableclient.login(process.env.TABLETOKEN);
 
-torbleclient.on('message', message => {
+torbletclient.on('message', message => {
   if (message.author.bot) return;
 	if (message.author.id !== '271355666977783808') return;
 	if(message.content.startsWith("!accept")){
@@ -70,7 +70,7 @@ torbleclient.on('message', message => {
 });
 
 
-torbleclient.login(process.env.TORBLETOKEN);
+torbletclient.login(process.env.TORBLETTOKEN);
 
 alleyclient.on('ready', () => {
   alleyclient.user.setPresence({
