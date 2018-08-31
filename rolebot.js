@@ -33,15 +33,13 @@ database.connect();
 
 tableclient.on('message', message => {
   if (message.author.bot) return;
-
-	if(message.content.startsWith("!!!analbeadspam")){
-		setTimeout(function(){ 
-			var i;
-			for (i = 500; i > 0; i--) {
-				message.channel.send("Anal beads " + i); 
-			}
-}, 1000);
+if(message.content === "!!!analbeadspam"){
+var i;
+	for (i=0; i < 500; i++){
+	message.channel.send("Anal beads " + i)
 	}
+}
+});
 
 
 tableclient.login(process.env.TABLETOKEN);
