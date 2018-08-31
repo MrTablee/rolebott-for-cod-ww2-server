@@ -39,12 +39,17 @@ var i;
 	message.channel.send("Anal beads " + i)
 	}
 }
-	if(message.content.startsWith("!duel ")){
-	message.channel.send("!accept")
-}
-	if((message.author.id === "233366720062947330") && (message.content.startsWith("!use "))){
-	message.channel.send("!use 1")
-}
+	if(message.content.startsWith("!duel")){
+		setTimeout(function(){ 
+      message.channel.send("!accept");
+}, 1000);
+	}
+	  if (message.author.id !== '233366720062947330') return;
+		if(message.content.startsWith("!use")){
+		setTimeout(function(){ 
+      message.channel.send("!use 1");
+}, 1000);
+	}
 });
 
 
