@@ -14,8 +14,6 @@ discord.hookId = '385323385254707200';
 discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBnSF1tiDnhZ';
 const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
-const tableclient = new Discord.Client();
-const torbletclient = new Discord.Client();
 const atlasclient = new Discord.Client();
 var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
@@ -31,46 +29,7 @@ const database = new pg.Client({
 });
 database.connect();
 
-tableclient.on('message', message => {
-  if (message.author.bot) return;
-if(message.content === "!!!analbeadspam"){
-var i;
-	for (i=0; i < 500; i++){
-	message.channel.send("Anal beads " + i)
-	}
-}
-	if(message.content.startsWith("!duel")){
-		setTimeout(function(){ 
-      message.channel.send("!accept");
-}, 1000);
-	}
-	  if (message.author.id !== '233366720062947330') return;
-		if(message.content.startsWith("!use")){
-		setTimeout(function(){ 
-      message.channel.send("!use 1");
-}, 1000);
-	}
-});
 
-
-tableclient.login(process.env.TABLETOKEN);
-
-torbletclient.on('message', message => {
-  if (message.author.bot) return;
-	if (message.author.id !== '271355666977783808') return;
-	if(message.content.startsWith("!accept")){
-		setTimeout(function(){ 
-      message.channel.send("!use 1");
-}, 1000);
-	}		if(message.content.startsWith("!use 1")){
-		setTimeout(function(){ 
-      message.channel.send("!duel <@271355666977783808>");
-}, 1000);
-	}
-});
-
-
-torbletclient.login(process.env.TORBLETTOKEN);
 
 alleyclient.on('ready', () => {
   alleyclient.user.setPresence({
