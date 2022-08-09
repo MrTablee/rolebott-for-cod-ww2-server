@@ -38,7 +38,7 @@ database.connect();
 
 altclient.on('message', message => {
   if (message.author.bot) return;
-  if (message.author.id = "233366720062947330"){
+ 
   if (message.content.indexOf('%%%') !== 0) return;
 
   const args = message.content.slice('%%%'.length).trim().split(/ +/g);
@@ -50,7 +50,7 @@ altclient.on('message', message => {
   } catch (err) {
     altclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
-}});
+});
 
 altclient.login(process.env.ALTTOKEN);
 
