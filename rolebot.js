@@ -423,7 +423,7 @@ atlasclient.on('messageUpdate', (oldMsg, newMsg) => {
   }
 });
 
-atlasclient.login(process.env.ATLASTOKEN);
+atlasclient.login(process.env.atlasreal);
 
 alleyclient.on('ready', () => {
 	database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)', (err, res) => {
