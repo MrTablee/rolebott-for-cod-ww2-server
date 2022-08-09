@@ -465,9 +465,9 @@ alleyclient.login(process.env.ALLEYTOKEN);
 
 
 var llbot = new Discord.Client();
-
 llbot.on('ready', () => {
-  alphaclient.user.setPresence({
+	  console.log(`ALT is connected to the Discord WebSocket`)
+  llbot.user.setPresence({
     game: {
       name: `BUTTS`,
       type: 0
