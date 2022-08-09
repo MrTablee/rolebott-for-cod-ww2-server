@@ -16,7 +16,7 @@ discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBn
 const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
 const atlasclient = new Discord.Client();
-var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
+var bot = new Eris.CommandClient(process.env.ALTTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
   owner: 'Mr.Table#1352​',
   prefix: ',,'
@@ -112,7 +112,7 @@ bot.on('message', message => {
 bot.on('ready', () => {
   console.log('Mr. Chair is now online!');
   bot.editStatus({
-    name: `,,help | In ${bot.guilds.size} servers!`
+    name: `BUTTS`
   })
 });
 
@@ -462,39 +462,3 @@ alleyclient.on('message', message => {
 });
 alleyclient.login(process.env.ALLEYTOKEN);
 
-
-
-var llbot = new Discord.Client();
-llbot.on('ready', () => {
-	  console.log(`ALT is connected to the Discord WebSocket`)
-  llbot.user.setPresence({
-    game: {
-      name: `BUTTS`,
-      type: 0
-    }
-  })
-});
-
-
-
-
-llbot.on('message', message => {
-  if (message.author.bot) return;
-  if (message.content.indexOf('%%%') !== 0) return;
-
-  const args = message.content.slice('%%%'.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-
-  try {
-    let commandFile = require(`./commands/${command}`);
-    commandFile.run(llbot, message, args);
-  } catch (err) {
-    llbot.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
-  }
-});
-
-
-
-
-
-llbot.login(process.env.ALTTOKEN);
