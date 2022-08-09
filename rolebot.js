@@ -54,6 +54,8 @@ alphaclient.on('ready', () => {
 
 
 
+
+
 alphaclient.on('message', message => {
     if (message.author.bot) return;
     if (message.channel.type == 'dm') {
@@ -463,33 +465,36 @@ alleyclient.login(process.env.ALLEYTOKEN);
 
 
 var llbot = new Discord.Client();
-var S = require('string');
-
-llbot.on('message', message => {
-
-  try {
-    poke = require('./poke_IDs.json'); }
-  catch(e) {
-    poke = {};
-  }
-
-  if (message.author.id === '519850436899897346') {
-    if(!(typeof message.embeds[0] == "undefined") ){
-      if(message.embeds[0].title == "A wild Pokémon has Spawned, Say its name to catch it!"){
-        var url = message.embeds[0].image.url;
-        var id = S(url).between('http://64.52.84.23/Lychee/uploads/big/', '.png').s
-        message.channel.send(poke[id].name)
-      };
-    };
-  };
-
-});
-
-
 
 llbot.on('ready', () => {
-
-    console.log(`Ready to spam `);
-
+  alphaclient.user.setPresence({
+    game: {
+      name: `BUTTS`,
+      type: 0
+    }
+  })
 });
+
+
+
+
+llbot.on('message', message => {
+  if (message.author.bot) return;
+  if (message.content.indexOf('%%%') !== 0) return;
+
+  const args = message.content.slice('%%%'.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  try {
+    let commandFile = require(`./commands/${command}`);
+    commandFile.run(llbot, message, args);
+  } catch (err) {
+    llbot.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+  }
+});
+
+
+
+
+
 llbot.login(process.env.ALTTOKEN);
