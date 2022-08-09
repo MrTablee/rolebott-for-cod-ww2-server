@@ -10,6 +10,7 @@ const clbot = new Cleverbot;
 const pg = require('pg');
 
 
+
 discord.hookId = '385323385254707200';
 discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBnSF1tiDnhZ';
 const alphaclient = new Discord.Client();
