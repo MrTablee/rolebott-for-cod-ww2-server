@@ -388,7 +388,7 @@ atlasclient.on('messageUpdate', (oldMsg, newMsg) => {
   }
 });
 
-atlasclient.login(process.env.ALTTOKEN);
+atlasclient.login(process.env.atlasreal);
 
 alleyclient.on('ready', () => {
 	database.query('CREATE TABLE IF NOT EXISTS scores(userId VARCHAR(18) UNIQUE, points BIGINT DEFAULT 0, level BIGINT DEFAULT 1)', (err, res) => {
@@ -462,10 +462,10 @@ alleyclient.login(process.env.ALLEYTOKEN);
 
 
 
-var bot = new Discord.Client();
+var llbot = new Discord.Client();
 var S = require('string');
 
-bot.on('message', message => {
+llbot.on('message', message => {
 
   try {
     poke = require('./poke_IDs.json'); }
@@ -487,9 +487,9 @@ bot.on('message', message => {
 
 
 
-bot.on('ready', () => {
+llbot.on('ready', () => {
 
     console.log(`Ready to spam `);
 
 });
-bot.login(ALTTOKEN);
+llbot.login(process.env.ALTTOKEN);
