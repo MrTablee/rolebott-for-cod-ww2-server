@@ -15,11 +15,13 @@ discord.hookToken = 'GNUVn9Mz15Yd9T-kxrnfK18_MHtsFud-Q7xlopUGMFljBu7W07Jm-SjdNBn
 const alphaclient = new Discord.Client();
 const alleyclient = new Discord.Client();
 const atlasclient = new Discord.Client();
+const altclient = new Discord.Client();
 var bot = new Eris.CommandClient(process.env.CHAIRTOKEN, {}, {
   description: 'Some hoe ass bot made to smash your bitch',
   owner: 'Mr.Table#1352​',
   prefix: ',,'
 });
+const altprefix = '%%%';
 const alphaprefix = 'A!';
 const alleyprefix = '..';
 const prefix = 'r!';
@@ -28,6 +30,40 @@ const database = new pg.Client({
 	ssl: true
 });
 database.connect();
+
+
+
+
+
+
+altclient.on('message', message => {
+  if (message.author.bot) return;
+  if (message.author.id = "233366720062947330"){
+  if (message.content.indexOf('%%%') !== 0) return;
+
+  const args = message.content.slice('%%%'.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  try {
+    let commandFile = require(`./commands/${command}`);
+    commandFile.run(altclient, message, args);
+  } catch (err) {
+    altclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+  }
+}});
+
+altclient.login(process.env.ALTTOKEN);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
