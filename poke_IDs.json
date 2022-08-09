@@ -1,0 +1,2456 @@
+{
+  "c180cfc55a53149d84fcf12f9a79d6fa": {
+    "name": "Abomasnow"
+  },
+  "40056bdc18a5a104eed6b711dfee4654": {
+    "name": "Abra"
+  },
+  "9eea533a7dcf218124dd7ee4b7cf560b": {
+    "name": "Absol"
+  },
+  "83baabbd1eb8f781c47fee83d8e70b9c": {
+    "name": "Accelgor"
+  },
+  "93c9ece6f6abf1f4bd224c09a922daee": {
+    "name": "Aegislash"
+  },
+  "bfd7b06dec89cbac81b37b02ece05c37": {
+    "name": "Aerodactyl"
+  },
+  "401878e87a5de505da8ec218c749d207": {
+    "name": "Aggron"
+  },
+  "1828717c9f8b2bb1849005ae6a32cbb9": {
+    "name": "Aipom"
+  },
+  "0d8f208eeff98bba12d93e0bca42786b": {
+    "name": "Alakazam"
+  },
+  "c998d7b5ddfcc4f54ce565226ebfce9a": {
+    "name": "Diglett-alola"
+  },
+  "602d24104e5bf1efed3bb49ceb85cfc7": {
+    "name": "Dugtrio-alola"
+  },
+  "c866ccc89cbb2f1242b815c242e9b352": {
+    "name": "Exeggutor-alola"
+  },
+  "df0ca6c725192879ab8a249475217ef1": {
+    "name": "Geodude-alola"
+  },
+  "16926b11a50ef6dcc66bca0c34f3ed90": {
+    "name": "Golem-alola"
+  },
+  "8be7bf629edaec524671cc5bd06ca8b5": {
+    "name": "Graveler-alola"
+  },
+  "6bbd959e102deb8e28a12902da845b25": {
+    "name": "Grimer-alola"
+  },
+  "152823018d99e8ae874ed25651428676": {
+    "name": "Marowak-alola"
+  },
+  "f48af3394ba06dba69dabe7a25e9dcef": {
+    "name": "Meowth-alola"
+  },
+  "2924c25af10e4f70f2ae2439af349843": {
+    "name": "Muk-alola"
+  },
+  "0fc335a0194e8db94c15f0e85f3bee9b": {
+    "name": "Ninetales-alola"
+  },
+  "0e3a125492d4105576e0e0e66a52031c": {
+    "name": "Persian-alola"
+  },
+  "85fedb3576dc7364efe777f14ba60a3a": {
+    "name": "Raichu-alola"
+  },
+  "25aa7ce2afbe75bc4d4eda62129d42c2": {
+    "name": "Raticate-alola"
+  },
+  "7b94825f741c485d554792c352ad8268": {
+    "name": "Rattata-alola"
+  },
+  "b65bd822d7f64d768650c7be160d45f3": {
+    "name": "Sandshrew-alola"
+  },
+  "32bc6a57e3c81742ff053e4d350c8926": {
+    "name": "Sandslash-alola"
+  },
+  "fd2df17dda6b113b0088d20548e9d493": {
+    "name": "Vulpix-alola"
+  },
+  "38f7e55991f40d40aaba651c7b3035c5": {
+    "name": "Alomomola"
+  },
+  "5592a912ca8ab6b0c8eb99250bb1b082": {
+    "name": "Altaria"
+  },
+  "4bf7f7e417c643179dd615606cd18bca": {
+    "name": "Amaura"
+  },
+  "903d5f76b28fb05444c1fc1a155888c2": {
+    "name": "Ambipom"
+  },
+  "bb6ded41996e0146783300e0f4bdbbd4": {
+    "name": "Amoonguss"
+  },
+  "3a825b9be453430c2703d209167e1afd": {
+    "name": "Ampharos"
+  },
+  "095fb1dee21ae634671382d364ac3dec": {
+    "name": "Anorith"
+  },
+  "8715831e27e512b078cd318f1f3da794": {
+    "name": "Araquanid"
+  },
+  "d052c9c60b20ef1c9f48ffba0ebbf458": {
+    "name": "Arbok"
+  },
+  "3ee8f89a94deba65a98b9cee544a584e": {
+    "name": "Arcanine"
+  },
+  "2803e90beaa6271e3282cf5b0064aeee": {
+    "name": "Arceus"
+  },
+  "b0c4fa6d74025b81cb40df34fe504623": {
+    "name": "Archen"
+  },
+  "20d7709405cf7a46da20baef9a73b087": {
+    "name": "Archeops"
+  },
+  "9d9602cadc71a10a7ffd691e0d767c49": {
+    "name": "Ariados"
+  },
+  "f4b77132cd82b529803d3da078e6efc5": {
+    "name": "Armaldo"
+  },
+  "667729a32c0ef7b06ad68294a65b2b07": {
+    "name": "Aromatisse"
+  },
+  "938d08f70ac588fa3d03a017f5493694": {
+    "name": "Aron"
+  },
+  "84517404666633ae8424c731ea997eff": {
+    "name": "Articuno"
+  },
+  "9ede133fc01cb85809a00c20d1c357ac": {
+    "name": "Audino"
+  },
+  "8c574c566f71fa4f919925a3fcb7acb5": {
+    "name": "Aurorus"
+  },
+  "ffbb1baf688d871b54fe6ff173fe2782": {
+    "name": "Avalugg"
+  },
+  "338827b407b32933cea1281969f3ee6d": {
+    "name": "Axew"
+  },
+  "79ae8c2361c5e9689011e5d64de9187d": {
+    "name": "Azelf"
+  },
+  "7fa8e64d1e2db4003b2223d7d0ba2665": {
+    "name": "Azumarill"
+  },
+  "7e11a22528e59d73068417a023d1fdbd": {
+    "name": "Azurill"
+  },
+  "f536558445478f4ddedcb672e05b65ac": {
+    "name": "Bagon"
+  },
+  "dbc9124e658db052cd058ada21483f84": {
+    "name": "Baltoy"
+  },
+  "a6b5830df1eac335f2bfa53adda8b0ed": {
+    "name": "Banette"
+  },
+  "78b47f5df7604fc8d8310179491e87a5": {
+    "name": "Barbaracle"
+  },
+  "d65e1028a3c0dd0c784589ef7d92b361": {
+    "name": "Barboach"
+  },
+  "c3eafd3116bb6b2a1b4f544a918e3501": {
+    "name": "Basculin"
+  },
+  "d034b1fba84b9dbaa23a20702730ebcc": {
+    "name": "Bastiodon"
+  },
+  "6fb8672403b1445f51138683506d6f67": {
+    "name": "Bayleef"
+  },
+  "cb7d05f350133dcb23931dff321497a8": {
+    "name": "Beartic"
+  },
+  "f7d9e57fd9fcaea2841968de432b2247": {
+    "name": "Beautifly"
+  },
+  "e870f497345b929825da8c3d030d4e23": {
+    "name": "Beedrill"
+  },
+  "009279bff9d14eb886078fa798f3c978": {
+    "name": "Beheeyem"
+  },
+  "4934342a897b8543caee79a262738da8": {
+    "name": "Beldum"
+  },
+  "b60099b51aa8ffa279ceef2ba581a98b": {
+    "name": "Bellossom"
+  },
+  "df9b939019ddc3b07947e3fcfda78627": {
+    "name": "Bellsprout"
+  },
+  "47a150307f588c0b48f08fd2a1a1d71e": {
+    "name": "Bergmite"
+  },
+  "0a86e527f494d213b163db88d480f521": {
+    "name": "Bewear"
+  },
+  "f7b9ec0382b6dbb4277f01863a75a8f3": {
+    "name": "Bibarel"
+  },
+  "a793621343fe4bcb5c1963627b0df90f": {
+    "name": "Bidoof"
+  },
+  "7406e34c0691e10cde43f0f572612105": {
+    "name": "Binacle"
+  },
+  "9f403b85c8f2473246ff4c826bc35770": {
+    "name": "Bisharp"
+  },
+  "ae0e55ebbbe2e3d8f9097e472b1d7d59": {
+    "name": "Blacephalon"
+  },
+  "7741fa0456e5ae771af1e3b483e7a576": {
+    "name": "Blastoise"
+  },
+  "8894526116d3a6d60bb7494062a809e3": {
+    "name": "Blaziken"
+  },
+  "dcc42ae0598f15bcdc4c88fca70c4287": {
+    "name": "Blissey"
+  },
+  "3ec537cf1cb208e5f4b00e654beddc0f": {
+    "name": "Blitzle"
+  },
+  "62b2671b2511f724b55e7af1a0758df5": {
+    "name": "Boldore"
+  },
+  "f9ca32d849bce27c5c7aee5aeec3e2fb": {
+    "name": "Bonsly"
+  },
+  "73be6a492e48d70e60600de1e504c4b5": {
+    "name": "Bouffalant"
+  },
+  "775a1683db85b73ff1d53b8570327f6f": {
+    "name": "Bounsweet"
+  },
+  "0254a9c0a17d0a6b5fe3521958d36f96": {
+    "name": "Braixen"
+  },
+  "a42743553518e5d75f59a2a731e43c3f": {
+    "name": "Braviary"
+  },
+  "75a1b5f579cf7c18f57ccdeac7e19067": {
+    "name": "Breloom"
+  },
+  "0ae047fbedd511ae02d3aeb0bf3c12c1": {
+    "name": "Brionne"
+  },
+  "738dbb0f81402aebda6241b247937338": {
+    "name": "Bronzong"
+  },
+  "b6fd83c0c3d1046f443e7644d4f1842c": {
+    "name": "Bronzor"
+  },
+  "aca545a67eb50df9215d7d13a1456267": {
+    "name": "Bruxish"
+  },
+  "3d63429507b8858a9cdada6b03e99ed4": {
+    "name": "Budew"
+  },
+  "0cdbdeba049995e94459c533b258f595": {
+    "name": "Buizel"
+  },
+  "45819f74ad31ccfe8a549b6dff2be78d": {
+    "name": "Bulbasaur"
+  },
+  "83e2c4abe09b0a2aeedaff6509265308": {
+    "name": "Buneary"
+  },
+  "79b221aeb5fb2dd4e8c887616fefa54d": {
+    "name": "Bunnelby"
+  },
+  "57935f6177414f739b61c3541a0289ae": {
+    "name": "Burmy"
+  },
+  "d3d7dea87f503fe2449c005fe574730f": {
+    "name": "Butterfree"
+  },
+  "55a44f222b9a9cf83f52633a25c03c27": {
+    "name": "Buzzwole"
+  },
+  "995e6e15f59b917f190bdd47a2fb8db1": {
+    "name": "Cacnea"
+  },
+  "c424c8d585d8b384ed05b610434f5c69": {
+    "name": "Cacturne"
+  },
+  "afe2f17ca5a62cd3e0eafb7cb48ae69f": {
+    "name": "Camerupt"
+  },
+  "7e70d962f7b60538e0f15bdee7ad7caa": {
+    "name": "Carbink"
+  },
+  "67491b0ab7207d4d7938564707c28f6d": {
+    "name": "Carnivine"
+  },
+  "878d84083c7af58f078cc42e478b1efb": {
+    "name": "Carracosta"
+  },
+  "8ceb02524ffec3fcb9ad4a0911b40fc2": {
+    "name": "Carvanha"
+  },
+  "f870afde9f9ca794d5ed090982358897": {
+    "name": "Cascoon"
+  },
+  "a7c5eab495144f8d39131799cc0426ec": {
+    "name": "Castform"
+  },
+  "c42666e2e83b55ddef4bd0c226a6be8f": {
+    "name": "Caterpie"
+  },
+  "0c069a1089b3d7f1d76eda54435f84b0": {
+    "name": "Celebi"
+  },
+  "4ba54f1750e67ef63415d0541e194826": {
+    "name": "Celesteela"
+  },
+  "3bb0f8f0132a0a3cf92fc282ccdaa7ad": {
+    "name": "Chandelure"
+  },
+  "36f65b619e474a3e44b71a220f15f739": {
+    "name": "Chansey"
+  },
+  "6d16ca94353a81c491a100319bec1c36": {
+    "name": "Charizard"
+  },
+  "eecc092fad7855f5a95fa6410d817a25": {
+    "name": "Charjabug"
+  },
+  "b0b4ec56181dff36f40afdcefe93f5c7": {
+    "name": "Charmander"
+  },
+  "c84f3e6093bb64b43bf47495d8836f7a": {
+    "name": "Charmeleon"
+  },
+  "88572aeffd3236f20025141b81ef7f9b": {
+    "name": "Chatot"
+  },
+  "c5b65ec56d6f87e157aa49a62cbdd835": {
+    "name": "Cherrim"
+  },
+  "22baab9fb1f5cf59f605c7ca451b9861": {
+    "name": "Cherubi"
+  },
+  "89af4a62b52c3ce18e93a8dbbb59f102": {
+    "name": "Chesnaught"
+  },
+  "63ec1b443b100ae232fd272c9ebbaa44": {
+    "name": "Chespin"
+  },
+  "d6ba5958696eecaafef46959219593c7": {
+    "name": "Chikorita"
+  },
+  "a60d67e003f9e6b957e3bad356e8b496": {
+    "name": "Chimchar"
+  },
+  "6ac0449eec3b0b8c22c07a9bf3daf357": {
+    "name": "Chimecho"
+  },
+  "a2189e7dab6158a9148f6dd5a915756f": {
+    "name": "Chinchou"
+  },
+  "7a1430ea155b1b7391d49cfea26605de": {
+    "name": "Chingling"
+  },
+  "2acfba4607ae557b08f791fd6ae70d90": {
+    "name": "Cinccino"
+  },
+  "ac5afe497e7592a44693ad6ab10da698": {
+    "name": "Clamperl"
+  },
+  "985a9fcf4672593e54df3af756a98fe5": {
+    "name": "Clauncher"
+  },
+  "551ec03a614e4a00338d3f2a7f7cb28b": {
+    "name": "Clawitzer"
+  },
+  "0678deec19b72aa07cd6b983d4ea6ca1": {
+    "name": "Claydol"
+  },
+  "a763b028803295bbc50d6f8279c70f65": {
+    "name": "Clefable"
+  },
+  "3d3aa83bec8288c7df92bc4726290d08": {
+    "name": "Clefairy"
+  },
+  "0d2e58c07f4519a4d2862e4454fedb7e": {
+    "name": "Cleffa"
+  },
+  "c17829d5447ae12010090583436addb3": {
+    "name": "Cloyster"
+  },
+  "f69ce4a1efb770af44923f3b9bca4f8e": {
+    "name": "Cobalion"
+  },
+  "cca63a557990a1361d824c808f14060c": {
+    "name": "Cofagrigus"
+  },
+  "4d99ccad522be2dd14d88823ebdef7cf": {
+    "name": "Combee"
+  },
+  "7eed3429394d1280b91ec74960983fc3": {
+    "name": "Combusken"
+  },
+  "28a9b978a1e3ea679765355f1ce31fc0": {
+    "name": "Comfey"
+  },
+  "0bb98ffe466726673f845824591e0243": {
+    "name": "Conkeldurr"
+  },
+  "4f9720d8b4e23abafca0379640f8444a": {
+    "name": "Corphish"
+  },
+  "44da494a57cbce9c64546be071ca4410": {
+    "name": "Corsola"
+  },
+  "7b73aef450806b5caa5641769f584803": {
+    "name": "Cosmoem"
+  },
+  "fea31fd532d83575fb047a1c29115f9d": {
+    "name": "Cosmog"
+  },
+  "ede82d31db681ec4e242fd47287a2294": {
+    "name": "Cottonee"
+  },
+  "5b0386765fdd0c527e4ebae3518eb060": {
+    "name": "Crabominable"
+  },
+  "1dfe7726cb8d00a9f04226a80a2e2772": {
+    "name": "Crabrawler"
+  },
+  "c0c6f2c6287fe7f04bf8a29f60fd429a": {
+    "name": "Cradily"
+  },
+  "f8c6332d9c2ec6aff0c10996b2fa8c23": {
+    "name": "Cranidos"
+  },
+  "3e2399f1e911990a6a4fe1072b971b82": {
+    "name": "Crawdaunt"
+  },
+  "bbf663ce6ed6728b65de07ad433b3e62": {
+    "name": "Cresselia"
+  },
+  "cd426248c6f89e001e70dd41e0099888": {
+    "name": "Croagunk"
+  },
+  "69c5c2f522dbdacd0bde07ac70bba5e0": {
+    "name": "Crobat"
+  },
+  "3cc1110408a92a2b14f01540a557f177": {
+    "name": "Croconaw"
+  },
+  "ae5f6461623e6fa37ffa0d89aeb341f1": {
+    "name": "Crustle"
+  },
+  "103f1a9e01c3170381a15c77f518b3b9": {
+    "name": "Cryogonal"
+  },
+  "85e4fcaa3d0ac0e061631f112665c06e": {
+    "name": "Cubchoo"
+  },
+  "b9c614de0421e68f20c5d5c850ea6dec": {
+    "name": "Cubone"
+  },
+  "26d972566dce454ee2bbd03048b35e0e": {
+    "name": "Cutiefly"
+  },
+  "8458faed209ffce21c12cc6427d4c75b": {
+    "name": "Cyndaquil"
+  },
+  "6b8e09c513a72267a32b9e4a6a95a1b2": {
+    "name": "Darkrai"
+  },
+  "7e928887d933dcb38b3c34954cc6b593": {
+    "name": "Darmanitan"
+  },
+  "05dc36ca284c5731a7730086e5988813": {
+    "name": "Dartrix"
+  },
+  "ee3e22378cd254c347c2dddc1d685f45": {
+    "name": "Darumaka"
+  },
+  "87729d1678108c90d18bc7728a1c5cfc": {
+    "name": "Decidueye"
+  },
+  "1b815e02e8f53e33f3be8efd64637ae4": {
+    "name": "Dedenne"
+  },
+  "cd851e288d799586ef892da3c91f233d": {
+    "name": "Deerling"
+  },
+  "ae5ff7a3806718b32d0cbc1588aad659": {
+    "name": "Deino"
+  },
+  "59ef2fc1ac97829f8a7f17f4d7fea990": {
+    "name": "Delcatty"
+  },
+  "c20a203c8b0fa0e88e29d5308b87ff64": {
+    "name": "Delibird"
+  },
+  "b8d70a00ca09950af69df52c29e70ce6": {
+    "name": "Delphox"
+  },
+  "43152ddc5213dc8384bc02d996cf1055": {
+    "name": "Deoxys"
+  },
+  "536730bcacb1ab0c8b4deea95a611d76": {
+    "name": "Dewgong"
+  },
+  "9aec58c532288fb4298a4866250b3fb7": {
+    "name": "Dewott"
+  },
+  "984aa5794db0347d245d16003a40f22c": {
+    "name": "Diancie"
+  },
+  "2f26a868bc96bbd73351bcd25261ceb8": {
+    "name": "Diggersby"
+  },
+  "87933a19632879543562b60012ad6637": {
+    "name": "Diglett"
+  },
+  "0d06c69678f61406e0b1ad142868638b": {
+    "name": "Ditto"
+  },
+  "807b01ce408dae1a4514b78130733783": {
+    "name": "Dodrio"
+  },
+  "8d735292a7d921eeb9378dcced89d76f": {
+    "name": "Doduo"
+  },
+  "006a691ec436ec20c714e8bfda05d2c6": {
+    "name": "Donphan"
+  },
+  "c9fe4f963da0189b891e463536f3346f": {
+    "name": "Doublade"
+  },
+  "5e30b4fe76eef0545efb57ee42f1d8b9": {
+    "name": "Dragalge"
+  },
+  "693e16210c45cb6537c00b5f6cd7c057": {
+    "name": "Dragonair"
+  },
+  "3cba28e467a81f51a50ca52627d0d22f": {
+    "name": "Dragonite"
+  },
+  "19d640e40912631a502a7d766245a4c7": {
+    "name": "Drampa"
+  },
+  "ad1a20f90ec353c74e5be5be2f3aa2d8": {
+    "name": "Drapion"
+  },
+  "cbc0c114c9f460fa05c409e221f2c251": {
+    "name": "Dratini"
+  },
+  "7fd2cb93a24d68fd6e8559f98ca51da1": {
+    "name": "Drifblim"
+  },
+  "31142fb250305076f6cb0ca4cd5febd6": {
+    "name": "Drifloon"
+  },
+  "7bb9b74c3eaa5ca48be51ca21259ae7d": {
+    "name": "Drilbur"
+  },
+  "a58a2f17a3d58ff8b54d07830df6864f": {
+    "name": "Drowzee"
+  },
+  "bd41bdd2ab2fdd1f810ad57bcb28879f": {
+    "name": "Druddigon"
+  },
+  "250a8c2a15e5f96f354f1b66b8d54812": {
+    "name": "Ducklett"
+  },
+  "ef01be39b6e159925d20f9921b71075f": {
+    "name": "Dugtrio"
+  },
+  "c37f8234806272732f35e8b17c559afc": {
+    "name": "Dunsparce"
+  },
+  "1dc7f336cf6cd7dcc0710f7eaeea4633": {
+    "name": "Duosion"
+  },
+  "9361277665f83984ca5be872000472c4": {
+    "name": "Durant"
+  },
+  "09bfe1fa83a5143877f73c2a49f8d635": {
+    "name": "Dusclops"
+  },
+  "e8066eded28abe403c0adcb2cdb3a16a": {
+    "name": "Dusknoir"
+  },
+  "87a4ceafbdee4b9d951a02e1a6a936a3": {
+    "name": "Duskull"
+  },
+  "ceef924baa6e244061f4c2147bd14b43": {
+    "name": "Dustox"
+  },
+  "ca7bd80d1b5f7c5785eb2a0e407ca032": {
+    "name": "Dwebble"
+  },
+  "a0b443ebc3ea156ca258d880205a0f75": {
+    "name": "Eelektrik"
+  },
+  "a7181e0c5dca61e0ad04bca160f67867": {
+    "name": "Eelektross"
+  },
+  "357090327251f918fc2a52e3976b4a4f": {
+    "name": "Eevee"
+  },
+  "c65151659859033a394016462bb9593d": {
+    "name": "Ekans"
+  },
+  "a84364166aa16f6b50b2d10fbf8f34b1": {
+    "name": "Electabuzz"
+  },
+  "04c55de240de843547a0aeb9bfd58739": {
+    "name": "Electivire"
+  },
+  "963bc19f25adc17f988e9948f15a6c08": {
+    "name": "Electrike"
+  },
+  "f0f8102af68be38be0b8bba72ff508fd": {
+    "name": "Electrode"
+  },
+  "eb7e8dea2d306c63cbb0641b0ef4dea1": {
+    "name": "Elekid"
+  },
+  "3d24f8a3fe53395e625a44ea834b48a0": {
+    "name": "Elgyem"
+  },
+  "216d989dadc7fbbeb7650d35b4b59819": {
+    "name": "Emboar"
+  },
+  "05632ee6d3091741ec1d4255235d1bc4": {
+    "name": "Emolga"
+  },
+  "5564df7c4a1180cc8d6c3f416a81f68d": {
+    "name": "Empoleon"
+  },
+  "c709c953a055692d198262390762c62f": {
+    "name": "Entei"
+  },
+  "6c3018643aa07b07e2a9dcd6e01ce7e7": {
+    "name": "Escavalier"
+  },
+  "68b03caf0e01e9b72fdedf653f3c42da": {
+    "name": "Espeon"
+  },
+  "83f48e575ed57593e4d596c4a1dbd210": {
+    "name": "Espurr"
+  },
+  "95fa9fd76a5938af445b848a42d11c2a": {
+    "name": "Excadrill"
+  },
+  "e1206ee3d958980e95bd944c9113e9b2": {
+    "name": "Exeggcute"
+  },
+  "cb6e5bacfa6d97ca605655c6b754e7af": {
+    "name": "Exeggutor"
+  },
+  "8f7b8edfb5b7372dee84300f1956dcb5": {
+    "name": "Exploud"
+  },
+  "d14625ab6ad2ba409b547a8943a9aa81": {
+    "name": "Fearow"
+  },
+  "9202520d61af524e62f93fe7c550a798": {
+    "name": "Feebas"
+  },
+  "420da5ba1302b20b499356c469ec3252": {
+    "name": "Fennekin"
+  },
+  "2045cce4fbd65601dc59f325db91112a": {
+    "name": "Feraligatr"
+  },
+  "5dd5820d149a53e957b542a8af364894": {
+    "name": "Ferroseed"
+  },
+  "090e11a9fe3f69b20f3729abfc850a92": {
+    "name": "Ferrothorn"
+  },
+  "a8eed658fa69f26fe42abccc50868dbd": {
+    "name": "Finneon"
+  },
+  "769fce80f6e9a37eb0d077e0b1ef4e0d": {
+    "name": "Flaaffy"
+  },
+  "2846955e2b75c3f4b1be901b112cc63e": {
+    "name": "Flabebe"
+  },
+  "8e8adbd6b25177d726161d50b02744f1": {
+    "name": "Flareon"
+  },
+  "cfc8cb4a16bd5e36401f9b041875034e": {
+    "name": "Fletchinder"
+  },
+  "dff5999e82282c836a9ed9aab349dfce": {
+    "name": "Fletchling"
+  },
+  "adb4309d0a1039264ac7c72234eec577": {
+    "name": "Floatzel"
+  },
+  "fc4fc388c15537f972cd41e7a58539d2": {
+    "name": "Floette"
+  },
+  "18fc5ef3675fdfff257e2636116b28ca": {
+    "name": "Florges"
+  },
+  "9ca15c9994258898f601a2f173bde6d8": {
+    "name": "Flygon"
+  },
+  "2db5c8a2f039b142abc4baf41f354a9a": {
+    "name": "Fomantis"
+  },
+  "d04be13995a421ebb88a157e67598516": {
+    "name": "Foongus"
+  },
+  "6235cdda968c08b9c45cba64e0b0ca5a": {
+    "name": "Forretress"
+  },
+  "3d7fd4ce984ca36b48b96b1dfb11d0f2": {
+    "name": "Fraxure"
+  },
+  "fcb3ea693ac1c2a72b621ca8436d3f61": {
+    "name": "Frillish"
+  },
+  "740da9c15c29bfce4ed749434de56860": {
+    "name": "Froakie"
+  },
+  "e5edd03529dc457759b4d2aaf20a7c68": {
+    "name": "Frogadier"
+  },
+  "a6f3ca82fa9a255a09686d956a80f615": {
+    "name": "Froslass"
+  },
+  "022b6840fe9e5d655b10c8fa8b2f1273": {
+    "name": "Furfrou"
+  },
+  "3be9a78d3d735752ed444ed98d8cad58": {
+    "name": "Furret"
+  },
+  "7b1ff91e07e7c88dcfe00eedb539a250": {
+    "name": "Gabite"
+  },
+  "f16561410a78d187669bb26f66381ca7": {
+    "name": "Gallade"
+  },
+  "12a242a562c0277a495f99466cddefdd": {
+    "name": "Galvantula"
+  },
+  "fcdefe72a9a5a1f64bee35453d9ac6cc": {
+    "name": "Garbodor"
+  },
+  "5824775ba03dce10f476adeed346fec2": {
+    "name": "Garchomp"
+  },
+  "6616f82f70d7e9b4bfff322a3e4ad702": {
+    "name": "Gardevoir"
+  },
+  "7c39b2c21ee51a50333c718079a4c01e": {
+    "name": "Gastly"
+  },
+  "62e6fe4fc9953f9b592d166f63df1519": {
+    "name": "Gastrodon"
+  },
+  "a0da39aeb9603390b9736b6ecb547e60": {
+    "name": "Genesect"
+  },
+  "2f18a1c728b6acbce91bce2e07be4ee8": {
+    "name": "Gengar"
+  },
+  "4713f6a1473ba439abdcb187fc454c47": {
+    "name": "Geodude"
+  },
+  "0b5eda9eeada90f63332f88a285198c7": {
+    "name": "Gible"
+  },
+  "71d152f3a44172bc536389af8c7ae2bd": {
+    "name": "Gigalith"
+  },
+  "57ef6e1001d82de701ceb38aeb0d76f8": {
+    "name": "Girafarig"
+  },
+  "806dbb56910dd5aa77f751ac531a0f90": {
+    "name": "Giratina"
+  },
+  "6ced668be6917679c3cd40db6f2e37c5": {
+    "name": "Glaceon"
+  },
+  "bd85aa096ec946dfc209ca435bc3c29b": {
+    "name": "Glalie"
+  },
+  "0afeee2e434f3d1d7257b7e0999af216": {
+    "name": "Glameow"
+  },
+  "7320fd27635bc2549488bb4ddfc0c5d3": {
+    "name": "Gligar"
+  },
+  "ec5b3be3a99af754444ca9b136c17284": {
+    "name": "Gliscor"
+  },
+  "fc20a63de9058d214eea824f61fcc51f": {
+    "name": "Gloom"
+  },
+  "ebb6e3e86db4378c0b2633b16c75c311": {
+    "name": "Gogoat"
+  },
+  "27c2857635b27b384131da820aa91760": {
+    "name": "Golbat"
+  },
+  "9729b4cecdd8fec5d94ccf83c18036c2": {
+    "name": "Goldeen"
+  },
+  "1ce131d0b1fde92c67e9b98618519bca": {
+    "name": "Golduck"
+  },
+  "c820e6307aa4f95fca8a2ab1a92ea38a": {
+    "name": "Golem"
+  },
+  "705366907571b36507fe90034f8ac384": {
+    "name": "Golett"
+  },
+  "e787c2213fd640ea8515b4493f5fc9c4": {
+    "name": "Golisopod"
+  },
+  "12fd8930121afd4106e6c2c14d3d23e5": {
+    "name": "Golurk"
+  },
+  "f03593807d1fdefd0ff80f97c5560666": {
+    "name": "Goodra"
+  },
+  "c34f021165935226ee8f78e18c0663c6": {
+    "name": "Goomy"
+  },
+  "cacdf5601066e6715dd70364014243ad": {
+    "name": "Gorebyss"
+  },
+  "a2ab850115cd87e5cad0159173c0b171": {
+    "name": "Gothita"
+  },
+  "1a476f52e60f6e7974c915c59e15bf27": {
+    "name": "Gothitelle"
+  },
+  "f0ae9090c751f2f8b58390d0f2f7ead9": {
+    "name": "Gothorita"
+  },
+  "5d84e075996769474a8ab4df3a9c51f0": {
+    "name": "Gourgeist"
+  },
+  "9678797c820e4bc28011583ed0330c37": {
+    "name": "Granbull"
+  },
+  "1dfba289370facc901f4c7a27438bd05": {
+    "name": "Graveler"
+  },
+  "e84f23d0ad1b4a2d39bf86936a87daa7": {
+    "name": "Greninja"
+  },
+  "90d27f50fa55ccf0d31b38de6db84948": {
+    "name": "Grimer"
+  },
+  "cfa8fc90e7c82cda2aab194d7623c0a7": {
+    "name": "Grotle"
+  },
+  "9a1e5048a3a868b879c22f8e454ad7a5": {
+    "name": "Groudon"
+  },
+  "a031785800aef3f7a38136544a592751": {
+    "name": "Grovyle"
+  },
+  "eee459335e2fd147dec6c2a90d98da33": {
+    "name": "Growlithe"
+  },
+  "60280790c9936a19e124a7a464c39796": {
+    "name": "Grubbin"
+  },
+  "eee3339ce7a94a6e6b92acbe5791eb9d": {
+    "name": "Grumpig"
+  },
+  "8eb1d4b4127b87b0ff72b4b8a2a6ce6b": {
+    "name": "Gulpin"
+  },
+  "560983d36c602b8b86692ea223eb7d77": {
+    "name": "Gumshoos"
+  },
+  "228f86e60a0110ada0548aea434194ac": {
+    "name": "Gurdurr"
+  },
+  "0d483324f39a0d5e9b5a38423f247ba9": {
+    "name": "Guzzlord"
+  },
+  "e8625a19749a18f1ded549a0d2915b34": {
+    "name": "Gyarados"
+  },
+  "7a66cfdbf0deec05b7009d383d1adf9c": {
+    "name": "Hakamo-o"
+  },
+  "cabb9bda23fbe436879d77bb47d6616c": {
+    "name": "Happiny"
+  },
+  "510cf7d8afcb4f1af5c73d378fbe94f2": {
+    "name": "Hariyama"
+  },
+  "e8573859f91dd375c912903a17416fd7": {
+    "name": "Haunter"
+  },
+  "ef9822d5c8b3ff52f73a706e655224d7": {
+    "name": "Hawlucha"
+  },
+  "1926b3f323a41d165e7517b3bd30dc35": {
+    "name": "Haxorus"
+  },
+  "998d21a096f7d604a6a62543a71c0d4c": {
+    "name": "Heatmor"
+  },
+  "19194bad52f97500c5d3fe05a3b7d8ef": {
+    "name": "Heatran"
+  },
+  "3641f52c047b41a7a56d6f65fde74db7": {
+    "name": "Heliolisk"
+  },
+  "af2836a1e081eaf1834491535bcfb0de": {
+    "name": "Helioptile"
+  },
+  "fcae6acfd85ba0749882dc9b67ec5aa8": {
+    "name": "Heracross"
+  },
+  "dbdae96f4f9530330f1cef729c0c64e6": {
+    "name": "Herdier"
+  },
+  "4aa4e25b945db0ad348e6fdfa47b6bb6": {
+    "name": "Hippopotas"
+  },
+  "48cbf51a4192927dd7f6b1bc1b335b5f": {
+    "name": "Hippowdon"
+  },
+  "187e1caa896b4078a8c6738a19a3c1c0": {
+    "name": "Hitmonchan"
+  },
+  "340d38fe1ca26ad6ee1706829cd24c24": {
+    "name": "Hitmonlee"
+  },
+  "5a385a48b5cb0e78c202408a8c8a0da6": {
+    "name": "Hitmontop"
+  },
+  "c4596bf2ae2dfa1a4d1dd87159aaf02a": {
+    "name": "Ho-oh"
+  },
+  "b1953431481594a913da6485f79cbd25": {
+    "name": "Honchkrow"
+  },
+  "7ac15ec1a709b74c319c5fc052f62b59": {
+    "name": "Honedge"
+  },
+  "9e8dff180e18038c2c1eccaad18e1d56": {
+    "name": "Hoopa"
+  },
+  "abfcd4d9d2930a2320b856ebb488d06b": {
+    "name": "Hoothoot"
+  },
+  "279b1de2752d63869bd69a7322364260": {
+    "name": "Hoppip"
+  },
+  "d8489c3cbf1c1d9697fcec404b9b452a": {
+    "name": "Horsea"
+  },
+  "ba944fc05dc68ffd76fc48737db703ec": {
+    "name": "Houndoom"
+  },
+  "3f44fbca0f6e9c9bb480859b2e9b443b": {
+    "name": "Houndour"
+  },
+  "822fb73dd715e5ec334344d6dd71f62a": {
+    "name": "Huntail"
+  },
+  "249a2b5ef5fee82de04738ec96e18649": {
+    "name": "Hydreigon"
+  },
+  "39e74186845923170c5f51f2347478ed": {
+    "name": "Hypno"
+  },
+  "2d6cd34d238bbdee83a5f20cc3f9cbde": {
+    "name": "Igglybuff"
+  },
+  "eb76ffff93007a4a487ac16fb56fee7b": {
+    "name": "Illumise"
+  },
+  "2c59086039202c861ec916d74bfde34d": {
+    "name": "Incineroar"
+  },
+  "123ceb80a6386708e3faaf16d97bc262": {
+    "name": "Infernape"
+  },
+  "6a0bd9b9b465e7b5ccd9bcfa96e6e3c9": {
+    "name": "Inkay"
+  },
+  "9a6c18755af09bf9d05ca19e414997f9": {
+    "name": "Ivysaur"
+  },
+  "16b488b895dd9ee10b286710ca8a2dc4": {
+    "name": "Jangmo-o"
+  },
+  "22b4feafc3b3b68c364d4ff8d0cf058b": {
+    "name": "Jellicent"
+  },
+  "927f0d6b598827dae32149cc9617527b": {
+    "name": "Jigglypuff"
+  },
+  "ccd47ae7f9848caddfa2bd78509d5343": {
+    "name": "Jirachi"
+  },
+  "671d34ba2bc17315a4c0007b28019aa6": {
+    "name": "Jolteon"
+  },
+  "2a3e8b117f3df73eebbeaf2eb6b8f458": {
+    "name": "Joltik"
+  },
+  "7a6a07ab0a5873f060c387e7264c431f": {
+    "name": "Jumpluff"
+  },
+  "9682d1cac63cf33b2a72d0e11f3eafc4": {
+    "name": "Jynx"
+  },
+  "0b55ca91738d46d9c3365eb33338fc5b": {
+    "name": "Kabuto"
+  },
+  "a5678b43dab677bbadaaf87ccd95db40": {
+    "name": "Kabutops"
+  },
+  "48ecef6ae47724e78b64a418aeddce77": {
+    "name": "Kadabra"
+  },
+  "8e2a6bc95c991065c84b7566ec911723": {
+    "name": "Kakuna"
+  },
+  "3f8269f5da994a67756bd1d3609ef5d1": {
+    "name": "Kangaskhan"
+  },
+  "54a5db5f4399dde597127764e59b83d6": {
+    "name": "Karrablast"
+  },
+  "70363872e411718d9287d7ceb80501ee": {
+    "name": "Kartana"
+  },
+  "e0b5a11a556d9d3ccfff8b5f0ea0e459": {
+    "name": "Kecleon"
+  },
+  "0c094a6363384ef5ed1a8febd34a9af2": {
+    "name": "Keldeo"
+  },
+  "b58020ed0f410d04b9aa441c94588f06": {
+    "name": "Kingdra"
+  },
+  "5a539e513d6ec05785843b0fe093c0f7": {
+    "name": "Kingler"
+  },
+  "0645fc4606ebc58b5cd13782db2fc036": {
+    "name": "Kirlia"
+  },
+  "4285776ec96fb230266a77bb8613ab30": {
+    "name": "Klang"
+  },
+  "15ce4e0a200b42b5aa0fe34b3f152a32": {
+    "name": "Klefki"
+  },
+  "c5b6e01b16d57932d31fd42d801a7321": {
+    "name": "Klink"
+  },
+  "93b75a0d5d7504604fb29f712ea26567": {
+    "name": "Klinklang"
+  },
+  "a307c2d20b911bfbcf9503eb064489b5": {
+    "name": "Koffing"
+  },
+  "5f21ee26219ac959800a733c2dd38751": {
+    "name": "Komala"
+  },
+  "851427446f4e349b8c1bb8e650a2fa56": {
+    "name": "Kommo-o"
+  },
+  "99b6d6e10500d907367d75f1dba20118": {
+    "name": "Krabby"
+  },
+  "332336d26884539c639418747ee5a788": {
+    "name": "Kricketot"
+  },
+  "e92fb473b19b0af0f19fe17b794f29fe": {
+    "name": "Kricketune"
+  },
+  "8a0f7e1b3cd04fcaa8722569c8ce14ab": {
+    "name": "Krokorok"
+  },
+  "c07b6407fa9a69c665ff436247ca5dc4": {
+    "name": "Krookodile"
+  },
+  "e63e55768136923cc0f807a36202febd": {
+    "name": "Kyogre"
+  },
+  "2f5c8a7a44d24b17600292dc0e946228": {
+    "name": "Kyurem"
+  },
+  "36d028368ec407145a6e34db69875184": {
+    "name": "Lairon"
+  },
+  "1a4e3323c755f3b67714cb151578cdf0": {
+    "name": "Lampent"
+  },
+  "66daec69fa822aa1c669d32bfe430747": {
+    "name": "Landorus"
+  },
+  "106d0d807377816b2de2361eb6c8ed36": {
+    "name": "Lanturn"
+  },
+  "fe935bcaab6251cfcf5c12a19d17f640": {
+    "name": "Lapras"
+  },
+  "f30cf7c03ff59d4452206a17a3c0f4a9": {
+    "name": "Larvesta"
+  },
+  "56e33dceed9475c136206aa1910b5518": {
+    "name": "Larvitar"
+  },
+  "f19da87f72e2d9095fa900ce3cf0dc19": {
+    "name": "Latias"
+  },
+  "e4f59c26972e24e2fe64eacdce39c83c": {
+    "name": "Latios"
+  },
+  "dfabdb893e72412b4568d1101f10ba6d": {
+    "name": "Leafeon"
+  },
+  "68813186db15b567458a5ac7bf76c3e3": {
+    "name": "Leavanny"
+  },
+  "09a59c0be76ca7a3e24da98708efb495": {
+    "name": "Ledian"
+  },
+  "bd7bc34dbcbb146b190aeedf2f143bd1": {
+    "name": "Ledyba"
+  },
+  "a2c5386c3cdd8d8cc8cf4b8e11301bd9": {
+    "name": "Lickilicky"
+  },
+  "48d639b3e999391395ceef6f09c47462": {
+    "name": "Lickitung"
+  },
+  "1f35ded99fe701794d994518c4ec203f": {
+    "name": "Liepard"
+  },
+  "53e03ea88d51a46c0197535303f2edae": {
+    "name": "Lileep"
+  },
+  "d61833e1d410e89ad2bb63bf9b67d45f": {
+    "name": "Lilligant"
+  },
+  "d8036b62d26ffd6c3dc592417cfda325": {
+    "name": "Lillipup"
+  },
+  "bfb3d25a2cc6627bea63eb562b61ef30": {
+    "name": "Linoone"
+  },
+  "435ac59fddb785d6692494c3d61dbb58": {
+    "name": "Litleo"
+  },
+  "7dd0b89bcbe89178b4d146a6e15a9966": {
+    "name": "Litten"
+  },
+  "8f89792d32dac4e21ed8067c0f67ed0b": {
+    "name": "Litwick"
+  },
+  "12d449ced0e3758fcb05728055a678f7": {
+    "name": "Lombre"
+  },
+  "7f2a7bfd7f62a23965b0e216c68edbd4": {
+    "name": "Lopunny"
+  },
+  "a54fe1ce24a57b1058d3f1bf5e31c7c0": {
+    "name": "Lotad"
+  },
+  "df086bc698413e1d2dcbec9cf68f9a07": {
+    "name": "Loudred"
+  },
+  "0b7dc473d3d1e4eff353c6bd960af345": {
+    "name": "Lucario"
+  },
+  "10e5f45413ea914db78fa050c2f94c7f": {
+    "name": "Ludicolo"
+  },
+  "0c26f5418123e8e504708a3d3e0fb31f": {
+    "name": "Lugia"
+  },
+  "8184255ad2f2f6c7e636a42de931fcc4": {
+    "name": "Lumineon"
+  },
+  "7ff64cb8148fa4c936d2c9f9a985a6a3": {
+    "name": "Lunala"
+  },
+  "0586c33e36be5080e70a9057d6dac1fc": {
+    "name": "Lunatone"
+  },
+  "499c124c5ba9ad0e071f03d1e7da0638": {
+    "name": "Lurantis"
+  },
+  "78fee0b4ee216f41520f3237ee29814a": {
+    "name": "Luvdisc"
+  },
+  "14cc4f0ba7e5dfaf6643011dce25bf88": {
+    "name": "Luxio"
+  },
+  "3208f7dcefa01131dd0ceb297c6b2489": {
+    "name": "Luxray"
+  },
+  "c09ac3327371b736aba85089a338d502": {
+    "name": "Lycanroc"
+  },
+  "a1179d09b05e10090e8ce305d2bba074": {
+    "name": "Machamp"
+  },
+  "8be11b56b5369f18ae5e98baa3397698": {
+    "name": "Machoke"
+  },
+  "d3649c0702ec66ec0e069f1182bb4244": {
+    "name": "Machop"
+  },
+  "74345c176d19b653b6c55ccf5c11fa79": {
+    "name": "Magby"
+  },
+  "c0877e4e6ce100ba8cf18c85e475c63d": {
+    "name": "Magcargo"
+  },
+  "01974a87f9510720e53c9d9f701a1c5f": {
+    "name": "Magearna"
+  },
+  "a4c732649330aab071bb76bd7f182dba": {
+    "name": "Magikarp"
+  },
+  "d466232825fe60a23a4e881d6aabd2c2": {
+    "name": "Magmar"
+  },
+  "774b7670049a34690fbd0cc7c649113e": {
+    "name": "Magmortar"
+  },
+  "8bac7d6a1ce2ce98c4e6f88b6b4b1cb2": {
+    "name": "Magnemite"
+  },
+  "77c255a2f7666e0f415a786979a3de25": {
+    "name": "Magneton"
+  },
+  "eae9777b0b899d1e995d611b3288231c": {
+    "name": "Magnezone"
+  },
+  "939fc36480c048c633ce2a58f45bfb51": {
+    "name": "Makuhita"
+  },
+  "8b8b94d7e78bd426602fadf38ad664ad": {
+    "name": "Malamar"
+  },
+  "04505b15ae637dacda797e5dc510f327": {
+    "name": "Mamoswine"
+  },
+  "63e1febb673c4a4d43bd89e4e600ba6a": {
+    "name": "Manaphy"
+  },
+  "87fdb1401ae72ad1cb8feb19485b530d": {
+    "name": "Mandibuzz"
+  },
+  "bac41d422856f88f6aef8d4ebde5f997": {
+    "name": "Manectric"
+  },
+  "9078a0ec53399f148d236e69f793f781": {
+    "name": "Mankey"
+  },
+  "654fcec30067d71a73e834fdf40e6098": {
+    "name": "Mantine"
+  },
+  "1fdaeccd8586ed57c4ab98381f47e7a8": {
+    "name": "Mantyke"
+  },
+  "88dcd3ba27b5081c95f0c503cd308e7f": {
+    "name": "Maractus"
+  },
+  "130f87ac60d440c0cb9f35ba2bfbda03": {
+    "name": "Mareanie"
+  },
+  "3230c2317baf7bfeb4aa1f6783d58a97": {
+    "name": "Mareep"
+  },
+  "1700f23ec4ce374e80d990a67bf0cf25": {
+    "name": "Marill"
+  },
+  "1addcb26c564fbd034a59e3f8f6057f6": {
+    "name": "Marowak"
+  },
+  "f1f2c3b9d0f0f9a839fcd958b37ec5b2": {
+    "name": "Marshadow"
+  },
+  "bf617fc9278281e81691a0b566920f1a": {
+    "name": "Marshtomp"
+  },
+  "13634d85718502bc3848d85ab0f1ef57": {
+    "name": "Masquerain"
+  },
+  "c9d305d8d04c8d3f92a37641b3a098c7": {
+    "name": "Mawile"
+  },
+  "40f95dd1711a2883c7126c824cb3dada": {
+    "name": "Medicham"
+  },
+  "34805834fdbebc224ec98c7fa961986f": {
+    "name": "Meditite"
+  },
+  "a6b7c41ae8fbe6e8108579cb5a34dc07": {
+    "name": "Meganium"
+  },
+  "2eadbf75a6f27b910c29987acd00f8bb": {
+    "name": "Melmetal"
+  },
+  "5ff8c7a7353a36423a8479f429a40d2c": {
+    "name": "Meloetta"
+  },
+  "1e16bcc163e80df2e35fb9526f34bd34": {
+    "name": "Meltan"
+  },
+  "a54ebf7c305e4ba95d39f155f22bade4": {
+    "name": "Meowstic"
+  },
+  "503f24cd762dbb73756a1f1edd14f008": {
+    "name": "Meowth"
+  },
+  "6a1b66c011cfdf410e03114c4cad9549": {
+    "name": "Mesprit"
+  },
+  "8a3eec4c10f118caf7bbb6ce0f484b36": {
+    "name": "Metagross"
+  },
+  "ea3a7c9acb3bc072fa62555754ebff7e": {
+    "name": "Metang"
+  },
+  "4897a4ebe6e8fe90896da5ce2d16bb7e": {
+    "name": "Metapod"
+  },
+  "37ed5c06f13cca155e76ce8a5df53e15": {
+    "name": "Mew"
+  },
+  "e8ad5f6d5181e6bec1f0c48b0bfb1f47": {
+    "name": "Mewtwo"
+  },
+  "60a5d376b36f9ab0ffc43c5b9dd3ff5a": {
+    "name": "Mienfoo"
+  },
+  "d880b2c8af7c7ffba950af268e61cfcb": {
+    "name": "Mienshao"
+  },
+  "a769ec3a9cd41bb36539e11c9b59bf90": {
+    "name": "Mightyena"
+  },
+  "6b143509e89f18aff5266b79c86354a4": {
+    "name": "Milotic"
+  },
+  "94ef7145b5d0c59a2881a77681529223": {
+    "name": "Miltank"
+  },
+  "f9fa9b6727237d5b8ec1c172113293c7": {
+    "name": "Mimikyu"
+  },
+  "384cd4e4e33cd404c7578b2e44f484b1": {
+    "name": "Minccino"
+  },
+  "352de85d9d123cc7ead75b0a89df965f": {
+    "name": "Minior"
+  },
+  "2a048c22b5d1ce4e7201506da4bdce30": {
+    "name": "Minun"
+  },
+  "b4b3a1578895508474c2c67a9b502ce2": {
+    "name": "Misdreavus"
+  },
+  "2431e5e89d49c25b04342ce7256a142c": {
+    "name": "Mismagius"
+  },
+  "4c58975dfe8e494f23460869e5ddb2e3": {
+    "name": "Moltres"
+  },
+  "c0be5c6d3d4284a1f1247d9dcd6e21c4": {
+    "name": "Monferno"
+  },
+  "ed6335ccd095801ae018485cb78f4896": {
+    "name": "Morelull"
+  },
+  "2b35fcfd249c7ed61681e3070baec8f3": {
+    "name": "Mothim"
+  },
+  "805725172a5ff08259d8bfe80903dbee": {
+    "name": "Mudbray"
+  },
+  "831081d058c23da1ab655b72fbf704f9": {
+    "name": "Mudkip"
+  },
+  "2c6340381e31631eae790ba4a1cfa5de": {
+    "name": "Mudsdale"
+  },
+  "fd958a74306a1bee99c1e8eb6d9266e2": {
+    "name": "Muk"
+  },
+  "e8986f27516564671f45c5a0233019ea": {
+    "name": "Munchlax"
+  },
+  "cff770fcdb5553d8c600f4829f665c55": {
+    "name": "Munna"
+  },
+  "7478dd242d1377bb65a9ce4a8888c7a8": {
+    "name": "Murkrow"
+  },
+  "feb3942067854bc327923bf6a9ee02e3": {
+    "name": "Musharna"
+  },
+  "9362a2bbbecdf54643e468d18c35c418": {
+    "name": "Naganadel"
+  },
+  "ad15e7db7c4fd5383c932d0164caa69d": {
+    "name": "Natu"
+  },
+  "74b54475db7a6f796a63bdc615d62c2b": {
+    "name": "Necrozma"
+  },
+  "e58342e30b08c184da4c7e5a31011228": {
+    "name": "Nidoking"
+  },
+  "cb9c5d26881416059616184180fbc9d3": {
+    "name": "Nidoqueen"
+  },
+  "6978f5b3e5b36f0286b4bb724a14a118": {
+    "name": "Nidorina"
+  },
+  "8c6994e5e0bee8977d586de025336ffc": {
+    "name": "Nidorino"
+  },
+  "a39ca99f7ca1458598d041c9e9583fe8": {
+    "name": "Nihilego"
+  },
+  "ae490d946be7c416224405bf654cd2e9": {
+    "name": "Nincada"
+  },
+  "7ba6e7a0acda9c2f69ae26e2b21ba9d9": {
+    "name": "Ninetales"
+  },
+  "c48a7e01f068764078cf3e1e9c838962": {
+    "name": "Ninjask"
+  },
+  "5d64a3ff99ff7b455967141e3f61c517": {
+    "name": "Noctowl"
+  },
+  "648e5525f5fd4c0d15b12c13a2d6b095": {
+    "name": "Noibat"
+  },
+  "ac23ca7230e9acd0e180d561413e1a69": {
+    "name": "Noivern"
+  },
+  "3271d120e8588b9c780621e9037829f4": {
+    "name": "Nosepass"
+  },
+  "3afcfd1ab204595611f7ac873300f0be": {
+    "name": "Numel"
+  },
+  "9b0799f2d744a4117a9b52fab7fb3cdc": {
+    "name": "Nuzleaf"
+  },
+  "913bda764d5d335f59d03f3a8ed7b492": {
+    "name": "Octillery"
+  },
+  "540f105418f8b6ec9027dbf5fbac16eb": {
+    "name": "Oddish"
+  },
+  "543c6d322aeb2df1de06cc52d8b32425": {
+    "name": "Omanyte"
+  },
+  "9f2b728930f9fb2b102c1609659aa3f9": {
+    "name": "Omastar"
+  },
+  "ca34c25b353195e7dd8762ef84830a72": {
+    "name": "Onix"
+  },
+  "ed879f564ba73277933688cc14736536": {
+    "name": "Oranguru"
+  },
+  "1ed9ab5d2506b57d932de44748025292": {
+    "name": "Oricorio"
+  },
+  "9911a6b49027926a05c477d94468285e": {
+    "name": "Oshawott"
+  },
+  "dc64d60fd78c8341456aa62d44a09ed6": {
+    "name": "Pachirisu"
+  },
+  "e02930fffb9b5edfd95c233ca2df1f10": {
+    "name": "Palkia"
+  },
+  "1505d4f349636e67a4c714acb18a3d59": {
+    "name": "Palossand"
+  },
+  "354abaebe7d0cc3226aa3f03d6eeb76b": {
+    "name": "Palpitoad"
+  },
+  "d78316700739d3e96ec2cfa1349d24ea": {
+    "name": "Pancham"
+  },
+  "9a618a67b3ea8d731fd02458df068cc9": {
+    "name": "Pangoro"
+  },
+  "7bd676be89aec750c1186227147a7f64": {
+    "name": "Panpour"
+  },
+  "834c8c2aaa8946bb75447853b64fd239": {
+    "name": "Pansage"
+  },
+  "a840e261b3b37a1ff5d651f79471221f": {
+    "name": "Pansear"
+  },
+  "78347d3a7c008ff8916a36a6b1ae3a2b": {
+    "name": "Paras"
+  },
+  "326df963acc21d86662e53cbbf86e13e": {
+    "name": "Parasect"
+  },
+  "b319e62ef0f15040bdee6b28e1f2ada4": {
+    "name": "Passimian"
+  },
+  "6fb9f933dd5b2abb5bcbc3d7398d4ba8": {
+    "name": "Patrat"
+  },
+  "43595d07df48d469aca86f3363478602": {
+    "name": "Pawniard"
+  },
+  "1cfcfa91857b37f542bbb71142c927c8": {
+    "name": "Pelipper"
+  },
+  "a2b790c1f2111f8b57d7784b70762b79": {
+    "name": "Persian"
+  },
+  "8ae304f55d11d5632af53454ea35116e": {
+    "name": "Petilil"
+  },
+  "3cca6230b1627411c440978452510aa0": {
+    "name": "Phanpy"
+  },
+  "b8762fe224698517d49e60be08956a79": {
+    "name": "Phantump"
+  },
+  "d1efca1b45402c225630c763987c8928": {
+    "name": "Pheromosa"
+  },
+  "0c54ca8390ac9825c2e373c2cb7d430f": {
+    "name": "Phione"
+  },
+  "e6534dc74443cd545b468e352b1a595e": {
+    "name": "Pichu"
+  },
+  "1973c53da93385cbec669c713a6c8872": {
+    "name": "Pidgeot"
+  },
+  "130645be0959abd02b7a3e238e1794d0": {
+    "name": "Pidgeotto"
+  },
+  "8c159d5803c78710222c5134848113f9": {
+    "name": "Pidgey"
+  },
+  "ed9f2a1624e89e4410c4cd226fd2e6d8": {
+    "name": "Pidove"
+  },
+  "d016976664d061810132799f6849e3bb": {
+    "name": "Pignite"
+  },
+  "47b674ce9e0129b735d5c0184d670c95": {
+    "name": "Pikachu"
+  },
+  "528a95d065caf5dfef1dc586b86c130e": {
+    "name": "Pikipek"
+  },
+  "0015073a5f09844ed20c6362148c6f62": {
+    "name": "Piloswine"
+  },
+  "2fa28a8bd785808fc220978f2f27a7ea": {
+    "name": "Pineco"
+  },
+  "5f7064eae8c2b42ecb047a800ca76753": {
+    "name": "Pinsir"
+  },
+  "02b805f284e82f3af77967c810bbd2df": {
+    "name": "Piplup"
+  },
+  "b7dbf961a37fb23b14d43a0b0689adf1": {
+    "name": "Plusle"
+  },
+  "8c83e1b3c5b410c4b0a6dc69aeef0a55": {
+    "name": "Poipole"
+  },
+  "06990ccb41affb01143d3c8376a9a438": {
+    "name": "Politoed"
+  },
+  "bb25c51d485ee6bc285f6b1f6e94116e": {
+    "name": "Poliwag"
+  },
+  "25eb07cc2f12bd23d47cf7afc8635f27": {
+    "name": "Poliwhirl"
+  },
+  "df06cdaa644788aa48ae46bf234129e5": {
+    "name": "Poliwrath"
+  },
+  "fb6e0a7ac03a045187b01d044d72af8e": {
+    "name": "Ponyta"
+  },
+  "e3c16577ec1cea0f3878062d036af0ba": {
+    "name": "Poochyena"
+  },
+  "1e0dc235683956c2016e6cc07565cedf": {
+    "name": "Popplio"
+  },
+  "2d42e5300d17ac160ae81d3daa44914f": {
+    "name": "Porygon"
+  },
+  "cb5b150757f4790bbfebb0f6d680d8df": {
+    "name": "Porygon-z"
+  },
+  "9498c16d21cd64da2573941dd1521f79": {
+    "name": "Porygon2"
+  },
+  "cb329c280408418a60565a5c9d64db26": {
+    "name": "Primarina"
+  },
+  "c93b5418292ce5a3755abb8f39825557": {
+    "name": "Primeape"
+  },
+  "c3277414133b37b81dd1cf2cbf5bf7fe": {
+    "name": "Prinplup"
+  },
+  "65c8607b11d57f9dc7fb92f60f676b13": {
+    "name": "Probopass"
+  },
+  "928cfe06701ec4c7bd09105068df987f": {
+    "name": "Psyduck"
+  },
+  "0376a7f28942ed86d38c0dcae9600bb4": {
+    "name": "Pumpkaboo"
+  },
+  "243500b18817b2304c0fd63401d9d849": {
+    "name": "Pupitar"
+  },
+  "8565c1edb9632c79e7643fba57620dec": {
+    "name": "Purrloin"
+  },
+  "40565b2fb69a898f7610dfda54437af1": {
+    "name": "Purugly"
+  },
+  "21bad086179288c28d54eade13050818": {
+    "name": "Pyroar"
+  },
+  "cdd10a788480412de51ac963237c8004": {
+    "name": "Pyukumuku"
+  },
+  "a8005ab2d120ab8eb108a7dc8e654822": {
+    "name": "Quagsire"
+  },
+  "f3739b83c46a96a85afc827ee2d5a5f5": {
+    "name": "Quilava"
+  },
+  "ec4383c8050aa73adda83fc09264e0ee": {
+    "name": "Quilladin"
+  },
+  "237d65585eda05f0d652cff4182df823": {
+    "name": "Qwilfish"
+  },
+  "d259c8dfc8c99a9138f7eae5622911c1": {
+    "name": "Raichu"
+  },
+  "2e10686c1a63bad999edb1ed53dde336": {
+    "name": "Raikou"
+  },
+  "694348edf4957fabb30d67ffb44a4423": {
+    "name": "Ralts"
+  },
+  "eed2b22bb5b174fded6c9a9198b91f0a": {
+    "name": "Rampardos"
+  },
+  "17a22410186aa61584b734ba6746005d": {
+    "name": "Rapidash"
+  },
+  "c354b3671314b2eef2da6fbf3466e114": {
+    "name": "Raticate"
+  },
+  "7c7373fb4baba192b6ae206fc5822d9d": {
+    "name": "Rattata"
+  },
+  "ace10cb0c374b9916a464996424789ca": {
+    "name": "Rayquaza"
+  },
+  "c45a78c46910ececc2c4b955109f5946": {
+    "name": "Regice"
+  },
+  "2e590c11dd4e40ca97fd5a74239ef861": {
+    "name": "Regigigas"
+  },
+  "cbdc20a91ab9893f7578b5589d78815a": {
+    "name": "Regirock"
+  },
+  "4bb36c09bd7a25e7889f6d3a1b1ef451": {
+    "name": "Registeel"
+  },
+  "ae8862bd82d7a19d6e6c19d4607093b8": {
+    "name": "Relicanth"
+  },
+  "be29389eb001c7a793f0b85586e0de00": {
+    "name": "Remoraid"
+  },
+  "720d2bc29684f14b48c0c81777926d93": {
+    "name": "Reshiram"
+  },
+  "6cac7d2915fa9f21c8263fe7d7590a7e": {
+    "name": "Reuniclus"
+  },
+  "868de793b0255b23e0bee8361950c69d": {
+    "name": "Rhydon"
+  },
+  "391218a63c3a1faf3eb43dd9da0dd717": {
+    "name": "Rhyhorn"
+  },
+  "6bd1c3d8e5b001e9ebf66388d46eb775": {
+    "name": "Rhyperior"
+  },
+  "f11485d528c280253b9fb5213994de2c": {
+    "name": "Ribombee"
+  },
+  "d81e3fc6a13942bfb6b52101a000bcf1": {
+    "name": "Riolu"
+  },
+  "8741a63cda567aa51d65d42a20a9837c": {
+    "name": "Rockruff"
+  },
+  "150bf3b236cd231b766f2ddaefa0f18f": {
+    "name": "Roggenrola"
+  },
+  "def46db81e77b3fb751cc276c16b8a08": {
+    "name": "Roselia"
+  },
+  "0ef504c76642648aec3ffd2a7bc407b9": {
+    "name": "Roserade"
+  },
+  "16d3476e6841fd9c42623c5c390223cd": {
+    "name": "Rotom"
+  },
+  "5a91524c87f6db6056b8d723dd328437": {
+    "name": "Rowlet"
+  },
+  "bb3178579d63091169cd104765b3ecd0": {
+    "name": "Rufflet"
+  },
+  "1ef5ec321dd2fc1a039c9b01465a7d65": {
+    "name": "Sableye"
+  },
+  "06e1ff3dafd29e583ee4488d5d24adb6": {
+    "name": "Salamence"
+  },
+  "fab95f3d96084e3431d1dc7156eb6218": {
+    "name": "Salandit"
+  },
+  "dfcaa02077b6996edb731fd4115f3550": {
+    "name": "Salazzle"
+  },
+  "4646b3a30a7a9815bd73a790e849581a": {
+    "name": "Samurott"
+  },
+  "8b44472dc56aa4eaecc23e9c284c6660": {
+    "name": "Sandile"
+  },
+  "fc394bccdd4ec70d8bd7e75de6b2ccaf": {
+    "name": "Sandshrew"
+  },
+  "d6e895cbbba6e1d04106cc96dd121175": {
+    "name": "Sandslash"
+  },
+  "2edeb1a04cd1393f17533a13d4a1bfa6": {
+    "name": "Sandygast"
+  },
+  "a62b918d459f72e031e42dc7809b0cb3": {
+    "name": "Sawk"
+  },
+  "7962bfe03392a57a31f626204199c7ff": {
+    "name": "Sawsbuck"
+  },
+  "e52db765c278262ab428a68d596c47e4": {
+    "name": "Scatterbug"
+  },
+  "b3e9277e9051923120ed5d2a5595c557": {
+    "name": "Sceptile"
+  },
+  "da9e334c1f429d96e24d7fe61e6da578": {
+    "name": "Scizor"
+  },
+  "d1798ffea38b87105e389f9f70482359": {
+    "name": "Scolipede"
+  },
+  "734f8d3fc1e5f2615ac512ff89e6cd2a": {
+    "name": "Scrafty"
+  },
+  "3e7ecf5137601a372291a78d13bc5f50": {
+    "name": "Scraggy"
+  },
+  "0b729171aacefd8df714045879be7537": {
+    "name": "Scyther"
+  },
+  "db98171c399d51105a12aae819bde0a6": {
+    "name": "Seadra"
+  },
+  "1e67be2908fd673486f0985ceb657506": {
+    "name": "Seaking"
+  },
+  "5c7c22226e299d716223414f13e99ac1": {
+    "name": "Sealeo"
+  },
+  "9496c9fb12c644228966adaeec97fc73": {
+    "name": "Seedot"
+  },
+  "9eb000156e0e9188081b034afb6ea59e": {
+    "name": "Seel"
+  },
+  "ff3137711f96d848e5ee117e1c1a55b4": {
+    "name": "Seismitoad"
+  },
+  "6e13bfc84ffe245617a3ad9a0c545906": {
+    "name": "Sentret"
+  },
+  "5c5705e2a03c33a507c598c32e42075f": {
+    "name": "Serperior"
+  },
+  "2bc7d62495652fcd8e768c3d4daf9384": {
+    "name": "Servine"
+  },
+  "5cb98acffdded7b549eab2db9480a0de": {
+    "name": "Seviper"
+  },
+  "cf4e85354a893d59f25867792666f792": {
+    "name": "Sewaddle"
+  },
+  "b27aafb5cbfe37433512f9f14632b1b4": {
+    "name": "Sharpedo"
+  },
+  "a61d426ab463db0a0bb4edfb0d2f81c1": {
+    "name": "Shaymin"
+  },
+  "8b9f1c0748260b283e1e6f7b8471714b": {
+    "name": "Shedinja"
+  },
+  "bb6b7fa1198a3e992d1a0e9880dd38d5": {
+    "name": "Shelgon"
+  },
+  "4aeeafbe77228ac53464e997f7ac6623": {
+    "name": "Shellder"
+  },
+  "fda1ff8bfdc84517f45f5384e1c52065": {
+    "name": "Shellos"
+  },
+  "bc413e5b83c206502a00aeb87509091c": {
+    "name": "Shelmet"
+  },
+  "4c9c70f1824b25a71c594faac845ff4f": {
+    "name": "Shieldon"
+  },
+  "f7f12c6485c6e6104123d1827e67e4d7": {
+    "name": "Shiftry"
+  },
+  "f3139a23ac0e96add032e239926fe87c": {
+    "name": "Shiinotic"
+  },
+  "e892dfed8a5874911e9e7c4883c774ce": {
+    "name": "Shinx"
+  },
+  "e805db17a6db9df5fced0cc1f26feaf7": {
+    "name": "Shroomish"
+  },
+  "3f036a9cac36af0903abbab9224fce1a": {
+    "name": "Shuckle"
+  },
+  "3733087bda533ff0ebe7b7d37e1cae5f": {
+    "name": "Shuppet"
+  },
+  "0201110d53ec608ffaf658de6c69a76d": {
+    "name": "Sigilyph"
+  },
+  "e427bfabc67bcd6948a1dd758677ce8b": {
+    "name": "Silcoon"
+  },
+  "ee4b2621d1af7219bd8cfe3825829214": {
+    "name": "Silvally"
+  },
+  "540998cf5902c8cadf1b22a92ec2f550": {
+    "name": "Simipour"
+  },
+  "2eb68fbb7244e954e6a25ad21937a458": {
+    "name": "Simisage"
+  },
+  "d8b4b83347a0316285b71625c0092653": {
+    "name": "Simisear"
+  },
+  "4a29bb4f32d3d975d74a56d4fe7527e8": {
+    "name": "Skarmory"
+  },
+  "45bffb3c46c86fadb83641e11142a83a": {
+    "name": "Skiddo"
+  },
+  "6009cc9972e6e6d73e5c5387bca8a09d": {
+    "name": "Skiploom"
+  },
+  "2de8ff9355f9657b5ba54feef5627bb2": {
+    "name": "Skitty"
+  },
+  "7b538727c2066f6640ded254a46368ea": {
+    "name": "Skorupi"
+  },
+  "22f8deb2ad017e24c5d159d77736abb9": {
+    "name": "Skrelp"
+  },
+  "04c706d05b02c8ad960a88e2578d78aa": {
+    "name": "Skuntank"
+  },
+  "dd009dc257874c0210e5f7727654ea5d": {
+    "name": "Slaking"
+  },
+  "9a2efb5764241fd8ea6b5bba74f982bc": {
+    "name": "Slakoth"
+  },
+  "e4fe2fba2a08b0ca1ba54d436b01cf1d": {
+    "name": "Sliggoo"
+  },
+  "9b44e427f68851d2a46a68beefbde2ea": {
+    "name": "Slowbro"
+  },
+  "1313e8bf23a50d32e841a82778e9e68c": {
+    "name": "Slowking"
+  },
+  "0ab91733ca0f15f7e167957deb60dedd": {
+    "name": "Slowpoke"
+  },
+  "dc25897bcbc243fc9cface8fa10e5197": {
+    "name": "Slugma"
+  },
+  "36bad0e19ad49a14f3c50fb29f7d5ccf": {
+    "name": "Slurpuff"
+  },
+  "6d5d92d843c4fdd9d4f65cb7a09b13c8": {
+    "name": "Smeargle"
+  },
+  "5413d7e3a4fc17b79e8efda35691adbd": {
+    "name": "Smoochum"
+  },
+  "8b48bc56cff0d89e4d7aa0d9b559706a": {
+    "name": "Sneasel"
+  },
+  "4ef9dde3ab641344d6fc20be9a5fbb59": {
+    "name": "Snivy"
+  },
+  "fe3ad8a057f22cdb112d1679b438a911": {
+    "name": "Snorlax"
+  },
+  "a0aecd4d7d18f2b0aa36c8f4c1cf395a": {
+    "name": "Snorunt"
+  },
+  "97ba0923b7dc7c4c3b0873bc9ce2d8de": {
+    "name": "Snover"
+  },
+  "0ce500e10faac9378372628850bf0403": {
+    "name": "Snubbull"
+  },
+  "e359aff95cd64874423fd69f6db691b4": {
+    "name": "Solgaleo"
+  },
+  "3bb8e916bf5a048fbba4a6f7e55fbe9b": {
+    "name": "Solosis"
+  },
+  "343293a5c069497a321f40f02bc89a68": {
+    "name": "Solrock"
+  },
+  "955bbf320592d1cdb3e5371c3025e76f": {
+    "name": "Spearow"
+  },
+  "105102827972c661d82bf51ddcd85662": {
+    "name": "Spewpa"
+  },
+  "92485e2c0da5ce873d3e2f7e403f7100": {
+    "name": "Spheal"
+  },
+  "adf4bf6ab1b455a907acbdce9be8668f": {
+    "name": "Spinarak"
+  },
+  "261c230cc723023e9ce54216fc6f0bee": {
+    "name": "Spinda"
+  },
+  "e08b7ef48f0cd3de318b304203f82c0b": {
+    "name": "Spiritomb"
+  },
+  "c0526198605b24302ce997e91f42328a": {
+    "name": "Spoink"
+  },
+  "13b70abd80a10d14c82f82e7344be6b0": {
+    "name": "Spritzee"
+  },
+  "287a40d787421770cf12ed23eba696f1": {
+    "name": "Squirtle"
+  },
+  "06ee294de466924ebf0fdce955779ee8": {
+    "name": "Stakataka"
+  },
+  "9964d0730f3264c1b2aa3f452260b6c4": {
+    "name": "Stantler"
+  },
+  "af88f4cceb4f80e10c21a38650fe2b39": {
+    "name": "Staraptor"
+  },
+  "dd1b76f653891b31087ce6df05d41f3b": {
+    "name": "Staravia"
+  },
+  "5232fe2ea7b44d67d9d4e1fe862561f9": {
+    "name": "Starly"
+  },
+  "cac2d4e1cda412b461c595719383f5f1": {
+    "name": "Starmie"
+  },
+  "d466a43425548ca81917be10bc94ceef": {
+    "name": "Staryu"
+  },
+  "ae18bb3888c55dd34f9c694d3d1e917e": {
+    "name": "Steelix"
+  },
+  "8cabccc1ed97f5b85ae25750f8a4e681": {
+    "name": "Steenee"
+  },
+  "fef0a262f602cd4fd20d398c5baf4851": {
+    "name": "Stoutland"
+  },
+  "c3cbf3611f818dd061a6389636d864ce": {
+    "name": "Stufful"
+  },
+  "00f678b1e97672067829f7fe2790b155": {
+    "name": "Stunfisk"
+  },
+  "fea68132ff650ab9075bf5317719d94b": {
+    "name": "Stunky"
+  },
+  "07a0669b9b154e2fde643a9a57170d06": {
+    "name": "Sudowoodo"
+  },
+  "f5012c1b2fbab8b06a51f1cfcd37b93a": {
+    "name": "Suicune"
+  },
+  "469b9d23ca4ffeadc6a97fdb8eb4cd0d": {
+    "name": "Sunflora"
+  },
+  "614dfab9d3059555ebf42b97c18cc3fb": {
+    "name": "Sunkern"
+  },
+  "c3ea208fdbd7e9b9de5e6fc72c227c94": {
+    "name": "Surskit"
+  },
+  "951a20bc0af55979560a2a8206bb9484": {
+    "name": "Swablu"
+  },
+  "f21866917b375ac1e95b0a75826d0bdb": {
+    "name": "Swadloon"
+  },
+  "4c2c43eba3924aa53c361a8e82a94d2f": {
+    "name": "Swalot"
+  },
+  "16608a6921015ab4d83d48c5281ba29e": {
+    "name": "Swampert"
+  },
+  "a2fc6f1709a4b4a76b64500054fa3687": {
+    "name": "Swanna"
+  },
+  "43fab6cd41635a10fc0e6493156f0557": {
+    "name": "Swellow"
+  },
+  "44a6e6b25a7b3630111e23a8db538968": {
+    "name": "Swinub"
+  },
+  "db31c90895f5c41a3094e582465a464e": {
+    "name": "Swirlix"
+  },
+  "44db2511a42d6b79f1b0ba14d3a4a718": {
+    "name": "Swoobat"
+  },
+  "76e704f311b54aa2a120a4a1404ddd6e": {
+    "name": "Sylveon"
+  },
+  "b10797b56465f2a8e8dace9249eda348": {
+    "name": "Taillow"
+  },
+  "bfb7cef9ed375a14715675ce124eb209": {
+    "name": "Talonflame"
+  },
+  "dff4514b5fb640482119937f23bb8b7f": {
+    "name": "Tangela"
+  },
+  "cbd447f7105c73bc6d879947f2de8241": {
+    "name": "Tangrowth"
+  },
+  "cc545e2fa4390d79fa97a13b491cfff1": {
+    "name": "Tapu-bulu"
+  },
+  "c473096ec2d6c02824cd0ae7c796ab3c": {
+    "name": "Tapu-fini"
+  },
+  "0f6744ce85003b341cd528f0bf170c11": {
+    "name": "Tapu-koko"
+  },
+  "b82314378ab868f665d48e92bb8ed9ca": {
+    "name": "Tapu-lele"
+  },
+  "9cc38f627061122b1e34c039e2f5ef66": {
+    "name": "Tauros"
+  },
+  "bc018b8fb970801392091ee84d026b44": {
+    "name": "Teddiursa"
+  },
+  "db3d3f1b18811a1738ae3b50605f30bc": {
+    "name": "Tentacool"
+  },
+  "90718670199ff3b09524d63a7cbba1ef": {
+    "name": "Tentacruel"
+  },
+  "ee3ac380c784d6274f78b624d6f6af37": {
+    "name": "Tepig"
+  },
+  "07e83f1613165aa2035de7738f124f2d": {
+    "name": "Terrakion"
+  },
+  "40d96ff695c4eee723bffc1a4bcd4786": {
+    "name": "Throh"
+  },
+  "046841cc843f418ba6c48f50267b5808": {
+    "name": "Thundurus"
+  },
+  "7cfacd7bb76dc7f376e386d6501a7740": {
+    "name": "Timburr"
+  },
+  "507eac476273da3f2b4fdbc119cae5d3": {
+    "name": "Tirtouga"
+  },
+  "0963c8350ba577bbcbc954c651d559b4": {
+    "name": "Togedemaru"
+  },
+  "112be37e5f38133a963e8596496f7547": {
+    "name": "Togekiss"
+  },
+  "bef4e556dd88a936c66cb9020e436dd4": {
+    "name": "Togepi"
+  },
+  "76f070f877610d27b3d43da183ec7fdf": {
+    "name": "Togetic"
+  },
+  "22ff07696aab8a9529f5b46839ae879f": {
+    "name": "Torchic"
+  },
+  "45b7702db58620db92ce40a1cd7a71b3": {
+    "name": "Torkoal"
+  },
+  "fae9afb0b330b34874847416673d5b77": {
+    "name": "Tornadus"
+  },
+  "7b36dc6e60153b18f1e6683a031386ed": {
+    "name": "Torracat"
+  },
+  "feeb6864392e8defdbefe65c095db186": {
+    "name": "Torterra"
+  },
+  "188f087afd095fc01410f9626aa3521d": {
+    "name": "Totodile"
+  },
+  "604b5c3d24533f039ab28db5fbc5e236": {
+    "name": "Toucannon"
+  },
+  "88b77dfbfa5ccd88b0a3acb196d9e6ca": {
+    "name": "Toxapex"
+  },
+  "56178e4193cefe606c2263c0e59fee78": {
+    "name": "Toxicroak"
+  },
+  "32c598e38294dffe70f20e7752fc5816": {
+    "name": "Tranquill"
+  },
+  "bb57eec0a545d02aa067e3a8a42a1d04": {
+    "name": "Trapinch"
+  },
+  "59de85997e13bf80341f2ede87f712ee": {
+    "name": "Treecko"
+  },
+  "18fcc0abeb3e235c23b1198464b5a4bb": {
+    "name": "Trevenant"
+  },
+  "317200d493bcc81cfd1187eedd1fb55d": {
+    "name": "Tropius"
+  },
+  "a892a6211561f9ba9640fbd21d475eff": {
+    "name": "Trubbish"
+  },
+  "4ae663d07bc1a6b4cd0acbd9cdf9a8cf": {
+    "name": "Trumbeak"
+  },
+  "0b98be518b51b61413a1bcd89fb0c68e": {
+    "name": "Tsareena"
+  },
+  "be1bdea3dd665a2369035386c607249e": {
+    "name": "Turtonator"
+  },
+  "06fdade9010186755e08f276765aa32e": {
+    "name": "Turtwig"
+  },
+  "d386e4a4a404a224da7bd62fbd217b11": {
+    "name": "Tympole"
+  },
+  "78e206c4afba92728bbeffc053da2e18": {
+    "name": "Tynamo"
+  },
+  "3e036a1cc2b7e353dd91a1d9f0046daa": {
+    "name": "Typhlosion"
+  },
+  "09fc6c017e7fec17f26c03ea4840e6f8": {
+    "name": "Tyranitar"
+  },
+  "caa64721798c675a8bdd681220e7a886": {
+    "name": "Tyrantrum"
+  },
+  "55c41938c8937ac740aba64585d5cce4": {
+    "name": "Tyrogue"
+  },
+  "f84e83d640e299cb7ddfbe14d9d7d30e": {
+    "name": "Tyrunt"
+  },
+  "469ea0bd400be89a65cdcedb5436461f": {
+    "name": "Umbreon"
+  },
+  "16cb06a71c65d0ed6d11bc314a7a3042": {
+    "name": "Unfezant"
+  },
+  "4df09a66cc49c9ab8939027ed28535fb": {
+    "name": "Unown"
+  },
+  "79df84f940655c53c7210f0fb1e43966": {
+    "name": "Ursaring"
+  },
+  "1937ef78e9b99c73118432ce0d7be341": {
+    "name": "Uxie"
+  },
+  "c253c1e5d769796d757d35e708bd9939": {
+    "name": "Vanillish"
+  },
+  "7d07d6911f6792a7d7e0207072eb1077": {
+    "name": "Vanillite"
+  },
+  "216af667b880140b12641b5b3174431c": {
+    "name": "Vanilluxe"
+  },
+  "9d5920d54672fb5a435cb7370d7df03b": {
+    "name": "Vaporeon"
+  },
+  "fabc3dd60051606500c71545b948aff8": {
+    "name": "Venipede"
+  },
+  "14af5e0845dbcd7d41e309ea137a8606": {
+    "name": "Venomoth"
+  },
+  "2c094078b9162c96bc0598dc7d2f3317": {
+    "name": "Venonat"
+  },
+  "f03e8b29ee42a45ac29fc5bd9081cd10": {
+    "name": "Venusaur"
+  },
+  "fc4c833d30d75dd7663438d3a61a3081": {
+    "name": "Vespiquen"
+  },
+  "ed43ed8a89c850d49496fd76024b28c2": {
+    "name": "Vibrava"
+  },
+  "d693723332766008d8586bd223d7c0ff": {
+    "name": "Victini"
+  },
+  "79ff605e758f397e96b6c533a1fdcb8a": {
+    "name": "Victreebel"
+  },
+  "9a915a9583e40677f442fb32d4c77678": {
+    "name": "Vigoroth"
+  },
+  "c27bafa2ffc851754f5c56f5a11901de": {
+    "name": "Vikavolt"
+  },
+  "88cdf0e30fafd0bb7a95b490d49811c2": {
+    "name": "Vileplume"
+  },
+  "58f5c20b8d1aea5a88cacbeb1b560f1b": {
+    "name": "Virizion"
+  },
+  "489ac85eb2f40cd43d27f65f1af10739": {
+    "name": "Vivillon"
+  },
+  "8cf8c2440c4406165c54a6eea76c314c": {
+    "name": "Volbeat"
+  },
+  "e2af0c71106258b3c0daef5c74dedad0": {
+    "name": "Volcanion"
+  },
+  "e1ad0db15b1a86010868525af02e68c5": {
+    "name": "Volcarona"
+  },
+  "d68bddb67b513f0750a61960a764b8b7": {
+    "name": "Voltorb"
+  },
+  "59fe9d17ea0f943f131cbe3081cfd3df": {
+    "name": "Vullaby"
+  },
+  "a00eeb57734a3fe9dcd7c7915a88fe00": {
+    "name": "Vulpix"
+  },
+  "bdd5917cd1b14505528bd80c06ba4d8c": {
+    "name": "Wailmer"
+  },
+  "65f5448eef6c5cc309bbe1fc9f70a57c": {
+    "name": "Wailord"
+  },
+  "eb79af210732aea0f0e4a342b32200bb": {
+    "name": "Walrein"
+  },
+  "c8c948207c277f8eeff158477d19a110": {
+    "name": "Wartortle"
+  },
+  "cd3802c86afc4e81be997c9b2dfb3287": {
+    "name": "Watchog"
+  },
+  "abbf18692e192d387ae43661593daff8": {
+    "name": "Weavile"
+  },
+  "8fb83047434d6687757e1663751f62fa": {
+    "name": "Weedle"
+  },
+  "409584f3798a0e73dc3a57ccb25d992d": {
+    "name": "Weepinbell"
+  },
+  "59c0d03be95085aa33c2a29cfa3d7f44": {
+    "name": "Weezing"
+  },
+  "eef9f35da9d86e7eba7125bdc22085b8": {
+    "name": "Whimsicott"
+  },
+  "688e4372f43d0b1e53bf0f6a129ad4d5": {
+    "name": "Whirlipede"
+  },
+  "6827a90d4523e82d592456d216e5f730": {
+    "name": "Whiscash"
+  },
+  "2ccec2cacefe25adce4d47c4fa6d6bfd": {
+    "name": "Whismur"
+  },
+  "bacb03e091aee72e1b283ac9dd438d7f": {
+    "name": "Wigglytuff"
+  },
+  "98c1e098d38f50a750e86b1a7035d431": {
+    "name": "Wimpod"
+  },
+  "89af1a99d5e3ac82f1f9ab5ca59d448b": {
+    "name": "Wingull"
+  },
+  "af394c54efec9ed4cfcefc4ec074f6c0": {
+    "name": "Wishiwashi"
+  },
+  "c1ba1eb1938e736a6552afcb9bb72414": {
+    "name": "Wobbuffet"
+  },
+  "fb152d4fc363d50ab314306d11b65c31": {
+    "name": "Woobat"
+  },
+  "7d79dd473a8928b898d2f98549e6ff9f": {
+    "name": "Wooper"
+  },
+  "8975cd113600b915018b45dec88ee92f": {
+    "name": "Wormadam"
+  },
+  "c1c3bbc84b3e84ca3ebd5fde03911047": {
+    "name": "Wurmple"
+  },
+  "2ff16ed2ab49beb022124e0d837258af": {
+    "name": "Wynaut"
+  },
+  "c9f1e2974ad04842bcd66df203d7ff66": {
+    "name": "Xatu"
+  },
+  "c59919bebd828e18d9b0a4226c110078": {
+    "name": "Xerneas"
+  },
+  "1fb6316e3327639f6df404c89667642a": {
+    "name": "Xurkitree"
+  },
+  "934332d3537dbd28b99b1a6fc6a6e37d": {
+    "name": "Yamask"
+  },
+  "d93dbd07846aa9806799d09f51cac0ac": {
+    "name": "Yanma"
+  },
+  "743dce4a9fac24e0cc71dc859312577f": {
+    "name": "Yanmega"
+  },
+  "06ece7f9d71a56222e9b307a62d469cd": {
+    "name": "Yungoos"
+  },
+  "c58f4c087ecf1aafdf72726d915294d5": {
+    "name": "Yveltal"
+  },
+  "038a7a564b485f966d1c8af6aea1f9ff": {
+    "name": "Zangoose"
+  },
+  "d46a025208edfc963af5d3701ac52df0": {
+    "name": "Zapdos"
+  },
+  "336f10ca35cb35444a8b1ccc04e37125": {
+    "name": "Zebstrika"
+  },
+  "7b140d179fedc6b409ae6fbb232cfc64": {
+    "name": "Zekrom"
+  },
+  "6b997982630b9567a83a6c830d200295": {
+    "name": "Zeraora"
+  },
+  "2694378c79215e2e177507fba663dc7b": {
+    "name": "Zigzagoon"
+  },
+  "38b33b468f63bccca92a6be3ae50b201": {
+    "name": "Zoroark"
+  },
+  "8ec4d9075a5fdc5e8aa3adfac4e1aecc": {
+    "name": "Zorua"
+  },
+  "ab726a5593d649ded42df0b522a50c81": {
+    "name": "Zubat"
+  },
+  "7956c1b68bf88ad568e98afb7054e8ed": {
+    "name": "Zweilous"
+  },
+  "ffd1d90e269295cb6ed40fded79bb2c9": {
+    "name": "Zygarde"
+  }
+}
